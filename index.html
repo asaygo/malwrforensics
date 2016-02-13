@@ -34,7 +34,7 @@
 		<div id="three-column">
 			<div class="boxA">
 				<div class="box"> <span class="fa fa-cloud-download"></span>
-					<p>The code developed by us is provided under <a href="http://www.gnu.org/licenses/gpl-3.0.en.html">GNU GPL v3</a>. You can find it on github.</p>
+					<p>The code that I developed is provided under <a href="http://www.gnu.org/licenses/gpl-3.0.en.html">GNU GPL v3</a>. You can find it on github.</p>
 				</div>
 			</div>
 			<div class="boxB">
@@ -73,10 +73,13 @@
 					<td> # crontab -u root -l<br># cat /etc/crontab<br># ls /etc/cron.*</td><td>check cron jobs scheduled by root</td>
 				</tr>
 				<tr>
-					<td> sort -nk3 -t: /etc/passwd | less</td><td>check for unauthorized accounts</td>
+					<td> # sort -nk3 -t: /etc/passwd | less</td><td>check for unauthorized accounts</td>
 				</tr>
 				<tr>
-					<td> stat &lt; filename &gt; </td><td>get inode, create/access/mod times</td>
+					<td> # stat &lt; filename &gt; </td><td>get inode, create/access/mod times</td>
+				</tr>
+				<tr>
+					<td> # getfattr -R *</td><td>get extended file attributes</td>
 				</tr>
 			</table>
 			</div>
