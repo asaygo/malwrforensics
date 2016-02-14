@@ -23,9 +23,9 @@
 			<ul>
 				<li><a href="index.html" accesskey="1" title="">Home</a></li>
 				<li><a href="#" accesskey="2" title="">Windows</a></li>
-				<li><a href="#" accesskey="2" title="">Linux</a></li>
+				<li class="current_page_item"><a href="#" accesskey="2" title="">Linux</a></li>
 				<li><a href="#" accesskey="3" title="">Links</a></li>
-				<li class="current_page_item"><a href="about.html" accesskey="5" title="">About</a></li>
+				<li><a href="about.html" accesskey="5" title="">About</a></li>
 			</ul>
 		</div>
 	</div>
@@ -44,9 +44,18 @@
 			<table>
 				<tr>
 					<td> $./volatility --filename=./coreflood.vmem --profile=WinXPSP2x86 psxview</td><td>Check for hidden processes (would show as <i>False</i> in pslist or psscan)</td>
+				</tr>
+				<tr>
 					<td> $./volatility --filename=./coreflood.vmem --profile=WinXPSP2x86 connscan</td><td>View active network connections</td>
+				</tr>
+				<tr>
 					<td> $./volatility --filename=./coreflood.vmem --profile=WinXPSP2x86 malfind -D ./dump</td><td>Dump all procs with injected code</td>
+				</tr>
+				<tr>
 					<td> $./volatility --filename=./coreflood.vmem --profile=WinXPSP2x86 dlllist</td><td>Get a list of all dlls loaded by each process</td>
+				</tr>
+				<tr>
+					<td> $./volatility --filename=./coreflood.vmem --profile=WinXPSP2x86 hivelist</td><td>Get a list of all reg hives</td>
 				</tr>
 			</table>
 			</div>
