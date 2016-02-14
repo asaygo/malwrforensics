@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="http://fonts.googleapis.com/css?family=Varela" rel="stylesheet" />
+<link href="default.css" rel="stylesheet" type="text/css" media="all" />
+<link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
+
+<!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+
+</head>
+<body>
+<div id="wrapper">
+	<div id="header-wrapper">
+	<div id="header" class="container">
+		<div id="logo">
+			<h1><a href="#">MalwrForensics</a></h1>
+		</div>
+		<div id="menu">
+			<ul>
+				<li><a href="index.html" accesskey="1" title="">Home</a></li>
+				<li><a href="#" accesskey="2" title="">Windows</a></li>
+				<li><a href="#" accesskey="2" title="">Linux</a></li>
+				<li><a href="#" accesskey="3" title="">Links</a></li>
+				<li class="current_page_item"><a href="about.html" accesskey="5" title="">About</a></li>
+			</ul>
+		</div>
+	</div>
+	</div>
+	<div id="extra" class="container">
+		<div align="center">
+			On this page I'm going to give some examples of various volatility commands..
+		</div>
+	</div>
+	<div id="featured">
+		<div class="container">
+			<div class="title">
+				<h2>Forensics with Volatility</h2>
+			</div>
+			<div align="center">
+			<table>
+				<tr>
+					<td> $./volatility --filename=./coreflood.vmem --profile=WinXPSP2x86 psxview</td><td>Check for hidden processes (would show as <i>False</i> in pslist or psscan)</td>
+					<td> $./volatility --filename=./coreflood.vmem --profile=WinXPSP2x86 connscan</td><td>View active network connections</td>
+					<td> $./volatility --filename=./coreflood.vmem --profile=WinXPSP2x86 malfind -D ./dump</td><td>Dump all procs with injected code</td>
+					<td> $./volatility --filename=./coreflood.vmem --profile=WinXPSP2x86 dlllist</td><td>Get a list of all dlls loaded by each process</td>
+				</tr>
+			</table>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
