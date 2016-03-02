@@ -45,12 +45,12 @@
             As the program starts, it will check if it's not already running and if not, it will install and start itself.
             </p>
             
-            <p align="center"><img src="img/start.png" width=350 height=350></p>
+            <p align="center"><img src="start.png" width=350 height=350></p>
             <p align="left">
             To detect if it's running it will first grep the process list:
             </p>
             <p align="center">
-            <img src="img/ps_grep.png" width=350 height=100>
+            <img src="ps_grep.png" width=350 height=100>
             </p>
             <p align="left">
             Next it will try to gain root privileges. If it succeeds, the drops itself in the /bin folder with the name rsyncd, otherwise it will choose the <tt><b>~/.config/dbus-notifier</b></tt> with the name <b>dbus-inotifier</b>.
@@ -59,7 +59,7 @@
             If this process is found, it will recursively search the <tt><b>"/usr/lib/systemd/"</b></tt> folder and check every file for the <tt><b>"/bin/rsyncd"</b></tt> string.
             </p>
             <p align="center">
-            <img src="img/grep_usr_lib_systemd.png" width=350 height=300>
+            <img src="grep_usr_lib_systemd.png" width=350 height=300>
             </p>
             <p align="left">
             If it doesn't have root privileges, it checks the <tt><b>~/.config/autostart/</b></tt> directory for the <tt><b>dbus-inotifier</b></tt> file.
@@ -68,13 +68,13 @@
             If the malware isn't running and the program has root privileges it will try to create a service file and launch itself.
             </p>
             <p align="center">
-            <img src="img/systemd_not_running.png" width=350 height=250>
+            <img src="systemd_not_running.png" width=350 height=250>
             </p>
             <p align="left">
             To do that it will create the <tt><b>rsyncd.service</b></tt> unit configuration file in <tt><b>/usr/lib/systemd/system/</b></tt>
             </p> 
             <p align="center">
-            <img src="img/rsyncd_service_unit_file.png" width=350 height=150>
+            <img src="rsyncd_service_unit_file.png" width=350 height=150>
             </p>
             <p align="left">
             Afterwards it installs & launch the service by executing the following commands:
@@ -84,7 +84,7 @@
             <tt><b>ln -s '/lib/systemd/system/rsyncd.service' '/etc/systemd/system/multi-user.target.wants/rsyncd.service'</b></tt>
             </br></br>
             <p align="center">
-            <img src="img/install_service.png" width=450 height=200>
+            <img src="install_service.png" width=450 height=200>
             </p>
             </td>
             <tr><td>
@@ -96,38 +96,38 @@
             If the backdoor doesn't have root privileges, it creates the <tt><b>~/.config/autostart/dbus-inotifier.desktop</b></tt> file with the following contents:
             </p>
             <p align="center">
-            <img src="img/dbus_notifier_desktop.png" width=450 height=120>
+            <img src="dbus_notifier_desktop.png" width=450 height=120>
             </p>
             <p align="left">
             It creates the directory <tt><b>/usr/lib/cva-ssys</b></tt> to store its files its files in it:
             </p>
             <p align="center">
-            <img src="img/mkdir_local_cva_ssys.png" width=450 height=200>
+            <img src="mkdir_local_cva_ssys.png" width=450 height=200>
             </p>
             <p align="left">
             In this folder it stores a sqlite3 database (named <tt><b>My_BD</b></tt>) where it stores configuration data.
             The configuration is stored in a binary format in a table called <b>chnnl</b>:
             </p>
             <p align="center">
-            <img src="img/chnnl_table.png" width=350 height=100>
+            <img src="chnnl_table.png" width=350 height=100>
             </p>
             <p align="left">
             The table has the following format:
             </p>
             <p align="center">
-            <img src="img/create_table.png" width=550 height=350>
+            <img src="create_table.png" width=550 height=350>
             </p>
             <p align="left">
             The backdoor will contact the C2 (command and control) server to register the infection and wait for commands:
             </p>
             <p align="center">
-            <img src="img/c2server.png" width=550 height=70>
+            <img src="c2server.png" width=550 height=70>
             </p>
             <p align="left">
             The malware will send a request like to the following:
             </p>
             <p align="center">
-            <img src="img/net_req.png" width=550 height=200>
+            <img src="net_req.png" width=550 height=200>
             </p>
             <p align="left">
             The backdoor allows for the following operations:
@@ -143,19 +143,19 @@
             <b>Commands supported by the shell module</b>
             </p>
             <p align="center">
-            <img src="img/shell_module.png" width=800 height=500>
+            <img src="shell_module.png" width=800 height=500>
             </p>
             <p align="left">
             <b>Commands supported by the filesystem module</b>
             </p>
             <p align="center">
-            <img src="img/fs_module.png" width=550 height=270>
+            <img src="fs_module.png" width=550 height=270>
             </p>
             <p align="left">
             <a href="https://github.com/asaygo/fysbis_detect">Here</a> you can find a python tool to detect this backdoor:
             </p>
             <p align="center">
-            <img src="img/fysbis_scan.png" width=550 height=150>
+            <img src="fysbis_scan.png" width=550 height=150>
             </p>
             </br>
             </br>
