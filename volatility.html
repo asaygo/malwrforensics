@@ -38,13 +38,22 @@
 			<div align="center">
 			<table>
 				<tr>
+					<td> $./volatility --filename=./coreflood.vmem --profile=WinXPSP2x86 psscan</td><td>Check for hidden processes (would show as <i>False</i> in pslist or psscan)</td>
+				</tr>
+				<tr>
 					<td> $./volatility --filename=./coreflood.vmem --profile=WinXPSP2x86 psxview</td><td>Check for hidden processes (would show as <i>False</i> in pslist or psscan)</td>
+				</tr>
+				<tr>
+					<td> $./volatility --filename=./coreflood.vmem --profile=WinXPSP2x86 envars -p 123</td><td>Check for hidden processes (would show as <i>False</i> in pslist or psscan)</td>
 				</tr>
 				<tr>
 					<td> $./volatility --filename=./coreflood.vmem --profile=WinXPSP2x86 connscan</td><td>View active network connections</td>
 				</tr>
 				<tr>
 					<td> $./volatility --filename=./coreflood.vmem --profile=WinXPSP2x86 malfind -D ./dump</td><td>Dump all procs with injected code</td>
+				</tr>
+				<tr>
+					<td> $./volatility --filename=./coreflood.vmem --profile=WinXPSP2x86 malfind -p 123 -D ./dump</td><td>Dump injected code in process with PID 960</td>
 				</tr>
 				<tr>
 					<td> $./volatility --filename=./coreflood.vmem --profile=WinXPSP2x86 dlllist</td><td>Get a list of all dlls loaded by each process</td>
