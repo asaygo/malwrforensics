@@ -22,8 +22,8 @@
 		<div id="menu">
 			<ul>
 				<li><a href="index.html" accesskey="1" title="">Home</a></li>
-				<li class="current_page_item"><a href="windows.html" accesskey="2" title="">Windows</a></li>
-				<li><a href="linux.html" accesskey="2" title="">Linux</a></li>
+				<li><a href="windows.html" accesskey="2" title="">Windows</a></li>
+				<li class="current_page_item"><a href="linux.html" accesskey="2" title="">Linux</a></li>
 				<li><a href="links.html" accesskey="3" title="">Links</a></li>
 				<li><a href="about.html" accesskey="5" title="">About</a></li>
 			</ul>
@@ -33,41 +33,19 @@
 	<div id="extra">
 		<div class="container">
 			<div class="title">
-				<h2>IDA memory dump script</h2>
+				<h2>Change swappiness in Ubuntu</h2>
 			</div>
 			<div align="center">
             <p align="left">
-            This is an <a href="https://www.hex-rays.com/products/ida/" target="_blank">IDA</a> to do a memory dump. It's useful to run it after you've gone past the obfuscation layer(s) and reached the decrypted code/data/strings.
-            </p>
-	    <pre>
             <code>
-	    <strong style="color: blue;">
-	    <p align="left">
-auto eax;
-auto start;
-auto end;
-auto f;
-
-f = fopen("dump.bin", "w");
-
-start = 0x400000;
-end = 0x500000;
-
-eax = start;
-while ( eax < end )
-{
-    writelong(f, Dword(eax) ,0);
-    eax = eax + 4;
-}
-fclose(f);
-	    </p>
-	    </strong>
-            </code>
-	    </pre>
-            <p align="left">
-            <a href="https://github.com/asaygo/malwrforensics/blob/master/ida_dump_mem.idc">Here</a> you can find the code on gitbug.
+	    #check current value<br>
+	    <em>cat /proc/sys/vm/swappiness</em><br>
+	    <br>
+	    #edit /etc/sysctl.conf and append the following line<br>
+	    <em>vm.swappiness=10</em><br>
+	    </code>
             </p>
-        	</div>
+        </div>
 	</div>
 	</div>
 </div>
