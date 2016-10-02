@@ -22,8 +22,8 @@
 		<div id="menu">
 			<ul>
 				<li><a href="index.html" accesskey="1" title="">Home</a></li>
-				<li><a href="windows.html" accesskey="2" title="">Windows</a></li>
-				<li class="current_page_item"><a href="linux.html" accesskey="2" title="">Linux</a></li>
+				<li class="current_page_item"><a href="windows.html" accesskey="2" title="">Windows</a></li>
+				<li><a href="linux.html" accesskey="2" title="">Linux</a></li>
 				<li><a href="links.html" accesskey="3" title="">Links</a></li>
 				<li><a href="about.html" accesskey="5" title="">About</a></li>
 			</ul>
@@ -33,19 +33,22 @@
 	<div id="extra">
 		<div class="container">
 			<div class="title">
-				<h2>Change swappiness in Ubuntu</h2>
+				<h2>Forensic Artefacts Extractor</h2>
 			</div>
 			<div align="center">
             <p align="left">
-            <code>
-	    #check current value<br>
-	    <em>cat /proc/sys/vm/swappiness</em><br>
-	    <br>
-	    #edit /etc/sysctl.conf and append the following line<br>
-	    <em>vm.swappiness=10</em><br>
-	    </code>
+						This is a script developed in python to extract forensic artefacts from a file/memory dump.
+						It's useful to run it after you've gone past the obfuscation layer(s) and reached the decrypted code/data/strings.
+						<br />It can extract filenames, registry keys, urls, e-mail addresses, IPs, etc.
+						<br />
+						<br />
+						<img src="img/faextr_win_run.png" alt="forensic artefacts extractor"/>
             </p>
-        </div>
+            <p align="left">
+						The data is logged to different text files, one for each category.<br />
+            <a href="https://github.com/asaygo/cybsecintel/blob/master/faextr_win.py">Here</a> you can find the code on gitbug.
+            </p>
+        	</div>
 	</div>
 	</div>
 </div>
