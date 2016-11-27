@@ -84,7 +84,7 @@ def exploit(server, command):
 
 
 ### MAIN ###
-myserver = '192.168.205.103'
+myserver = '127.0.0.1'
 #fuzz_user(myserver)
 #fuzz_pass(myserver)
 #fuzz(myserver, 'ABOR')
