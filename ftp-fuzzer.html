@@ -33,39 +33,64 @@
 	<div id="extra">
 		<div class="container">
 			<div class="title">
-				<h2>IDA memory dump script</h2>
+				<h2>FTP Server command fuzzing</h2>
 			</div>
 			<div align="center">
             <p align="left">
-            This is an <a href="https://www.hex-rays.com/products/ida/" target="_blank">IDA</a> script that can do a memory dump. It's useful to run it after you've gone past the obfuscation layer(s) and reached the decrypted code/data/strings.
-            </p>
+            This script can be used to do fuzzing against an FTP server.<br>
+	    It supports the following commands:
 	    <pre>
-            <code>
-	    <strong style="color: blue;">
-	    <p align="left">
-auto eax;
-auto start;
-auto end;
-auto f;
-
-f = fopen("dump.bin", "w");
-
-start = 0x400000;
-end = 0x500000;
-
-eax = start;
-while ( eax < end )
-{
-    writelong(f, Dword(eax) ,0);
-    eax = eax + 4;
-}
-fclose(f);
-	    </p>
-	    </strong>
-            </code>
+	    <code>
+ABOR
+ACCT
+ALLO
+APPE
+CWD
+DELE
+DIR
+FORM
+GET
+HELP
+LIST
+MACDEF
+MDELETE
+MDIR
+MGET
+MKD
+MLS
+MODE
+MODETIME
+MPUT
+NEWER
+NLST
+NMAP
+MTDM
+NTRANS
+PUT
+RECV
+REGET
+REMOTEHELP
+REMOTESTATUS
+REST
+RESTART
+RETR
+RMD
+RNFR
+RNTO
+QUOTE
+SEND
+SITE
+SIZE
+STAT
+STOR
+STRU
+UMASK
+TYPE
+	    </code>
 	    </pre>
+            </p>
             <p align="left">
-            <a href="https://github.com/asaygo/malwrforensics/blob/master/ida_dump_mem.idc">Here</a> you can find the code on github.
+            <a href="https://github.com/asaygo/malwrforensics/blob/master/ftpfuzz.py" target="_blank">Here</a> you can find the code on github.
             </p>
         	</div>
 	</div>
