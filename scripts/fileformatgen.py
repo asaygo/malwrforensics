@@ -29,6 +29,13 @@ def write_png_header(fname):
 	fhandle.write(header)
 	fhandle.close()
 
+def write_bmp_header(fname):
+	#BM+size(4)+reserved(4)+starting addr
+	header = "BM" + chr(0xff) + chr(0xff) + chr(0xff) + chr(0xff) + chr(0x41) + chr(0x41) + chr(0x41) + chr(0x41) + "\x00\x00\x00\x0E"
+	fhandle = open(fname , 'ab')
+	fhandle.write(header)
+	fhandle.close()
+
 def write_pdf_header(fname):
 	header = chr(0x25) + chr(0x50) + chr(0x44) + chr(0x46) + chr(0x2d) + chr(0x31) + chr(0x2e)
 	header +=  chr(0x33) + chr(0x0a) + chr(0x25) + chr(0xc4) + chr(0xe5) + chr(0xf2) + chr(0xe5)
@@ -37,11 +44,28 @@ def write_pdf_header(fname):
 	fhandle.write(header)
 	fhandle.close()
 
+def write_cue_file(fname, buffer):
+	header = "FILE \""
+	header += buffer
+	header += "\" BINARY\n"
+	header += "  INDEX 01 00:00:00\n"
+	header += "  INDEX 01 00:00:00"
+	fhandle = open(fname , 'wb')
+	fhandle.write(header)
+	fhandle.close()
+
+def write_avi_header(fname):
+	#RIFF size AVI
+	header = "\x52\x49\x46\x46" + "\xFF\xFF\xFF\xFF" + "\x41\x56\x49\x20"
+	fhandle = open(fname , 'ab')
+	fhandle.write(header)
+	fhandle.close()
+
 def write_random_poc(fname):
 	junk = ""
 	i=0
 	limit=450
-	while i<limit: 
+	while i<limit:
 		junk += chr(randint(0x41, 0x5a))
 		i=i+1
 
