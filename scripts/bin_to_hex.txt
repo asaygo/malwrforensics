@@ -1,0 +1,14 @@
+#! perl
+
+open(OUT, ">", "dump.hex");
+open(FILE, "<", "dump.bin");
+binmode FILE;
+
+my ($hex, $byte, $n);
+
+while (($n = read FILE, $byte, 1) != 0) {
+  $hex = sprintf('%02X', ord($byte));
+  print OUT "$hex";
+}
+close(FILE);
+close(OUT);

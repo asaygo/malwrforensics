@@ -1,0 +1,15 @@
+#! perl
+
+open(IN, "<", "dump.hex");
+open(OUT, ">", "dump.bin");
+while(<IN>)
+{
+	chomp();
+	while ( $_ =~ /(.{2})/g )
+	{
+		$x = hex($1);
+		printf(OUT "%c", $x);
+	}
+}
+close(IN);
+close(OUT);
