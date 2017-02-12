@@ -61,10 +61,9 @@ def write_avi_header(fname):
 	fhandle.write(header)
 	fhandle.close()
 
-def write_random_poc(fname):
+def write_random_poc(fname, limit):
 	junk = ""
 	i=0
-	limit=450
 	while i<limit:
 		junk += chr(randint(0x41, 0x5a))
 		i=i+1
@@ -87,5 +86,5 @@ fname="poc.txt"
 #write_png_header(fname)
 #write_pdf_header(fname)
 
-write_random_poc(fname)
+write_random_poc(fname, 0x300)
 #write_constant_poc(fname, chr(0x0))
