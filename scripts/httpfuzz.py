@@ -11,6 +11,9 @@ import sys
 import time
 from random import randint
 
+SHOW_RESPONSE = 1
+INCREMENT = 10
+
 def write_random_poc(fname,limit):
     poc = ""
     junk = ""
@@ -26,9 +29,12 @@ def write_random_poc(fname,limit):
     #fhandle.close()
     return poc
 
-def fuzz_req_type(server, port):
+def fuzz_req_type(server, port, limit):
+	global SHOW_RESPONSE
+	global INCREMENT
+
         indx = 100
-	while indx<1000:
+	while indx<limit:
 		crash = "\x41" * indx
 		buffer= crash + " /index.html HTTP/1.1\r\n"
 		buffer+="Host: 127.0.0.1\r\n"
@@ -41,13 +47,19 @@ def fuzz_req_type(server, port):
 		expl = socket.socket ( socket.AF_INET, socket.SOCK_STREAM )
 		expl.connect((server, port))
 		expl.send(buffer)
+		if SHOW_RESPONSE == 1:
+			print expl.recv(2048)
+
 		expl.close()
 		time.sleep(0.5)
-		indx = indx + 5
+		indx = indx + INCREMENT
 
-def fuzz_page(server, port):
+def fuzz_page(server, port, limit):
+	global SHOW_RESPONSE
+	global INCREMENT
+
         indx = 100
-	while indx<1000:
+	while indx<limit:
 		crash = "\x41" * indx
 		buffer= "GET /" + crash + " HTTP/1.1\r\n"
 		buffer+="Host: 127.0.0.1\r\n"
@@ -60,13 +72,19 @@ def fuzz_page(server, port):
 		expl = socket.socket ( socket.AF_INET, socket.SOCK_STREAM )
 		expl.connect((server, port))
 		expl.send(buffer)
+		if SHOW_RESPONSE == 1:
+			print expl.recv(2048)
+
 		expl.close()
 		time.sleep(0.5)
-		indx = indx + 5
+		indx = indx + INCREMENT
 
-def fuzz_protocol(server, port):
+def fuzz_protocol(server, port, limit):
+	global SHOW_RESPONSE
+	global INCREMENT
+
         indx = 100
-	while indx<1000:
+	while indx<limit:
 		crash = "\x41" * indx
 		buffer= "GET /index.html " + crash + "/1.1\r\n"
 		buffer+="Host: 127.0.0.1\r\n"
@@ -79,13 +97,19 @@ def fuzz_protocol(server, port):
 		expl = socket.socket ( socket.AF_INET, socket.SOCK_STREAM )
 		expl.connect((server, port))
 		expl.send(buffer)
+		if SHOW_RESPONSE == 1:
+			print expl.recv(2048)
+
 		expl.close()
 		time.sleep(0.5)
-		indx = indx + 5
+		indx = indx + INCREMENT
 
-def fuzz_host(server, port):
+def fuzz_host(server, port, limit):
+	global SHOW_RESPONSE
+	global INCREMENT
+
         indx = 100
-	while indx<1000:
+	while indx<limit:
 		crash = "\x41" * indx
 		buffer= "GET /index.html HTTP/1.1\r\n"
 		buffer+="Host: " + crash + "\r\n"
@@ -98,13 +122,19 @@ def fuzz_host(server, port):
 		expl = socket.socket ( socket.AF_INET, socket.SOCK_STREAM )
 		expl.connect((server, port))
 		expl.send(buffer)
+		if SHOW_RESPONSE == 1:
+			print expl.recv(2048)
+
 		expl.close()
 		time.sleep(0.5)
-		indx = indx + 5
+		indx = indx + INCREMENT
 
-def fuzz_referrer(server, port):
+def fuzz_referrer(server, port, limit):
+	global SHOW_RESPONSE
+	global INCREMENT
+
         indx = 100
-	while indx<1000:
+	while indx<limit:
 		crash = "\x41" * indx
 		buffer= "GET /index.html HTTP/1.1\r\n"
 		buffer+="Host: 127.0.0.1\r\n"
@@ -117,13 +147,19 @@ def fuzz_referrer(server, port):
 		expl = socket.socket ( socket.AF_INET, socket.SOCK_STREAM )
 		expl.connect((server, port))
 		expl.send(buffer)
+		if SHOW_RESPONSE == 1:
+			print expl.recv(2048)
+
 		expl.close()
 		time.sleep(0.5)
-		indx = indx + 5
+		indx = indx + INCREMENT
 
-def fuzz_content_type(server, port):
+def fuzz_content_type(server, port, limit):
+	global SHOW_RESPONSE
+	global INCREMENT
+
         indx = 100
-	while indx<1000:
+	while indx<limit:
 		crash = "\x41" * indx
 		buffer= "GET /index.html HTTP/1.1\r\n"
 		buffer+="Host: 127.0.0.1\r\n"
@@ -136,13 +172,19 @@ def fuzz_content_type(server, port):
 		expl = socket.socket ( socket.AF_INET, socket.SOCK_STREAM )
 		expl.connect((server, port))
 		expl.send(buffer)
+		if SHOW_RESPONSE == 1:
+			print expl.recv(2048)
+
 		expl.close()
 		time.sleep(0.5)
-		indx = indx + 5
+		indx = indx + INCREMENT
 
-def fuzz_user_agent(server, port):
+def fuzz_user_agent(server, port, limit):
+	global SHOW_RESPONSE
+	global INCREMENT
+
         indx = 100
-	while indx<1000:
+	while indx<limit:
 		crash = "\x41" * indx
 		buffer= "GET /index.html HTTP/1.1\r\n"
 		buffer+="Host: 127.0.0.1\r\n"
@@ -155,13 +197,19 @@ def fuzz_user_agent(server, port):
 		expl = socket.socket ( socket.AF_INET, socket.SOCK_STREAM )
 		expl.connect((server, port))
 		expl.send(buffer)
+		if SHOW_RESPONSE == 1:
+			print expl.recv(2048)
+
 		expl.close()
 		time.sleep(0.5)
-		indx = indx + 5
+		indx = indx + INCREMENT
 
-def fuzz_content_length(server, port):
+def fuzz_content_length(server, port, limit):
+	global SHOW_RESPONSE
+	global INCREMENT
+
         indx = 100
-	while indx<1000:
+	while indx<limit:
 		crash = "\x41" * indx
 		buffer= "GET /index.html HTTP/1.1\r\n"
 		buffer+="Host: 127.0.0.1\r\n"
@@ -174,13 +222,19 @@ def fuzz_content_length(server, port):
 		expl = socket.socket ( socket.AF_INET, socket.SOCK_STREAM )
 		expl.connect((server, port))
 		expl.send(buffer)
+		if SHOW_RESPONSE == 1:
+			print expl.recv(2048)
+
 		expl.close()
 		time.sleep(0.5)
-		indx = indx + 5
+		indx = indx + INCREMENT
 
-def fuzz_cookie(server, port):
+def fuzz_cookie(server, port, limit):
+	global SHOW_RESPONSE
+	global INCREMENT
+
         indx = 100
-	while indx<1000:
+	while indx<limit:
 		crash = "\x41" * indx
 		buffer= "GET /index.html HTTP/1.1\r\n"
 		buffer+="Host: 127.0.0.1\r\n"
@@ -193,36 +247,40 @@ def fuzz_cookie(server, port):
 		expl = socket.socket ( socket.AF_INET, socket.SOCK_STREAM )
 		expl.connect((server, port))
 		expl.send(buffer)
+		if SHOW_RESPONSE == 1:
+			print expl.recv(2048)
+
 		expl.close()
 		time.sleep(0.5)
-		indx = indx + 5
+		indx = indx + INCREMENT
 
 ###MAIN###
 myserver = "127.0.0.1"
-myport = 9090
+myport = 80
+mylimit = 2000
 print "[+] Fuzz request type"
-fuzz_req_type(myserver, myport)
+fuzz_req_type(myserver, myport, mylimit)
 
 print "[+] Fuzz page"
-fuzz_page(myserver, myport)
+fuzz_page(myserver, myport, mylimit)
 
 print "[+] Fuzz protocol"
-fuzz_protocol(myserver, myport)
+fuzz_protocol(myserver, myport, mylimit)
 
 print "[+] Fuzz host"
-fuzz_host(myserver, myport)
+fuzz_host(myserver, myport, mylimit)
 
 print "[+] Fuzz referrer"
-fuzz_referrer(myserver, myport)
+fuzz_referrer(myserver, myport, mylimit)
 
 print "[+] Fuzz content type"
-fuzz_content_type(myserver, myport)
+fuzz_content_type(myserver, myport, mylimit)
 
 print "[+] Fuzz user agent"
-fuzz_user_agent(myserver, myport)
+fuzz_user_agent(myserver, myport, mylimit)
 
 print "[+] Fuzz content length"
-fuzz_content_length(myserver, myport)
+fuzz_content_length(myserver, myport, mylimit)
 
 print "[+] Fuzz cookie"
-fuzz_cookie(myserver, myport)
+fuzz_cookie(myserver, myport, mylimit)
