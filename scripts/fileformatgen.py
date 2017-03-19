@@ -2,7 +2,7 @@
 ###############################################
 #   File Format Generator		      #
 #   Author: malwrforensics                    #
-#   Conact: malwr at malwrforensics dot com   #
+#   Contact: malwr at malwrforensics dot com  #
 ###############################################
 
 from random import randint

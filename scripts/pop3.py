@@ -1,8 +1,8 @@
 #!python
 ###############################################
-#   POP3 Fuzzer                                #
+#   POP3 Fuzzer                               #
 #   Author: malwrforensics                    #
-#   Conact: malwr at malwrforensics dot com   #
+#   Contact: malwr at malwrforensics dot com  #
 ###############################################
 
 import sys, socket
