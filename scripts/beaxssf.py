@@ -11,7 +11,7 @@ import os
 import requests
 import re
 
-DEBUG = 1
+DEBUG = 0
 xss_attacks = [ "<script>alert(1);</script>", "<img src=x onerror=prompt(/test/)>",
                 "\"><script>alert(1);</script><div id=\"x", "</script><script>alert(1);</script>",
                 "</title><script>alert(1);</script>", "<body background=\"javascript:alert(1)\">"]
