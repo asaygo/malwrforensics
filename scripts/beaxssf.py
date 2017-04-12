@@ -11,7 +11,7 @@ import os
 import requests
 import re
 
-DEBUG = 0
+DEBUG = 1
 xss_attacks = [ "<script>alert(1);</script>", "<img src=x onerror=prompt(/test/)>",
                 "\"><script>alert(1);</script><div id=\"x", "</script><script>alert(1);</script>",
                 "</title><script>alert(1);</script>", "<body background=\"javascript:alert(1)\">"]
@@ -19,7 +19,10 @@ xss_attacks = [ "<script>alert(1);</script>", "<img src=x onerror=prompt(/test/)
 def check_xss(host, page, method, params, hidden_param_name, hidden_param_value, form_counter):
     global xss_attacks
     global DEBUG
-    furl = "http://" + host + "/" + page
+    if page.find("http://") == 0:
+        furl = page
+    else:
+        furl = "http://" + host + "/" + page
     print "[+] XSS check for: " + furl
     if DEBUG == 1:
         print "Params: "
@@ -101,7 +104,7 @@ def scan_for_forms(fname, host):
 
                 #detect forms
                 m_same      = re.match(r'.*\<form\>"', line, re.M|re.I)
-                m_action    = re.match(r'.*\<form\s[^\>]*action="([\w\/\.\-\#]+)"', line, re.M|re.I)
+                m_action    = re.match(r'.*\<form\s[^\>]*action="([\w\/\.\-\#\:]+)"', line, re.M|re.I)
                 m_reqtype   = re.match(r'.*\<form\s[^\>]*method="([\w\/\.\-]+)"', line, re.M|re.I)
                 if m_action or m_same:
                     has_form=1
