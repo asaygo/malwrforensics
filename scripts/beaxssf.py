@@ -14,15 +14,20 @@ import re
 DEBUG = 0
 xss_attacks = [ "<script>alert(1);</script>", "<img src=x onerror=prompt(/test/)>",
                 "\"><script>alert(1);</script><div id=\"x", "</script><script>alert(1);</script>",
-                "</title><script>alert(1);</script>", "<body background=\"javascript:alert(1)\">"]
+                "</title><script>alert(1);</script>", "<body background=\"javascript:alert(1)\">",
+                "<img src=malwrforensics.jpg onerror='alert(1)'></img>"]
 
-def check_xss(host, page, method, params, hidden_param_name, hidden_param_value, form_counter):
+def check_xss(host, page, method, params, hidden_param_name, hidden_param_value, form_counter, _url):
     global xss_attacks
     global DEBUG
-    if page.find("http://") == 0:
+    if page.find("http://") == 0 or page.find("https://") == 0:
         furl = page
     else:
-        furl = "http://" + host + "/" + page
+        if _url.find("https://") == 0:
+            furl = "https://" + host + "/" + page
+        else:
+            furl = "http://" + host + "/" + page
+
     print "[+] XSS check for: " + furl
     if DEBUG == 1:
         print "Params: "
@@ -66,7 +71,7 @@ def check_xss(host, page, method, params, hidden_param_name, hidden_param_value,
             return
     return
 
-def scan_for_forms(fname, host):
+def scan_for_forms(fname, host, url):
     print "[+] Start scan"
     rtype=""
     has_form=0
@@ -84,7 +89,7 @@ def scan_for_forms(fname, host):
                 if line.find("</form>") >=0:
                     has_form=0
                     if len(page) > 0 and len(params) > 0:
-                        check_xss(host, page, rtype, params, hidden_param_name, hidden_param_value, form_counter)
+                        check_xss(host, page, rtype, params, hidden_param_name, hidden_param_value, form_counter, url)
                         params=[]
                         hidden_param_name=[]
                         hidden_param_value=[]
@@ -144,7 +149,7 @@ if url.find("http") != 0:
     print "[-] Invalid target"
     exit()
 
-m=re.match(r'http:\/\/([^\/]+)', url, re.I|re.M)
+m=re.match(r'(http|https):\/\/([^\/]+)', url, re.I|re.M)
 if m:
     host = m.group(1)
 else:
@@ -161,7 +166,7 @@ try:
     with open("page.txt", "w") as f:
         f.write(s)
 
-    scan_for_forms("page.txt", host)
+    scan_for_forms("page.txt", host, url)
 
 except Exception, e:
     print "[-] Main(): Error " + str(e)
