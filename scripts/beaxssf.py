@@ -151,7 +151,7 @@ if url.find("http") != 0:
 
 m=re.match(r'(http|https):\/\/([^\/]+)', url, re.I|re.M)
 if m:
-    host = m.group(1)
+    host = m.group(2)
 else:
     print "[-] Can't get host information"
     exit()
