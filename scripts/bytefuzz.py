@@ -1,6 +1,6 @@
 #!/usr/bin/python
 ###############################################
-#   Static Byte FUZZer			              #
+#   Static Byte FUZZer			      #
 #   Author: malwrforensics                    #
 #   Conact: malwr at malwrforensics dot com   #
 ###############################################
