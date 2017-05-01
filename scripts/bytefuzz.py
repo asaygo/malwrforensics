@@ -10,7 +10,7 @@ import subprocess
 import time
 import sys
 
-JUST_GENERATE	= 1     #just generate the files
+JUST_GENERATE	= 0     #just generate the files
 IS_CMDLN        = 0     #don't try to kill the target app as it exited
 DEBUG           = 0     #show the command line arguments (for debugging purposes)
 TIMEOUT         = 1     #no of seconds to wait for the target program to load

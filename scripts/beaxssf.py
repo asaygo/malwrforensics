@@ -5,7 +5,6 @@
 #   Contact: malwr at malwrforensics dot com  #
 ###############################################
 
-
 import sys
 import os
 import requests
@@ -167,7 +166,7 @@ try:
         f.write(s)
 
     scan_for_forms("page.txt", host, url)
-
+    os.remove("page.txt")
 except Exception, e:
     print "[-] Main(): Error " + str(e)
 
