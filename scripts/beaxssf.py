@@ -15,7 +15,7 @@ DEBUG = 0
 xss_attacks = [ "<script>alert(1);</script>", "<img src=x onerror=prompt(/test/)>",
                 "\"><script>alert(1);</script><div id=\"x", "</script><script>alert(1);</script>",
                 "</title><script>alert(1);</script>", "<body background=\"javascript:alert(1)\">",
-                "<img src=malwrforensics.jpg onerror='alert(1)'></img>"]
+                "<img src=test123456.jpg onerror=alert(1)>"]
 
 def check_xss(host, page, method, params, hidden_param_name, hidden_param_value, form_counter, _url):
     global xss_attacks

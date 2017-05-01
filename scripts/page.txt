@@ -1,2097 +1,3609 @@
+<!DOCTYPE html>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
-  "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html lang="en">
 
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#" xml:lang="en" version="XHTML+RDFa 1.0" dir="ltr">
+<head>
 
+	<title>
+Rudy Project Sunglasses, Helmets and Goggles - Leader in Cycling Sunglasses, Shooting Sunglasses, Running Sunglasses, Golf Sunglasses and Prescription Sport Sunglasses</title>
 
-<head profile="http://www.w3.org/1999/xhtml/vocab">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta charset="utf-8">
 
-<link rel="shortcut icon" href="https://www.homepower.com/sites/default/files/favicon.ico" type="image/vnd.microsoft.icon" />
+	<meta name="robots" content="index, follow">
 
-<meta name="Generator" content="Drupal 7 (http://drupal.org)" />
+	<meta name="keywords" content="Rudy Project, cycling sunglasses, golf sunglasses, running sunglasses, biking sunglasses, shooting glasses, cycling helmets">
 
-  <meta name="viewport" content="width=990" />
+	<meta name="description" content="e-RUDY.com - Rudy Project's Official Online Store.  Rudy Project Cycling Sunglasses, Golf Sunglasses, Running Sunglasses, Cycling Helmets and Prescription Sport Sunglasses.">
 
-  <meta property="og:image" content="http://homepower.dev.cfdv.net/sites/all/themes/hpower/images/hp-meta-logo.jpg"/>
+	<meta name="author" content="Rudy Project North America">
 
-  <link rel="image_src" href="http://homepower.dev.cfdv.net/sites/all/themes/hpower/images/hp-meta-logo.jpg" / >
+	<!--- Pinterest Domain Verification ---->
 
+	<meta name="p:domain_verify" content="827bcbf4dde8d5bef5349a9554733772"/>
 
-  <title>
-Renewable Energy &amp; Efficiency Technologies | Home Power Magazine</title>
-
-      <meta name="description" content="Independently published since 1987, Home Power magazine is the premier information resource for small-scale renewable energy and energy efficiency technologies." />
-
-    <style type="text/css" media="all">
-
-@import url("https://www.homepower.com/modules/system/system.base.css?oolyb9");
-@import url("https://www.homepower.com/modules/system/system.menus.css?oolyb9");
-@import url("https://www.homepower.com/modules/system/system.messages.css?oolyb9");
-@import url("https://www.homepower.com/modules/system/system.theme.css?oolyb9");
-</style>
-
-<style type="text/css" media="screen">
-
-@import url("https://www.homepower.com/sites/all/modules/views_slideshow/views_slideshow.css?oolyb9");
-</style>
-
-<style type="text/css" media="all">
-
-@import url("https://www.homepower.com/sites/all/modules/comment_notify/comment_notify.css?oolyb9");
-@import url("https://www.homepower.com/modules/comment/comment.css?oolyb9");
-@import url("https://www.homepower.com/sites/all/modules/date/date_api/date.css?oolyb9");
-@import url("https://www.homepower.com/sites/all/modules/date/date_popup/themes/datepicker.1.7.css?oolyb9");
-@import url("https://www.homepower.com/modules/field/theme/field.css?oolyb9");
-@import url("https://www.homepower.com/sites/all/modules/logintoboggan/logintoboggan.css?oolyb9");
-@import url("https://www.homepower.com/modules/node/node.css?oolyb9");
-@import url("https://www.homepower.com/modules/search/search.css?oolyb9");
-@import url("https://www.homepower.com/modules/user/user.css?oolyb9");
-@import url("https://www.homepower.com/modules/forum/forum.css?oolyb9");
-@import url("https://www.homepower.com/sites/all/modules/views/css/views.css?oolyb9");
-</style>
-
-<style type="text/css" media="all">
-
-@import url("https://www.homepower.com/sites/all/modules/colorbox/styles/default/colorbox_style.css?oolyb9");
-@import url("https://www.homepower.com/sites/all/modules/ctools/css/ctools.css?oolyb9");
-@import url("https://www.homepower.com/sites/all/libraries/cluetip/jquery.cluetip.css?oolyb9");
-@import url("https://www.homepower.com/sites/all/modules/views_slideshow/contrib/views_slideshow_cycle/views_slideshow_cycle.css?oolyb9");
-@import url("https://www.homepower.com/sites/all/modules/quicktabs/css/quicktabs.css?oolyb9");
-@import url("https://www.homepower.com/sites/all/modules/fancy_login/css/fancy_login.css?oolyb9");
-</style>
-
-<style type="text/css" media="all">
-
-@import url("https://www.homepower.com/sites/all/themes/hpower/css/layout.css?oolyb9");
-@import url("https://www.homepower.com/sites/all/themes/hpower/css/style.css?oolyb9");
-@import url("https://www.homepower.com/sites/all/themes/hpower/css/components.css?oolyb9");
-@import url("https://www.homepower.com/sites/all/themes/hpower/css/section-colors.css?oolyb9");
-</style>
-
-<style type="text/css" media="print">
-
-@import url("https://www.homepower.com/sites/all/themes/hpower/css/print.css?oolyb9");
-</style>
+	<!--- /End Pinterest Domain Verification ---->
 
 
-<!--[if lte IE 9]>
+	<!--- Favicons Courtesy http://realfavicongenerator.net/ ---->
 
-<link type="text/css" rel="stylesheet" href="https://www.homepower.com/sites/all/themes/hpower/css/ie-lte-9.css?oolyb9" media="all" />
+	<link rel="shortcut icon" href="/en/img/theme/icons/compressed/favicon.ico">
 
-<![endif]-->
+	<link rel="apple-touch-icon" sizes="57x57" href="/en/img/theme/icons/compressed/apple-touch-icon-57x57.png">
+
+	<link rel="apple-touch-icon" sizes="114x114" href="/en/img/theme/icons/compressed/apple-touch-icon-114x114.png">
+
+	<link rel="apple-touch-icon" sizes="72x72" href="/en/img/theme/icons/compressed/apple-touch-icon-72x72.png">
+
+	<link rel="apple-touch-icon" sizes="144x144" href="/en/img/theme/icons/compressed/apple-touch-icon-144x144.png">
+
+	<link rel="apple-touch-icon" sizes="60x60" href="/en/img/theme/icons/compressed/apple-touch-icon-60x60.png">
+
+	<link rel="apple-touch-icon" sizes="120x120" href="/en/img/theme/icons/compressed/apple-touch-icon-120x120.png">
+
+	<link rel="apple-touch-icon" sizes="76x76" href="/en/img/theme/icons/compressed/apple-touch-icon-76x76.png">
+
+	<link rel="apple-touch-icon" sizes="152x152" href="/en/img/theme/icons/compressed/apple-touch-icon-152x152.png">
+
+	<link rel="icon" type="image/png" href="/en/img/theme/icons/compressed/favicon-196x196.png" sizes="196x196">
+
+	<link rel="icon" type="image/png" href="/en/img/theme/icons/compressed/favicon-160x160.png" sizes="160x160">
+
+	<link rel="icon" type="image/png" href="/en/img/theme/icons/compressed/favicon-96x96.png" sizes="96x96">
+
+	<link rel="icon" type="image/png" href="/en/img/theme/icons/compressed/favicon-32x32.png" sizes="32x32">
+
+	<link rel="icon" type="image/png" href="/en/img/theme/icons/compressed/favicon-16x16.png" sizes="16x16">
+
+	<meta name="msapplication-TileColor" content="#cc3300">
+
+	<meta name="msapplication-TileImage" content="/en/img/theme/icons/compressed/mstile-144x144.png">
+
+	<meta name="msapplication-square70x70logo" content="/en/img/theme/icons/compressed/mstile-70x70.png">
+
+	<meta name="msapplication-square144x144logo" content="/en/img/theme/icons/compressed/mstile-144x144.png">
+
+	<meta name="msapplication-square150x150logo" content="/en/img/theme/icons/compressed/mstile-150x150.png">
+
+	<meta name="msapplication-square310x310logo" content="/en/img/theme/icons/compressed/mstile-310x310.png">
+
+	<meta name="msapplication-wide310x150logo" content="/en/img/theme/icons/compressed/mstile-310x150.png">
+
+	<!--- /End Favicons ---->
 
 
-<!--[if lte IE 8]>
+	<link rel="stylesheet" id="bootstrap-css" type="text/css" href="/en/css/bootstrap/bootstrap.min.css" />
+	<link rel="stylesheet" id="bootstrap-responsive-css" type="text/css" href="/en/css/bootstrap/bootstrap-responsive.min.css" />
+	<link rel="stylesheet" id="font-awesome-css" type="text/css" href="/en/css/font-awesome/font-awesome3.2.1/font-awesome.min.css" />
+	<link rel="stylesheet" id="rudy-theme-css" type="text/css" href="/en/css/rudy-theme.min.css" />
+	<link rel="stylesheet" id="rudy-theme-media-css" type="text/css" href="/en/css/rudy-theme-media.min.css" />
+	<!--[if IE 9]>
 
-<link type="text/css" rel="stylesheet" href="https://www.homepower.com/sites/all/themes/hpower/css/ie-lte-8.css?oolyb9" media="all" />
+	<link rel="stylesheet" id="rudy-theme-ie9-css" type="text/css" href="/en/css/rudy-theme-ie9.css" />
+	<![endif]-->
 
-<![endif]-->
+	<!--[if IE 8]>
+
+	<link rel="stylesheet" id="rudy-theme-ie8-css" type="text/css" href="/en/css/rudy-theme-ie8.css" />
+	<![endif]-->
+
+	<!--[if IE 7]>
+
+	<link rel="stylesheet" id="font-awesome-ie7-css" type="text/css" href="/en/css/font-awesome/font-awesome3.2.1/font-awesome-ie7.min.css" />
+	<link rel="stylesheet" id="rudy-theme-ie7-css" type="text/css" href="/en/css/rudy-theme-ie7.css" />
+	<![endif]-->
 
 
-<!--[if lte IE 7]>
 
-<link type="text/css" rel="stylesheet" href="https://www.homepower.com/sites/all/themes/hpower/css/ie-lte-7.css?oolyb9" media="all" />
+	<link rel="stylesheet" id="fancybox2-css" type="text/css" href="/en/css/fancybox2/jquery.fancybox.min.css" />
+	<script>
 
-<![endif]-->
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
+		ga('create', 'UA-2558506-1', 'auto');
+		ga('require', 'displayfeatures');
+		ga('send', 'pageview');
+	</script>
 
-<!--[if IE 6]>
+	<!-- Facebook Pixel Code -->
 
-<link type="text/css" rel="stylesheet" href="https://www.homepower.com/sites/all/themes/hpower/css/ie6.css?oolyb9" media="all" />
+	<script>
 
-<![endif]-->
+	!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+	n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+	n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+	t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+	document,'script','//connect.facebook.net/en_US/fbevents.js');
 
-  <script type="text/javascript" src="https://www.homepower.com/misc/jquery.js?v=1.4.4">
+	fbq('init', '1221623727860703');
+	fbq('track', "PageView");</script>
+
+	<noscript>
+<img height="1" width="1" style="display:none"
+	src="https://www.facebook.com/tr?id=1221623727860703&ev=PageView&noscript=1"
+	/>
+</noscript>
+
+	<!-- End Facebook Pixel Code -->
+
+			<link rel="stylesheet" type="text/css" id="home-css" href="/en/css/home/home.min.css" />
+
+		<link rel="stylesheet" type="text/css" id="zopim-css" href="/en/css/components/zopim/zopim.min.css" />
+
+		<link rel="stylesheet" type="text/css" id="scoop-subscription-css" href="/en/css/components/scoopsubscription/scoopsubscription.min.css" />
+
+		<link rel="stylesheet" type="text/css" id="promotion-mast-css" href="/en/css/components/promotionmast/promotionmast.min.css" />
+
+		<link rel="stylesheet" type="text/css" id="promotion-carousel-css" href="/en/css/components/promotioncarousel/promotioncarousel.css" />
+
+			<script type="text/javascript" src="/en/js/powerreviews/full.js">
 </script>
-
-<script type="text/javascript" src="https://www.homepower.com/misc/jquery.once.js?v=1.2">
-</script>
-
-<script type="text/javascript" src="https://www.homepower.com/misc/drupal.js?oolyb9">
-</script>
-
-<script type="text/javascript" src="https://www.homepower.com/sites/all/libraries/cluetip/jquery.cluetip.js?v=1.0.7">
-</script>
-
-<script type="text/javascript" src="https://www.homepower.com/sites/all/libraries/cluetip/lib/jquery.hoverIntent.js?v=1.0.7">
-</script>
-
-<script type="text/javascript" src="https://www.homepower.com/sites/all/libraries/cluetip/lib/jquery.bgiframe.min.js?v=1.0.7">
-</script>
-
-<script type="text/javascript" src="https://www.homepower.com/sites/all/modules/views_slideshow/js/views_slideshow.js?v=1.0">
-</script>
-
-<script type="text/javascript" src="https://www.homepower.com/misc/jquery.cookie.js?v=1.0">
-</script>
-
-<script type="text/javascript" src="https://www.homepower.com/misc/jquery.form.js?v=2.52">
-</script>
-
-<script type="text/javascript" src="https://www.homepower.com/sites/all/libraries/curvycorners/jquery.curvycorners.min.js?v=2.1.1">
-</script>
-
-<script type="text/javascript" src="https://www.homepower.com/misc/ajax.js?v=7.54">
-</script>
-
-<script type="text/javascript" src="https://www.homepower.com/sites/all/modules/hpower_glossary/hp_gloss.js?oolyb9">
-</script>
-
-<script type="text/javascript" src="https://www.homepower.com/misc/progress.js?oolyb9">
-</script>
-
-<script type="text/javascript" src="https://partner.googleadservices.com/gampad/google_service.js">
-</script>
-
-<script type="text/javascript" src="https://www.homepower.com/sites/all/modules/colorbox/js/colorbox.js?oolyb9">
-</script>
-
-<script type="text/javascript" src="https://www.homepower.com/sites/all/modules/colorbox/styles/default/colorbox_style.js?oolyb9">
-</script>
-
-<script type="text/javascript" src="https://www.homepower.com/sites/all/modules/colorbox/js/colorbox_load.js?oolyb9">
-</script>
-
-<script type="text/javascript" src="https://www.homepower.com/sites/all/libraries/jquery.cycle/jquery.cycle.all.min.js?oolyb9">
-</script>
-
-<script type="text/javascript" src="https://www.homepower.com/sites/all/modules/views_slideshow/contrib/views_slideshow_cycle/js/views_slideshow_cycle.js?oolyb9">
-</script>
-
-<script type="text/javascript" src="https://www.homepower.com/sites/all/modules/views/js/base.js?oolyb9">
-</script>
-
-<script type="text/javascript" src="https://www.homepower.com/sites/all/modules/views/js/ajax_view.js?oolyb9">
-</script>
-
-<script type="text/javascript" src="https://www.homepower.com/sites/all/modules/google_analytics/googleanalytics.js?oolyb9">
-</script>
-
-<script type="text/javascript">
-
-<!--//-->
-<![CDATA[//>
-<!--
-(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create", "UA-2739813-1", {"cookieDomain":".homepower.com"});ga("send", "pageview");
-//-->
-<!]]>
-
-</script>
-
-<script type="text/javascript" src="https://www.homepower.com/sites/all/modules/quicktabs/js/quicktabs.js?oolyb9">
-</script>
-
-<script type="text/javascript" src="https://www.homepower.com/sites/all/modules/fancy_login/js/fancy_login.js?oolyb9">
-</script>
-
-<script type="text/javascript" src="https://www.homepower.com/sites/all/themes/hpower/js/jquery.cycle.min.js?oolyb9">
-</script>
-
-<script type="text/javascript" src="https://www.homepower.com/sites/all/themes/hpower/js/jquery.waitforimages.js?oolyb9">
-</script>
-
-<script type="text/javascript" src="https://www.homepower.com/sites/all/themes/hpower/js/jquery.hp-gallery.js?oolyb9">
-</script>
-
-<script type="text/javascript" src="https://www.homepower.com/sites/all/themes/hpower/js/jquery.mousewheel.js?oolyb9">
-</script>
-
-<script type="text/javascript" src="https://www.homepower.com/sites/all/themes/hpower/js/jquery.jscrollpane.min.js?oolyb9">
-</script>
-
-<script type="text/javascript" src="https://www.homepower.com/sites/all/themes/hpower/js/jquery.validate.min.js?oolyb9">
-</script>
-
-<script type="text/javascript" src="https://www.homepower.com/sites/all/themes/hpower/js/jquery.replacetext.js?oolyb9">
-</script>
-
-<script type="text/javascript" src="https://www.homepower.com/sites/all/themes/hpower/js/script.js?oolyb9">
-</script>
-
-<script type="text/javascript" src="https://www.homepower.com/sites/all/themes/hpower/js/google-ad.js?oolyb9">
-</script>
-
-<script type="text/javascript" src="https://www.homepower.com/sites/all/themes/hpower/js/google-ad-2.js?oolyb9">
-</script>
-
-<script type="text/javascript" src="https://www.homepower.com/sites/all/themes/hpower/js/google-ad-3.js?oolyb9">
-</script>
-
-<script type="text/javascript">
-
-<!--//-->
-<![CDATA[//>
-<!--
-jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"hpower","theme_token":"Qd64-tdjEWf9aLhneMVLHtIMNbdx9Nbsarlor7f8l34","js":{"misc\/jquery.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/libraries\/cluetip\/jquery.cluetip.js":1,"sites\/all\/libraries\/cluetip\/lib\/jquery.hoverIntent.js":1,"sites\/all\/libraries\/cluetip\/lib\/jquery.bgiframe.min.js":1,"sites\/all\/modules\/views_slideshow\/js\/views_slideshow.js":1,"misc\/jquery.cookie.js":1,"misc\/jquery.form.js":1,"sites\/all\/libraries\/curvycorners\/jquery.curvycorners.min.js":1,"misc\/ajax.js":1,"sites\/all\/modules\/hpower_glossary\/hp_gloss.js":1,"misc\/progress.js":1,"https:\/\/partner.googleadservices.com\/gampad\/google_service.js":1,"sites\/all\/modules\/colorbox\/js\/colorbox.js":1,"sites\/all\/modules\/colorbox\/styles\/default\/colorbox_style.js":1,"sites\/all\/modules\/colorbox\/js\/colorbox_load.js":1,"sites\/all\/libraries\/jquery.cycle\/jquery.cycle.all.min.js":1,"sites\/all\/modules\/views_slideshow\/contrib\/views_slideshow_cycle\/js\/views_slideshow_cycle.js":1,"sites\/all\/modules\/views\/js\/base.js":1,"sites\/all\/modules\/views\/js\/ajax_view.js":1,"sites\/all\/modules\/google_analytics\/googleanalytics.js":1,"0":1,"sites\/all\/modules\/quicktabs\/js\/quicktabs.js":1,"sites\/all\/modules\/fancy_login\/js\/fancy_login.js":1,"sites\/all\/themes\/hpower\/js\/jquery.cycle.min.js":1,"sites\/all\/themes\/hpower\/js\/jquery.waitforimages.js":1,"sites\/all\/themes\/hpower\/js\/jquery.hp-gallery.js":1,"sites\/all\/themes\/hpower\/js\/jquery.mousewheel.js":1,"sites\/all\/themes\/hpower\/js\/jquery.jscrollpane.min.js":1,"sites\/all\/themes\/hpower\/js\/jquery.validate.min.js":1,"sites\/all\/themes\/hpower\/js\/jquery.replacetext.js":1,"sites\/all\/themes\/hpower\/js\/script.js":1,"sites\/all\/themes\/hpower\/js\/google-ad.js":1,"sites\/all\/themes\/hpower\/js\/google-ad-2.js":1,"sites\/all\/themes\/hpower\/js\/google-ad-3.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"sites\/all\/modules\/views_slideshow\/views_slideshow.css":1,"sites\/all\/modules\/comment_notify\/comment_notify.css":1,"modules\/comment\/comment.css":1,"sites\/all\/modules\/date\/date_api\/date.css":1,"sites\/all\/modules\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"sites\/all\/modules\/logintoboggan\/logintoboggan.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"modules\/forum\/forum.css":1,"sites\/all\/modules\/views\/css\/views.css":1,"sites\/all\/modules\/colorbox\/styles\/default\/colorbox_style.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"sites\/all\/libraries\/cluetip\/jquery.cluetip.css":1,"sites\/all\/modules\/views_slideshow\/contrib\/views_slideshow_cycle\/views_slideshow_cycle.css":1,"sites\/all\/modules\/quicktabs\/css\/quicktabs.css":1,"sites\/all\/modules\/fancy_login\/css\/fancy_login.css":1,"sites\/all\/themes\/hpower\/css\/layout.css":1,"sites\/all\/themes\/hpower\/css\/style.css":1,"sites\/all\/themes\/hpower\/css\/components.css":1,"sites\/all\/themes\/hpower\/css\/section-colors.css":1,"sites\/all\/themes\/hpower\/css\/print.css":1,"sites\/all\/themes\/hpower\/css\/ie-lte-9.css":1,"sites\/all\/themes\/hpower\/css\/ie-lte-8.css":1,"sites\/all\/themes\/hpower\/css\/ie-lte-7.css":1,"sites\/all\/themes\/hpower\/css\/ie6.css":1}},"colorbox":{"opacity":"0.85","current":"{current} of {total}","previous":"\u00ab Prev","next":"Next \u00bb","close":"Close","maxWidth":"98%","maxHeight":"98%","fixed":true,"mobiledetect":true,"mobiledevicewidth":"480px"},"jcarousel":{"ajaxPath":"\/jcarousel\/ajax\/views"},"better_exposed_filters":{"views":{"print_cover_block":{"displays":{"block":{"filters":[]}}},"home_page_hero_nodequeue":{"displays":{"block":{"filters":[]}}},"home_page_features_nodequeue":{"displays":{"default":{"filters":[]}}},"user_account_info":{"displays":{"block_1":{"filters":[]},"default":{"filters":[]}}},"my_digital_issues":{"displays":{"block_2":{"filters":[]}}},"directory_listings_for_user":{"displays":{"block":{"filters":[]}}},"commerce_user_orders":{"displays":{"block_1":{"filters":[]}}},"comments_recent":{"displays":{"page":{"filters":[]}}}}},"viewsSlideshow":{"home_page_hero_nodequeue-block":{"methods":{"goToSlide":["viewsSlideshowPager","viewsSlideshowSlideCounter","viewsSlideshowCycle"],"nextSlide":["viewsSlideshowPager","viewsSlideshowSlideCounter","viewsSlideshowCycle"],"pause":["viewsSlideshowControls","viewsSlideshowCycle"],"play":["viewsSlideshowControls","viewsSlideshowCycle"],"previousSlide":["viewsSlideshowPager","viewsSlideshowSlideCounter","viewsSlideshowCycle"],"transitionBegin":["viewsSlideshowPager","viewsSlideshowSlideCounter"],"transitionEnd":[]},"paused":0}},"viewsSlideshowCycle":{"#views_slideshow_cycle_main_home_page_hero_nodequeue-block":{"num_divs":6,"id_prefix":"#views_slideshow_cycle_main_","div_prefix":"#views_slideshow_cycle_div_","vss_id":"home_page_hero_nodequeue-block","effect":"fade","transition_advanced":0,"timeout":5000,"speed":700,"delay":0,"sync":1,"random":0,"pause":1,"pause_on_click":0,"action_advanced":0,"start_paused":0,"remember_slide":0,"remember_slide_days":1,"pause_in_middle":0,"pause_when_hidden":0,"pause_when_hidden_type":"full","amount_allowed_visible":"","nowrap":0,"fixed_height":1,"items_per_slide":1,"wait_for_image_load":1,"wait_for_image_load_timeout":3000,"cleartype":0,"cleartypenobg":0,"advanced_options":"{}"}},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip","trackColorbox":1,"trackDomainMode":"1","trackCrossDomains":["homepower.com"]},"urlIsAjaxTrusted":{"\/":true,"\/system\/ajax":true,"\/node?destination=node":true},"quicktabs":{"qt_feat_pop_home":{"name":"feat_pop_home","tabs":[{"vid":"home_page_features_nodequeue","display":"default","args":"","view_path":"node","view_dom_id":1,"ajax_args":"","actual_args":[]}],"better_exposed_filters":{"views":{"home_page_features_nodequeue":{"displays":{"default":{"filters":[]}}}}}}},"ajax":{"edit-submit-1492843995":{"wrapper":"fancy_login_user_login_block_wrapper","callback":"fancy_login_user_login_block_ajax_callback","event":"mousedown","keypress":true,"prevent":"click","url":"\/system\/ajax","submit":{"_triggering_element_name":"op","_triggering_element_value":"Log in"}}},"fancyLogin":{"screenFadeColor":"black","screenFadeZIndex":"10","loginBoxBackgroundColor":"white","loginBoxTextColor":"black","loginBoxBorderColor":"black","loginBoxBorderWidth":"3px","loginBoxBorderStyle":"solid","loginPath":"user\/login","dimFadeSpeed":350,"boxFadeSpeed":350,"hideObjects":0,"disableRegistration":0}});
-//-->
-<!]]>
-
-</script>
-
 
 </head>
 
-<body class="html front not-logged-in one-sidebar sidebar-first page-node" >
+<body class="home index ">
 
+<div id="main" class="">
 
-  <div id="skip-link">
+	<div id="header" class="navbar font-oswald">
 
-    <a href="#main-menu" class="element-invisible element-focusable">
-Jump to Navigation</a>
+		<div class="promotion-mast text-center hidden-tablet hidden-phone">
 
-  </div>
+	<div class="row-fluid">
 
-    <div id="page-wrapper">
-<div id="page">
+		<div class="span2" data-cs-toggle="tooltip" title="Need Rx Sunglasses? Leader in Italian prescription sport eyewear.">
 
+			<a href="/en/products/filter/category/sunglasses/sub/rx-collection" title="Need Rx Glasses">
 
-  <div id="header">
-<div class="section clearfix">
+				<i class="icon-2x icon-custom-rx red">
+</i>
 
+				<p class="description">
+<b>
+Need Rx Glasses</b>
+</p>
 
-          <div id="name-and-slogan">
+			</a>
 
+		</div>
 
-                              <div id="site-name">
+		<div class="span2" data-cs-toggle="tooltip" title="Free Shipping To the US and Canada on select orders.">
 
-              <a href="/" title="Home" rel="home">
-<span>
-Home Power Magazine</span>
+			<a class="ship-info-box" href="/en/support/policies#shipping" title="Free Shipping">
+
+				<i class="icon-2x icon-truck">
+</i>
+
+				<p class="description">
+<b>
+Free 2 Way Shipping</b>
+</p>
+
+			</a>
+
+		</div>
+
+		<div class="span2" data-cs-toggle="tooltip" title="90 Day Returns, If you're not happy, Return It!">
+
+			<a class="90-day-info-box" href="/en/support/policies#returns" title="90 Day Returns">
+
+				<i class="icon-2x icon-mail-reply-all">
+</i>
+
+				<p class="description">
+<b>
+90 Day Returns</b>
+</p>
+
+			</a>
+
+		</div>
+
+		<div class="span2" data-cs-toggle="tooltip" title="Low Price Guarantee See it for a lower price, we'll match it.">
+
+			<a class="price-match-box" href="/en/support/pricematcher" title="Lowest Price Guaranteed">
+
+				<i class="icon-2x icon-dollar">
+</i>
+
+				<p class="description">
+<b>
+Low Price Guarantee</b>
+</p>
+
+			</a>
+
+		</div>
+
+		<div class="span2" data-cs-toggle="tooltip" title="Sale Items Save money, shop our Sale Items.">
+
+			<a href="/en/products/saleitems/description/asc" title="Shop Sale Items">
+
+				<i class="icon-2x icon-tags">
+</i>
+
+				<p class="description">
+<b>
+Shop Sale Items</b>
+</p>
+
+			</a>
+
+		</div>
+
+		<div class="span2" data-cs-toggle="tooltip" title="Deep discounts on last years products!">
+
+			<a href="/en/products/clearance" title="Shop Our Clearance Rack">
+
+				<i class="icon-2x icon-heart red">
+</i>
+
+				<p class="description">
+<b>
+Clearance Rack</b>
+</p>
+
+			</a>
+
+		</div>
+
+	</div>
+
+</div>
+
+		<div id="top-bar" class="container-fluid">
+
+	<div class="row-fluid">
+
+		<div id="mobile-nav" class="hidden-desktop span4">
+
+			<button type="button" class="btn btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
+
+				<span class="icon-bar">
+</span>
+
+				<span class="icon-bar">
+</span>
+
+				<span class="icon-bar">
+</span>
+
+			</button>
+
+		</div>
+
+		<div id="logo" class="span4">
+
+			<a class="brand" href="/en">
+<img src="/en/img/theme/e-rudy-logo.png" alt="e-Rudy.com">
 </a>
 
-            </div>
+		</div>
 
-                  
-      </div>
- <!-- /#name-and-slogan -->
+		<div class="span4 offset4 visible-desktop">
 
-    
-      <div class="region region-header">
+			<div class="row-fluid">
 
-    <div id="block-hpower-admin-loginlogout" class="block block-hpower-admin loginlogout-block">
+				<div class="span2">
 
+					<!-- <img src="/en/img/theme/sponsors/award-kona-small.png" alt="Rudy Project - the Preferred Helmet in KONA 5 Years in a Row!">
+ -->
 
-    <h2 class="element-invisible">
-<none>
-</h2>
+				</div>
 
-  
-  <div class="content">
+				<div id="search" class="span8">
 
-    <div class="loginlogout-links clearfix">
-<span class="loginlogout-link login-link">
-<a href="/user/login">
-Sign In</a>
-</span>
-<span class="loginlogout-link register-link">
-<a href="/user/register">
-Register</a>
-</span>
-</div>
-  </div>
+	<form id="search-form" class="search" method="POST" action="/en/search/results/">
 
-</div>
+		<div class="form-search">
 
-<div id="block-search-form" class="block block-search">
+			<input id="search-input" type="text" name="filter" value="" data-default-text="search..." class="input-text" autocomplete="on">
 
+			<button type="submit">
+<i class="icon-search icon-large">
+</i>
+</button>
 
-    
-  <div class="content">
+		</div>
 
-    <form action="/" method="post" id="search-block-form" accept-charset="UTF-8">
-<div>
-<div class="container-inline">
-
-      <h2 class="element-invisible">
-Search form</h2>
-
-    <div class="form-item form-type-textfield form-item-search-block-form">
-
-  <label class="element-invisible" for="edit-search-block-form--2">
-Article Search </label>
-
- <input title="Enter the terms you wish to search for." onblur="if (this.value == &#039;&#039;) {this.value = &#039;Article Search&#039;;}" onfocus="if (this.value == &#039;Article Search&#039;) {this.value = &#039;&#039;;}" type="text" id="edit-search-block-form--2" name="search_block_form" value="Article Search" size="40" maxlength="128" class="form-text" />
+	</form>
 
 </div>
+			</div>
 
-<div class="form-actions form-wrapper" id="edit-actions">
-<input type="submit" id="edit-submit" name="op" value="Search" class="form-submit" />
-</div>
-<input type="hidden" name="form_build_id" value="form-Z1btqCxhUBF258WS-QnuSHdN0qn22nIjQrQm8axGsnI" />
+		</div>
 
-<input type="hidden" name="form_id" value="search_block_form" />
+		<div class="span4 hidden-desktop secondary-nav">
 
-</div>
 
-</div>
-</form>
-  </div>
+			<a href="/en/cart/display">
+
+				<i class="icon-shopping-cart icon-2x">
+</i>
+<span class="hidden-phone">
+Cart </span>
+(<span class="num-items-wrapper">
+0</span>
+)
+			</a>
+
+
+			<a class="search slide in last" href="#footer-search">
+
+				<i class="icon-search icon-2x">
+</i>
+<span class="hidden-phone">
+Search</span>
+
+			</a>
+
+		</div>
+
+	</div>
 
 </div>
 
-<div id="block-block-16" class="block block-block directories-menu-block-top">
+<div id="nav" class="nav-collapse collapse">
 
+	<div class="container-fluid">
 
-    
-  <div class="content">
+		<div class="row-fluid">
 
-    <ul id="nav-directories">
-<li>
-<a href="https://www.homepower.com/" class="top-level">
-Directories</a>
+			<ul class="nav span9">
 
-<ul>
-<li>
-<a href="https://www.homepower.com/contractors">
-Contractors</a>
-</li>
+				<li id="fixed-logo" class="pull-left slidedown in">
 
-<li>
-<a href="https://www.homepower.com/events">
-Events &amp; Training</a>
-</li>
-
-<li class="last">
-<a href="https://www.homepower.com/experts-directory">
-Experts</a>
-</li>
-
-</ul>
-</li>
-
-</ul>
-  </div>
-
-</div>
-
-<div id="block-views-print-cover-block-block" class="block block-views print-cover-block">
-
-
-    
-  <div class="content">
-
-    <div class="view view-print-cover-block view-id-print_cover_block view-display-id-block view-dom-id-31ebf95d2de8d2ab2ee612228db04443">
-
-        
-  
-  
-      <div class="view-content">
-
-        <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
-
-      
-  <div class="views-field views-field-field-print-issue-coverart">
-        <div class="field-content">
-<a href="/subscribe-and-save?template=subscribe" target="_blank">
-<img src="https://www.homepower.com/sites/default/files/styles/print_cover_block/public/HomePower_178_Cover.jpg?itok=cS36UPPZ" width="194" height="260" alt="" />
+					<a class="" href="/en">
+<img src="/en/img/theme/e-rudy-logo-small.png" alt="e-Rudy.com">
 </a>
-</div>
-  </div>
-  </div>
 
-    </div>
+				</li>
 
-  
-  
-  
-  
-  
-  
-</div>
-  </div>
+				<li class="parent first ">
+<a href="/en/products/allsports">
+Shop By Sport</a>
 
-</div>
+				  <ul class="sub-menu visible-desktop">
 
-<div id="block-menu-menu-header-menu" class="block block-menu">
-
-
-    <h2 class="element-invisible">
-Header Menu</h2>
-
-  
-  <div class="content">
-
-    <ul class="menu clearfix">
-<li class="first leaf">
-<a href="/" title="" class="active">
-Home</a>
+						<li>
+<a href="/en/products/filter/sub/landing/sport/cycling">
+Cycling</a>
 </li>
 
-<li class="leaf">
-<a href="/about" title="">
-About Us</a>
+						<li>
+<a href="/en/products/filter/sub/landing/sport/mountain-biking">
+Mountain Biking</a>
 </li>
 
-<li class="leaf">
-<a href="/contact-us" title="">
-Contact Us</a>
+						<li>
+<a href="/en/products/filter/sub/landing/sport/running">
+Running</a>
 </li>
 
-<li class="leaf">
-<a href="https://www.facebook.com/HomePower" title="Like Us">
+						<li>
+<a href="/en/products/filter/sub/landing/sport/triathlon">
+Triathlon</a>
+</li>
+
+						<li>
+<a href="/en/products/filter/sub/landing/sport/shooting">
+Shooting</a>
+</li>
+
+						<li>
+<a href="/en/products/filter/sub/landing/sport/golfing">
+Golfing</a>
+</li>
+
+						<li>
+<a href="/en/products/filter/sub/landing/sport/volleyball">
+Volleyball</a>
+</li>
+
+						<li>
+<a href="/en/products/filter/sub/landing/sport/fishing">
+Fishing</a>
+</li>
+
+						<li>
+<a href="/en/products/filter/sub/landing/sport/baseball">
+Baseball</a>
+</li>
+
+						<li>
+<a href="/en/products/filter/sub/landing/sport/motorsports">
+Motorsports</a>
+</li>
+
+						<li>
+<a href="/en/products/filter/sub/landing/sport/inline-skate">
+Inline Skate</a>
+</li>
+
+						<li>
+<a href="/en/products/filter/sub/landing/sport/mountain-climbing">
+Mountain Climbing</a>
+</li>
+
+						<li>
+<a href="/en/products/filter/sub/landing/sport/tennis">
+Tennis</a>
+</li>
+
+						<li>
+<a href="/en/products/filter/sub/landing/sport/water-sports">
+Water Sports</a>
+</li>
+
+						<li>
+<a href="/en/products/filter/sub/landing/sport/winter-sports">
+Winter Sports</a>
+</li>
+
+						<li>
+<a href="/en/products/filter/sub/landing/sport/active-lifestyle">
+Active Lifestyle</a>
+</li>
+
+						<li>
+<a href="/en/products/filter/sub/landing/sport/rowing">
+Rowing</a>
+</li>
+
+				  </ul>
+
+				</li>
+
+			  <li class="parent">
+<a href="#">
+Products</a>
+
+				<ul class="sub-menu">
+
+					<li class="sub-menu-dropdown-link tier-dropdown-link">
+<a href="/en/products/filter/category/sunglasses">
+Sunglasses</a>
+
+						<ul class="sub-menu-dropdown">
+
+							<li>
+<a href="/en/products/filter/category/sunglasses">
+All Sunglasses</a>
+</li>
+
+							<li>
+<a href="/en/products/filter/category/sunglasses/sub/top-sellers">
+Top Sellers</a>
+</li>
+
+							<li>
+<a href="/en/products/filter/category/sunglasses/sub/new-products">
+Recent Arrivals</a>
+</li>
+
+							<li>
+<a href="/en/products/filter/category/sunglasses/sub/sport-collection">
+Sport Collection</a>
+</li>
+
+							<li>
+<a href="/en/products/filter/category/sunglasses/sub/casual-collection">
+Casual Collection</a>
+</li>
+
+							<li>
+<a href="/en/products/filter/category/sunglasses/sub/rx-collection">
+Rx Collection</a>
+</li>
+
+							<li>
+<a href="/en/products/readerslanding">
+Sport Reader Collection</a>
+</li>
+
+						</ul>
+
+					</li>
+
+					<li class="sub-menu-dropdown-link tier-dropdown-link">
+<a href="/en/products/filter/category/ophthalmics">
+Ophthalmics</a>
+
+						<ul class="sub-menu-dropdown">
+
+							<li>
+<a href="/en/products/filter/category/ophthalmics">
+All Ophthalmics</a>
+</li>
+
+							<li>
+<a href="/en/products/filter/category/ophthalmics/sub/new-products">
+Recent Arrivals</a>
+</li>
+
+						</ul>
+
+					</li>
+
+					<li class="sub-menu-dropdown-link tier-dropdown-link">
+<a href="/en/products/filter/category/helmets">
+Helmets</a>
+
+						<ul class="sub-menu-dropdown">
+
+							<li>
+<a href="/en/products/filter/category/helmets">
+All Helmets</a>
+</li>
+
+							<li>
+<a href="/en/products/filter/category/helmets/sub/top-sellers">
+Top Sellers</a>
+</li>
+
+							<li>
+<a href="/en/products/filter/category/helmets/sub/new-products">
+Recent Arrivals</a>
+</li>
+
+							<li>
+<a href="/en/products/filter/category/helmets/sub/road-and-mountain">
+Road &amp; Mountain</a>
+</li>
+
+							<li>
+<a href="/en/products/filter/category/helmets/sub/time-trial">
+Road Aero / Time Trial</a>
+</li>
+
+							<li>
+<a href="/en/products/filter/category/helmets/sub/snow">
+Snow</a>
+</li>
+
+							<li>
+<a href="/en/products/filter/category/helmets/sub/downhill">
+Downhill</a>
+</li>
+
+						</ul>
+
+					</li>
+
+					<li class="sub-menu-dropdown-link tier-dropdown-link">
+<a href="/en/products/filter/category/goggles">
+Goggles</a>
+
+						<ul class="sub-menu-dropdown">
+
+							<li>
+<a href="/en/products/filter/category/goggles">
+All Goggles</a>
+</li>
+
+							<li>
+<a href="/en/products/filter/category/goggles/sub/new-products">
+Recent Arrivals</a>
+</li>
+
+							<li>
+<a href="/en/products/filter/category/goggles/sub/snow">
+Snow</a>
+</li>
+
+							<li>
+<a href="/en/products/filter/category/goggles/sub/mx">
+MX</a>
+</li>
+
+							<li>
+<a href="/en/products/filter/category/goggles/sub/ski-visors">
+Ski Visors</a>
+</li>
+
+						</ul>
+
+					</li>
+
+					<li class="sub-menu-dropdown-link tier-dropdown-link">
+<a href="/en/products/filter/category/apparel">
+Apparel</a>
+
+						<ul class="sub-menu-dropdown">
+
+							<li>
+<a href="/en/products/filter/category/apparel">
+All Apparel</a>
+</li>
+
+							<li>
+<a href="/en/products/filter/category/apparel/sub/new-products">
+Recent Arrivals</a>
+</li>
+
+							<li>
+<a href="/en/products/filter/category/apparel/sub/cycling-apparel">
+Cycling Apparel</a>
+</li>
+
+							<li>
+<a href="/en/products/filter/category/apparel/sub/triathlon-apparel">
+Triathlon</a>
+</li>
+
+							<li>
+<a href="/en/products/filter/category/apparel/sub/t-shirts">
+T-Shirts</a>
+</li>
+
+							<li>
+<a href="/en/products/filter/category/apparel/sub/jackets">
+Jackets</a>
+</li>
+
+						</ul>
+
+					</li>
+
+					<li class="sub-menu-dropdown-link tier-dropdown-link">
+<a href="/en/products/filter/category/rudy-gear">
+Rudy Gear</a>
+
+						<ul class="sub-menu-dropdown">
+
+							<li>
+<a href="/en/products/filter/category/rudy-gear">
+All Rudy Gear</a>
+</li>
+
+							<li>
+<a href="/en/products/filter/category/rudy-gear/sub/new-products">
+Recent Arrivals</a>
+</li>
+
+							<li>
+<a href="/en/products/filter/category/rudy-gear/sub/watches">
+Watches</a>
+</li>
+
+							<li>
+<a href="/en/products/filter/category/rudy-gear/sub/bags-and-packs">
+Bags &amp; Packs</a>
+</li>
+
+							<li>
+<a href="/en/products/filter/category/rudy-gear/sub/hats-and-visors">
+Hats &amp; Visors</a>
+</li>
+
+						</ul>
+
+					</li>
+
+					<li class="sub-menu-dropdown-link">
+<a href="/en/products/partsandlenses">
+Parts &amp; Lenses</a>
+</li>
+
+					<li class="sub-menu-dropdown-link">
+<a href="/en/giftcards">
+Gift Cards</a>
+</li>
+
+				</ul>
+
+			</li>
+
+			<li class="parent">
+<a href="#">
+Special Offers</a>
+
+				<ul class="sub-menu">
+
+					<li class="sub-menu-dropdown-link">
+<a href="/en/products/saleitems/description/asc">
+Shop Sale Items</a>
+</li>
+
+					<li class="sub-menu-dropdown-link">
+<a href="/en/products/clearance">
+Shop Clearance Rack</a>
+</li>
+
+					<li class="sub-menu-dropdown-link">
+<a href="/en/freegeardeal">
+Free Gear Deal!</a>
+</li>
+
+					<li class="sub-menu-dropdown-link">
+<a href="/en/giftwithpurchase">
+Gift With Purchase</a>
+</li>
+
+				</ul>
+
+			</li>
+
+			<li class="parent">
+<a href="#">
+The Brand</a>
+
+				<ul class="sub-menu">
+
+					<li class="sub-menu-dropdown-link">
+<a href="/en/brand/whosrudy">
+Who's Rudy?</a>
+</li>
+
+					<li class="sub-menu-dropdown-link tier-dropdown-link">
+<a href="/en/brand/technology">
+Technology</a>
+
+						<ul class="sub-menu-dropdown">
+
+							<li>
+<a href="/en/brand/technology#sunglass">
+Sunglass Technology</a>
+</li>
+
+							<li>
+<a href="/en/brand/technology#helmet">
+Helmet Technology</a>
+</li>
+
+							<li>
+<a href="/en/brand/technology#goggle">
+Goggle Technology</a>
+</li>
+
+							<li>
+<a href="/en/brand/technology#lens">
+Lens Technology</a>
+</li>
+
+						</ul>
+
+					</li>
+
+					<li class="sub-menu-dropdown-link tier-dropdown-link">
+<a href="#">
+Media</a>
+
+						<ul class="sub-menu-dropdown">
+
+							<li>
+<a href="/en/media/coolvideos">
+Cool Videos</a>
+</li>
+
+							<li>
+<a href="http://www.rudyprojectusa.com/press/">
+Rudy Press</a>
+</li>
+
+						</ul>
+
+					</li>
+
+					<li class="sub-menu-dropdown-link tier-dropdown-link">
+<a href="#">
+Socialize</a>
+
+						<ul class="sub-menu-dropdown">
+
+							<li>
+<a href="http://www.facebook.com/RudyProjectNA" target="_blank">
 Facebook</a>
 </li>
 
-<li class="last leaf">
-<a href="https://twitter.com/HomePowerMag" title="Follow Us">
+							<li>
+<a href="http://twitter.com/RudyProjectNA" target="_blank">
 Twitter</a>
 </li>
 
-</ul>
-  </div>
-
-</div>
-
-<div id="block-block-2" class="block block-block header-banner-block ad-block">
-
-
-    
-  <div class="content">
-
-    <!--smart_paging_filter-->
-<p>
-<script type="text/javascript">
-
-<!--//-->
-<![CDATA[// >
-<!--
-
-  GA_googleFillSlot("HPLeaderboard728x90");
-
-//-->
-<!]]>
-
-</script>
-</p>
-
-<p>
-Advertisement</p>
-
-  </div>
-
-</div>
-
-  </div>
-
-
-          <div id="main-menu" class="navigation">
-
-        <h2 class="element-invisible">
-Main menu</h2>
-<ul id="main-menu-links" class="links clearfix">
-<li class="menu-1799 first">
-<a href="/solar-electricity" title="Solar Electricity">
-Solar Electricity</a>
+							<li>
+<a href="http://www.youtube.com/user/rudyprojectna" target="_blank">
+Youtube</a>
 </li>
 
-<li class="menu-1804">
-<a href="/solar-water-heating" title="Solar Water Heating">
-Solar Water Heating</a>
+							<li>
+<a href="http://www.pinterest.com/rudyprojectna/" target="_blank">
+Pinterest</a>
 </li>
 
-<li class="menu-1810">
-<a href="/wind-power" title="Wind Power">
-Wind Power</a>
+						</ul>
+
+					</li>
+
+				</ul>
+
+			</li>
+
+			<li class="parent">
+<a href="#">
+Support</a>
+
+			  <ul class="sub-menu">
+
+				<li class="sub-menu-dropdown-link tier-dropdown-link">
+<a href="/en/support/warranties">
+Warranties</a>
+
+					<ul class="sub-menu-dropdown">
+
+						<li>
+<a href="/en/support/warranties#sunglasses">
+Sunglass Warranty</a>
 </li>
 
-<li class="menu-1815">
-<a href="/microhydro-power" title="Microhydro Power">
-Microhydro Power</a>
+						<li>
+<a href="/en/support/warranties#helmets">
+Helmet Warranty</a>
 </li>
 
-<li class="menu-1820">
-<a href="/home-efficiency" title="Home Efficiency">
-Home Efficiency</a>
+						<li>
+<a href="/en/support/warranties#goggles">
+Goggle Warranty</a>
 </li>
 
-<li class="menu-1826 last">
-<a href="/vehicles" title="Vehicles">
-Vehicles</a>
+						<li>
+<a href="/en/support/warranties#lenses">
+Lens Warranty</a>
 </li>
 
-</ul>
-      </div>
- <!-- /#main-menu -->
+					</ul>
 
-    
-  </div>
-</div>
- <!-- /.section, /#header -->
+				</li>
 
+				<li class="sub-menu-dropdown-link tier-dropdown-link">
+<a href="/en/support/policies">
+Policies</a>
 
-  
-  <div id="main-wrapper" class="clearfix">
-<div id="main" class="clearfix">
+					<ul class="sub-menu-dropdown">
 
-    
-    <div id="content-area" class="column">
-<div class="content-area-section section">
-
-      
-      <div id="content" class="column">
-<div class="content-section section">
-
-        <a id="main-content">
-</a>
-
-                          <h1 class="title" id="page-title">
-
-            Welcome to Home Power Magazine          </h1>
-
-                        
-                                  <div class="region region-content">
-
-    <div id="block-views-home-page-hero-nodequeue-block" class="block block-views">
-
-
-    
-  <div class="content">
-
-    <div class="view view-home-page-hero-nodequeue view-id-home_page_hero_nodequeue view-display-id-block landing-hero-block hero view-dom-id-18f2dbc0dbd07046a6794014109cfcf6">
-
-        
-  
-  
-      <div class="view-content">
-
-      
-  <div class="skin-default">
-
-    
-    <div id="views_slideshow_cycle_main_home_page_hero_nodequeue-block" class="views_slideshow_cycle_main views_slideshow_main">
-<div id="views_slideshow_cycle_teaser_section_home_page_hero_nodequeue-block" class="views-slideshow-cycle-main-frame views_slideshow_cycle_teaser_section">
-
-  <div id="views_slideshow_cycle_div_home_page_hero_nodequeue-block_0" class="views-slideshow-cycle-main-frame-row views_slideshow_cycle_slide views_slideshow_slide views-row-1 views-row-odd views-subject-15">
-
-  <div class="views-slideshow-cycle-main-frame-row-item views-row views-row-0 views-row-odd views-row-first">
-
-    
-  <div class="views-field views-field-field-feature-hero-img">
-        <div class="field-content">
-<img src="https://www.homepower.com/sites/default/files/styles/featured_hero/public/articles/images/HP177-36a-Magwood.jpg?itok=NsPsovL1" alt="" />
-</div>
-  </div>
-  
-  <div class="hero-info">
-        <span>
-<div class="views-field-field-author-value">
-By: Chris Magwood</div>
-
-<div class="views-field-title">
-<a href="/articles/home-efficiency/design-construction/building-high-performance-low-carbon-house">
-<h2>
-Building a High-Performance, Low-Carbon House</h2>
-</a>
-</div>
-
-<div class="views-field-field-blurb-value">
-Mostly local, natural materials paired with solar heating and electricity systems helped create this low-carbon Canadian home.</div>
-</span>
-  </div>
-  
-  <div>
-        <div>
-<div class="views-subject views-subject-15">
-Home Efficiency</div>
-</div>
-  </div>
-</div>
-
-</div>
-
-<div id="views_slideshow_cycle_div_home_page_hero_nodequeue-block_1" class="views-slideshow-cycle-main-frame-row views_slideshow_cycle_slide views_slideshow_slide views-row-2 views_slideshow_cycle_hidden views-row-even views-subject-4">
-
-  <div class="views-slideshow-cycle-main-frame-row-item views-row views-row-1 views-row-even">
-
-    
-  <div class="views-field views-field-field-feature-hero-img">
-        <div class="field-content">
-<img src="https://www.homepower.com/sites/default/files/styles/featured_hero/public/articles/images/HP176-26a-VW.jpg?itok=87cX05eY" alt="" />
-</div>
-  </div>
-  
-  <div class="hero-info">
-        <span>
-<div class="views-field-field-author-value">
-By: Brett Belan</div>
-
-<div class="views-field-title">
-<a href="/articles/vehicles/all-electric/rolling-sunshine">
-<h2>
-Rolling on Sunshine</h2>
-</a>
-</div>
-
-<div class="views-field-field-blurb-value">
-Brett Belan and his family take to the road in their solar-powered electric Volkswagen bus.</div>
-</span>
-  </div>
-  
-  <div>
-        <div>
-<div class="views-subject views-subject-4">
-Vehicles</div>
-</div>
-  </div>
-</div>
-
-</div>
-
-<div id="views_slideshow_cycle_div_home_page_hero_nodequeue-block_2" class="views-slideshow-cycle-main-frame-row views_slideshow_cycle_slide views_slideshow_slide views-row-3 views_slideshow_cycle_hidden views-row-odd views-subject-13">
-
-  <div class="views-slideshow-cycle-main-frame-row-item views-row views-row-2 views-row-odd">
-
-    
-  <div class="views-field views-field-field-feature-hero-img">
-        <div class="field-content">
-<img src="https://www.homepower.com/sites/default/files/styles/featured_hero/public/articles/images/Evacuated_Tubes.jpg?itok=RxsfW37s" alt="" />
-</div>
-  </div>
-  
-  <div class="hero-info">
-        <span>
-<div class="views-field-field-author-value">
-By: Vaughan Woodruff, Ian Woofenden</div>
-
-<div class="views-field-title">
-<a href="/articles/solar-water-heating/domestic-hot-water/grid-water-heating">
-<h2>
-Off-Grid Water Heating</h2>
-</a>
-</div>
-
-<div class="views-field-field-blurb-value">
-What strategies do off-gridders use for making hot water?</div>
-</span>
-  </div>
-  
-  <div>
-        <div>
-<div class="views-subject views-subject-13">
-Solar Water Heating</div>
-</div>
-  </div>
-</div>
-
-</div>
-
-<div id="views_slideshow_cycle_div_home_page_hero_nodequeue-block_3" class="views-slideshow-cycle-main-frame-row views_slideshow_cycle_slide views_slideshow_slide views-row-4 views_slideshow_cycle_hidden views-row-even views-subject-3">
-
-  <div class="views-slideshow-cycle-main-frame-row-item views-row views-row-3 views-row-even">
-
-    
-  <div class="views-field views-field-field-feature-hero-img">
-        <div class="field-content">
-<img src="https://www.homepower.com/sites/default/files/styles/featured_hero/public/articles/images/174-28a-Hydro_0.jpg?itok=7fAJrM3q" alt="" />
-</div>
-  </div>
-  
-  <div class="hero-info">
-        <span>
-<div class="views-field-field-author-value">
-By: Hugh Piggott, Ian Woofenden</div>
-
-<div class="views-field-title">
-<a href="/articles/microhydro-power/equipment-products/microhydro-turbine-buyer%E2%80%99s-guide">
-<h2>
-Microhydro Turbine Buyer’s Guide</h2>
-</a>
-</div>
-
-<div class="views-field-field-blurb-value">
-Learn the basics of microhydro system design and determine which hydro turbine can maximize the energy harvest in your on-site stream.</div>
-</span>
-  </div>
-  
-  <div>
-        <div>
-<div class="views-subject views-subject-3">
-Microhydro Power</div>
-</div>
-  </div>
-</div>
-
-</div>
-
-<div id="views_slideshow_cycle_div_home_page_hero_nodequeue-block_4" class="views-slideshow-cycle-main-frame-row views_slideshow_cycle_slide views_slideshow_slide views-row-5 views_slideshow_cycle_hidden views-row-odd views-subject-1">
-
-  <div class="views-slideshow-cycle-main-frame-row-item views-row views-row-4 views-row-odd">
-
-    
-  <div class="views-field views-field-field-feature-hero-img">
-        <div class="field-content">
-<img src="https://www.homepower.com/sites/default/files/styles/featured_hero/public/articles/images/174-44a-VacationHome.jpg?itok=8GYJnd7_" alt="" />
-</div>
-  </div>
-  
-  <div class="hero-info">
-        <span>
-<div class="views-field-field-author-value">
-By: Dan Fink</div>
-
-<div class="views-field-title">
-<a href="/articles/solar-electricity/design-installation/power-systems-grid-vacation-cabins">
-<h2>
-Power Systems for Off-Grid Vacation Cabins</h2>
-</a>
-</div>
-
-<div class="views-field-field-blurb-value">
-Home Power writer and off-grid installer Dan Fink writes about PV systems for off-grid cabins.</div>
-</span>
-  </div>
-  
-  <div>
-        <div>
-<div class="views-subject views-subject-1">
-Solar Electricity</div>
-</div>
-  </div>
-</div>
-
-</div>
-
-<div id="views_slideshow_cycle_div_home_page_hero_nodequeue-block_5" class="views-slideshow-cycle-main-frame-row views_slideshow_cycle_slide views_slideshow_slide views-row-6 views_slideshow_cycle_hidden views-row-even views-subject-2">
-
-  <div class="views-slideshow-cycle-main-frame-row-item views-row views-row-5 views-row-even views-row-last">
-
-    
-  <div class="views-field views-field-field-feature-hero-img">
-        <div class="field-content">
-<img src="https://www.homepower.com/sites/default/files/styles/featured_hero/public/articles/images/Woof_lead.jpg?itok=EFforerw" alt="" />
-</div>
-  </div>
-  
-  <div class="hero-info">
-        <span>
-<div class="views-field-field-author-value">
-By: Ian Woofenden</div>
-
-<div class="views-field-title">
-<a href="/articles/wind-power/equipment-products/tower-climbing-tools-tips-pros">
-<h2>
-Tower Climbing Tools &amp; Tips From the Pros</h2>
-</a>
-</div>
-
-<div class="views-field-field-blurb-value">
-Wind experts provide their top tool choices and tower-climbing strategies.</div>
-</span>
-  </div>
-  
-  <div>
-        <div>
-<div class="views-subject views-subject-2">
-Wind Power</div>
-</div>
-  </div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-      </div>
-
-    </div>
-
-  
-  
-  
-  
-  
-  
-</div>
-  </div>
-
-</div>
-
-<div id="block-quicktabs-feat-pop-home" class="block block-quicktabs feat-pop-block replace-scroll">
-
-
-    
-  <div class="content">
-
-    <div  id="quicktabs-feat_pop_home" class="quicktabs-wrapper quicktabs-style-nostyle">
-<div class="item-list">
-<ul class="quicktabs-tabs quicktabs-style-nostyle">
-<li class="active first last">
-<a href="/node?qt-feat_pop_home=0#qt-feat_pop_home" id="quicktabs-tab-feat_pop_home-0" class="active">
-Featured Articles</a>
+						<li>
+<a href="/en/support/policies#shipping">
+Shipping Policy</a>
 </li>
 
-</ul>
-</div>
-<div id="quicktabs-container-feat_pop_home" class="quicktabs_main quicktabs-style-nostyle">
-<div  id="quicktabs-tabpage-feat_pop_home-0" class="quicktabs-tabpage ">
-<div class="view view-home-page-features-nodequeue view-id-home_page_features_nodequeue view-display-id-default feat-pop-articles view-dom-id-92171123e08149c0e12caa373fc9e7ff">
-
-        
-  
-  
-      <div class="view-content">
-
-      <div class="article-group">
-  <div class="views-row views-row-1 views-row-odd views-row-first clearfix no-image row-top">
-
-      
-  <div class="views-field views-field-field-subject">
-        <div class="field-content">
-
-<div class="views-subject views-subject-2">
-Wind Power</div>
-</div>
-  </div>
-  
-  <div class="views-field views-field-field-skill-level">
-        <div class="field-content skill">
-Intermediate</div>
-  </div>
-  
-  <div class="views-field views-field-field-feature-feat-img">
-        <div class="field-content">
-
-<img src="https://www.homepower.com/sites/default/files/styles/featured_thumb/public/articles/images/HP175-p30a-WindHybrid.jpg?itok=evWIkpeA" alt="" />
-</div>
-  </div>
-  
-  <div class="views-field views-field-title">
-        <span class="field-content">
-<a href="/articles/wind-power/project-profiles/merging-wind-pv-batteries-re-independence">
-Merging Wind, PV &amp; Batteries for RE &amp; Independence</a>
-</span>
-  </div>
-  
-  <div class="views-field views-field-field-article-blurb">
-        <div class="field-content">
-A battery-backup grid-tied hybrid system provides electricity for a central New York farmstead and for the homeowner’s electric vehicle.</div>
-  </div>
-  
-  <div class="views-field views-field-comment-count">
-        <span class="field-content">
-
-3 comments <span class="comment-timestamp">
-<em class="placeholder">
-2 weeks 6 days</em>
- ago</span>
- <span class="comment-name">
-by <a href="/users/bonneygaj6508" title="View user profile." class="username">
-bonneygaj@6508</a>
-</span>
-</span>
-  </div>
-  </div>
-
-
-    <div class="views-row views-row-2 views-row-even clearfix no-image row-top">
-
-      
-  <div class="views-field views-field-field-subject">
-        <div class="field-content">
-
-<div class="views-subject views-subject-4">
-Vehicles</div>
-</div>
-  </div>
-  
-  <div class="views-field views-field-field-skill-level">
-        <div class="field-content skill">
-Beginner</div>
-  </div>
-  
-  <div class="views-field views-field-field-feature-feat-img">
-        <div class="field-content">
-
-<img src="https://www.homepower.com/sites/default/files/styles/featured_thumb/public/articles/images/173-38a-Berman.jpg?itok=149YMTSo" alt="" />
-</div>
-  </div>
-  
-  <div class="views-field views-field-title">
-        <span class="field-content">
-<a href="/articles/vehicles/all-electric/use-your-electric-car-power-your-house">
-Use Your Electric Car To Power Your House</a>
-</span>
-  </div>
-  
-  <div class="views-field views-field-field-article-blurb">
-        <div class="field-content">
-Electrifying a home during a utility outage with an EV’s battery is now on the horizon.</div>
-  </div>
-  
-  <div class="views-field views-field-comment-count">
-        <span class="field-content">
-
-5 comments <span class="comment-timestamp">
-<em class="placeholder">
-9 months 2 weeks</em>
- ago</span>
- <span class="comment-name">
-by <a href="/users/rmichael-curran" title="View user profile." class="username">
-RMichael Curran</a>
-</span>
-</span>
-  </div>
-  </div>
-
-
-  </div>
-<div class="article-group">
-  <div class="views-row views-row-3 views-row-odd clearfix no-image row-top">
-
-      
-  <div class="views-field views-field-field-subject">
-        <div class="field-content">
-
-<div class="views-subject views-subject-13">
-Solar Water Heating</div>
-</div>
-  </div>
-  
-  <div class="views-field views-field-field-skill-level">
-        <div class="field-content skill">
-Intermediate</div>
-  </div>
-  
-  <div class="views-field views-field-field-feature-feat-img">
-        <div class="field-content">
-
-<img src="https://www.homepower.com/sites/default/files/styles/featured_thumb/public/articles/images/HP176-20a-AtE1HotTub.jpg?itok=UZxuAKx-" alt="" />
-</div>
-  </div>
-  
-  <div class="views-field views-field-title">
-        <span class="field-content">
-<a href="/articles/solar-water-heating/domestic-hot-water/ask-experts-designing-solar-heated-spa-tub">
-ASK THE EXPERTS: Designing a Solar-Heated Spa Tub</a>
-</span>
-  </div>
-  
-  <div class="views-field views-field-field-article-blurb">
-        <div class="field-content">
-A Home Power reader asks about a solar hot tub heater, and an expert responds.</div>
-  </div>
-  
-  <div class="views-field views-field-comment-count">
-        <span class="field-content">
-
-1 comment <span class="comment-timestamp">
-<em class="placeholder">
-2 weeks 3 days</em>
- ago</span>
- <span class="comment-name">
-by <a href="/users/fred-golden" title="View user profile." class="username">
-Fred Golden</a>
-</span>
-</span>
-  </div>
-  </div>
-
-
-    <div class="views-row views-row-4 views-row-even clearfix no-image row-top">
-
-      
-  <div class="views-field views-field-field-subject">
-        <div class="field-content">
-
-<div class="views-subject views-subject-1">
-Solar Electricity</div>
-</div>
-  </div>
-  
-  <div class="views-field views-field-field-skill-level">
-        <div class="field-content skill">
-Intermediate</div>
-  </div>
-  
-  <div class="views-field views-field-field-feature-feat-img">
-        <div class="field-content">
-
-<img src="https://www.homepower.com/sites/default/files/styles/featured_thumb/public/articles/images/HP175-p38aa-RapidShutdown.jpg?itok=D-4cJ5Vh" alt="" />
-</div>
-  </div>
-  
-  <div class="views-field views-field-title">
-        <span class="field-content">
-<a href="/articles/solar-electricity/equipment-products/pv-system-rapid-shutdown">
-PV System Rapid Shutdown</a>
-</span>
-  </div>
-  
-  <div class="views-field views-field-field-article-blurb">
-        <div class="field-content">
-Justine Sanchez writes about the 2014 National Electrical Code’s rapid shutdown requirements &amp; how they may affect future PV system installations.
-</div>
-  </div>
-  
-  <div class="views-field views-field-comment-count">
-        <span class="field-content">
-
-3 comments <span class="comment-timestamp">
-<em class="placeholder">
-6 months 3 weeks</em>
- ago</span>
- <span class="comment-name">
-by <a href="/users/edward-dijeau" title="View user profile." class="username">
-Edward-Dijeau</a>
-</span>
-</span>
-  </div>
-  </div>
-
-
-  </div>
-<div class="article-group">
-  <div class="views-row views-row-5 views-row-odd clearfix no-image row-top">
-
-      
-  <div class="views-field views-field-field-subject">
-        <div class="field-content">
-
-<div class="views-subject views-subject-15">
-Home Efficiency</div>
-</div>
-  </div>
-  
-  <div class="views-field views-field-field-skill-level">
-        <div class="field-content skill">
-Beginner</div>
-  </div>
-  
-  <div class="views-field views-field-field-feature-feat-img">
-        <div class="field-content">
-
-<img src="https://www.homepower.com/sites/default/files/styles/featured_thumb/public/articles/images/HP175-p46a-StrawBale.jpg?itok=gdjXuRwI" alt="" />
-</div>
-  </div>
-  
-  <div class="views-field views-field-title">
-        <span class="field-content">
-<a href="/articles/home-efficiency/design-construction/straw-bales-solar-energy-natural-partnership">
-Straw Bales &amp; Solar Energy -- A Natural Partnership</a>
-</span>
-  </div>
-  
-  <div class="views-field views-field-field-article-blurb">
-        <div class="field-content">
-Straw bale building with passive &amp; active solar strategies can help reduce a building’s carbon footprint, embodied energy, &amp; reliance on fossil fuel.</div>
-  </div>
-  
-  <div class="views-field views-field-comment-count">
-        <span class="field-content">
-
-<a href="/articles/home-efficiency/design-construction/straw-bales-solar-energy-natural-partnership#comments">
-Be the first to comment</a>
-.</span>
-  </div>
-  </div>
-
-
-    <div class="views-row views-row-6 views-row-even clearfix no-image row-top">
-
-      
-  <div class="views-field views-field-field-subject">
-        <div class="field-content">
-
-<div class="views-subject views-subject-1">
-Solar Electricity</div>
-</div>
-  </div>
-  
-  <div class="views-field views-field-field-skill-level">
-        <div class="field-content skill">
-Intermediate</div>
-  </div>
-  
-  <div class="views-field views-field-field-feature-feat-img">
-        <div class="field-content">
-
-<img src="https://www.homepower.com/sites/default/files/styles/featured_thumb/public/articles/images/172-55a-Finance.jpg?itok=WOQEOUzC" alt="" />
-</div>
-  </div>
-  
-  <div class="views-field views-field-title">
-        <span class="field-content">
-<a href="/articles/solar-electricity/project-profiles/leasing-vs-owning-pv-system">
-Leasing vs. Owning a PV System</a>
-</span>
-  </div>
-  
-  <div class="views-field views-field-field-article-blurb">
-        <div class="field-content">
-Owning or leasing—which is better for your bank account? This article looks at leasing, bank loans, PACE programs, and other possibilities.</div>
-  </div>
-  
-  <div class="views-field views-field-comment-count">
-        <span class="field-content">
-
-2 comments <span class="comment-timestamp">
-<em class="placeholder">
-11 months 3 weeks</em>
- ago</span>
- <span class="comment-name">
-by <a href="/users/markexactsolarcom" title="View user profile." class="username">
-Mark@exactsolar.com</a>
-</span>
-</span>
-  </div>
-  </div>
-
-
-  </div>
-<div class="article-group">
-  <div class="views-row views-row-7 views-row-odd clearfix no-image row-top">
-
-      
-  <div class="views-field views-field-field-subject">
-        <div class="field-content">
-
-<div class="views-subject views-subject-3">
-Microhydro Power</div>
-</div>
-  </div>
-  
-  <div class="views-field views-field-field-skill-level">
-        <div class="field-content skill">
-Intermediate</div>
-  </div>
-  
-  <div class="views-field views-field-field-feature-feat-img">
-        <div class="field-content">
-
-<img src="https://www.homepower.com/sites/default/files/styles/featured_thumb/public/articles/images/1_Soler511.fxd_.jpg?itok=4rpGZ4u0" alt="Chris Soler purging the lines" />
-</div>
-  </div>
-  
-  <div class="views-field views-field-title">
-        <span class="field-content">
-<a href="/articles/microhydro-power/design-installation/hydro-electric-evolution">
-Hydro-Electric Evolution</a>
-</span>
-  </div>
-  
-  <div class="views-field views-field-field-article-blurb">
-        <div class="field-content">
-Join Chris Soler for a frank discussion of microhydro systems—past, present, and future.</div>
-  </div>
-  
-  <div class="views-field views-field-comment-count">
-        <span class="field-content">
-
-9 comments <span class="comment-timestamp">
-<em class="placeholder">
-4 months 1 week</em>
- ago</span>
- <span class="comment-name">
-by <a href="/users/ian-woofenden" title="View user profile." class="username">
-Ian Woofenden</a>
-</span>
-</span>
-  </div>
-  </div>
-
-
-    <div class="views-row views-row-8 views-row-even clearfix no-image row-top">
-
-      
-  <div class="views-field views-field-field-subject">
-        <div class="field-content">
-
-<div class="views-subject views-subject-1">
-Solar Electricity</div>
-</div>
-  </div>
-  
-  <div class="views-field views-field-field-skill-level">
-        <div class="field-content skill">
-Intermediate</div>
-  </div>
-  
-  <div class="views-field views-field-field-feature-feat-img">
-        <div class="field-content">
-
-<img src="https://www.homepower.com/sites/default/files/styles/featured_thumb/public/articles/images/165-48a.jpg?itok=5H33aOcw" alt="The author&#039;s homestead" />
-</div>
-  </div>
-  
-  <div class="views-field views-field-title">
-        <span class="field-content">
-<a href="/articles/solar-electricity/design-installation/so-you-want-go-grid">
-So You Want to Go Off-Grid...</a>
-</span>
-  </div>
-  
-  <div class="views-field views-field-field-article-blurb">
-        <div class="field-content">
-Off-grid lifestyles that rely primarily on RE are full of benefits &amp; responsibilities. See if you’re ready for the
-challenges—&amp; potential rewards.</div>
-  </div>
-  
-  <div class="views-field views-field-comment-count">
-        <span class="field-content">
-
-24 comments <span class="comment-timestamp">
-<em class="placeholder">
-8 months 4 weeks</em>
- ago</span>
- <span class="comment-name">
-by <a href="/users/ian-woofenden" title="View user profile." class="username">
-Ian Woofenden</a>
-</span>
-</span>
-  </div>
-  </div>
-
-
-  </div>
-<div class="article-group">
-  <div class="views-row views-row-9 views-row-odd clearfix no-image row-top">
-
-      
-  <div class="views-field views-field-field-subject">
-        <div class="field-content">
-
-<div class="views-subject views-subject-15">
-Home Efficiency</div>
-</div>
-  </div>
-  
-  <div class="views-field views-field-field-skill-level">
-        <div class="field-content skill">
-Beginner</div>
-  </div>
-  
-  <div class="views-field views-field-field-feature-feat-img">
-        <div class="field-content">
-
-<img src="https://www.homepower.com/sites/default/files/styles/featured_thumb/public/articles/images/46aMagwood.jpg?itok=Yj6XGya5" alt="" />
-</div>
-  </div>
-  
-  <div class="views-field views-field-title">
-        <span class="field-content">
-<a href="/articles/home-efficiency/equipment-products/assessing-green-building-materials">
-Assessing  Green  Building  Materials</a>
-</span>
-  </div>
-  
-  <div class="views-field views-field-field-article-blurb">
-        <div class="field-content">
-A look at green building materials—what to consider when you’re choosing ecofriendlier products &amp; how to identify their not-so-eco counterparts.</div>
-  </div>
-  
-  <div class="views-field views-field-comment-count">
-        <span class="field-content">
-
-4 comments <span class="comment-timestamp">
-<em class="placeholder">
-1 year 6 months</em>
- ago</span>
- <span class="comment-name">
-by <a href="/users/allise-burris" title="View user profile." class="username">
-Allise Burris</a>
-</span>
-</span>
-  </div>
-  </div>
-
-
-    <div class="views-row views-row-10 views-row-even clearfix no-image row-top">
-
-      
-  <div class="views-field views-field-field-subject">
-        <div class="field-content">
-
-<div class="views-subject views-subject-2">
-Wind Power</div>
-</div>
-  </div>
-  
-  <div class="views-field views-field-field-skill-level">
-        <div class="field-content skill">
-Intermediate</div>
-  </div>
-  
-  <div class="views-field views-field-field-feature-feat-img">
-        <div class="field-content">
-
-<img src="https://www.homepower.com/sites/default/files/styles/featured_thumb/public/articles/images/165-24a.jpg?itok=tmTmRxTX" alt="Destroyed wind system" />
-</div>
-  </div>
-  
-  <div class="views-field views-field-title">
-        <span class="field-content">
-<a href="/articles/wind-power/design-installation/ask-experts-wind-hard">
-ASK THE EXPERTS: Wind is Hard</a>
-</span>
-  </div>
-  
-  <div class="views-field views-field-field-article-blurb">
-        <div class="field-content">
-Living with a wind generator is not for everybody.</div>
-  </div>
-  
-  <div class="views-field views-field-comment-count">
-        <span class="field-content">
-
-8 comments <span class="comment-timestamp">
-<em class="placeholder">
-2 years 2 weeks</em>
- ago</span>
- <span class="comment-name">
-by <a href="/users/james-knapp" title="View user profile." class="username">
-James Knapp</a>
-</span>
-</span>
-  </div>
-  </div>
-
-
-  </div>
-<div class="article-group">
-  <div class="views-row views-row-11 views-row-odd clearfix no-image row-top">
-
-      
-  <div class="views-field views-field-field-subject">
-        <div class="field-content">
-
-<div class="views-subject views-subject-4">
-Vehicles</div>
-</div>
-  </div>
-  
-  <div class="views-field views-field-field-skill-level">
-        <div class="field-content skill">
-Beginner</div>
-  </div>
-  
-  <div class="views-field views-field-field-feature-feat-img">
-        <div class="field-content">
-
-<img src="https://www.homepower.com/sites/default/files/styles/featured_thumb/public/articles/images/168-16c-mailbox.jpg?itok=_WQYWmxQ" alt="" />
-</div>
-  </div>
-  
-  <div class="views-field views-field-title">
-        <span class="field-content">
-<a href="/articles/vehicles/all-electric/mailbox-chevy-volt-charging">
-MAILBOX: Chevy Volt Charging</a>
-</span>
-  </div>
-  
-  <div class="views-field views-field-field-article-blurb">
-        <div class="field-content">
-A reader tells us about charging a Chevy Volt with their solar-electric system.</div>
-  </div>
-  
-  <div class="views-field views-field-comment-count">
-        <span class="field-content">
-
-<a href="/articles/vehicles/all-electric/mailbox-chevy-volt-charging#comments">
-Be the first to comment</a>
-.</span>
-  </div>
-  </div>
-
-
-    <div class="views-row views-row-12 views-row-even views-row-last clearfix no-image row-top">
-
-      
-  <div class="views-field views-field-field-subject">
-        <div class="field-content">
-
-<div class="views-subject views-subject-1">
-Solar Electricity</div>
-</div>
-  </div>
-  
-  <div class="views-field views-field-field-skill-level">
-        <div class="field-content skill">
-Advanced</div>
-  </div>
-  
-  <div class="views-field views-field-field-feature-feat-img">
-        <div class="field-content">
-
-<img src="https://www.homepower.com/sites/default/files/styles/featured_thumb/public/articles/images/38aHampel.jpg?itok=AxIdi_HC" alt="" />
-</div>
-  </div>
-  
-  <div class="views-field views-field-title">
-        <span class="field-content">
-<a href="/articles/solar-electricity/project-profiles/grid-tied-pv-125-watt">
-Grid-Tied PV For $1.25 Per Watt</a>
-</span>
-  </div>
-  
-  <div class="views-field views-field-field-article-blurb">
-        <div class="field-content">
-This Wisconsin homeowner designed a custom, tiltable PV rack to cut upfront system costs &amp; optimize his grid-tied PV array’s energy production.</div>
-  </div>
-  
-  <div class="views-field views-field-comment-count">
-        <span class="field-content">
-
-38 comments <span class="comment-timestamp">
-<em class="placeholder">
-6 months 3 weeks</em>
- ago</span>
- <span class="comment-name">
-by <a href="/users/willi-hampel2" title="View user profile." class="username">
-Willi Hampel_2</a>
-</span>
-</span>
-  </div>
-  </div>
-
-
-  </div>
-    </div>
-
-  
-  
-  
-  
-  
-  
-</div>
-</div>
-</div>
-</div>
-  </div>
-
-</div>
-
-<div id="block-system-main" class="block block-system">
-
-
-    
-  <div class="content">
-
-    <div id="first-time">
-<p>
-No front page content has been created yet.</p>
-</div>
-  </div>
-
-</div>
-
-  </div>
-
-        
-      </div>
-</div>
- <!-- /.section, /#content -->
-
-
-            
-          <div id="aside-last" class="aside-last">
-<div class="section">
-
-          <div class="region region-aside-last">
-
-    <div id="block-block-13" class="block block-block ad-block">
-
-
-    
-  <div class="content">
-
-    <!--smart_paging_filter-->
-<p>
-
-<script type="text/javascript">
-
-<!--//-->
-<![CDATA[// >
-<!--
-
-  GA_googleFillSlot("HPLeaderboardFooter728x90");
-
-//-->
-<!]]>
-
-</script>
-</p>
-
-<p>
-Advertisement</p>
-
-  </div>
-
-</div>
-
-  </div>
-
-      </div>
-</div>
- <!-- /.section, /#aside-last-->
-
-    
-
-    </div>
-</div>
-<!-- /.section, /#content-area -->
-
-
-          <div id="sidebar-first" class="column sidebar">
-<div class="section">
-
-          <div class="region region-sidebar-first">
-
-    <div id="block-block-1" class="block block-block subscribe-block">
-
-
-    
-  <div class="content">
-
-    <h2>
-<a href="/subscribe-and-save?template=subscribe" target="_blank">
-Subscribe</a>
-</h2>
-
-<ul>
-
-	<li>
-<a href="/subscribe-and-save?template=subscribe" target="_blank">
-Subscribe</a>
+						<li>
+<a href="/en/support/policies#returns">
+Return Policy</a>
 </li>
 
-	<li>
-<a href="/subscribe-and-save?template=subscribe&amp;type=renew" target="_blank">
-Renew</a>
+						<li>
+<a href="/en/support/pricematcher">
+Low Price Guarantee</a>
 </li>
 
-	<li>
-<a href="/subscribe-and-save?template=subscribe&amp;gift=true" target="_blank">
-Give a Gift</a>
+					</ul>
+
+				</li>
+
+				<li class="sub-menu-dropdown-link">
+<a href="/en/support/policies#customer-service">
+Customer Service</a>
 </li>
 
-	<li>
-<a href="/issue-gallery">
-Issue Downloads</a>
-</li>
-
-</ul>
-
-  </div>
-
-</div>
-
-<div id="block-block-5" class="block block-block basics-block">
-
-
-    <h2>
-Home Power Basics</h2>
-
-  
-  <div class="content">
-
-    <!--smart_paging_filter-->
-<ul>
-<li>
-<a href="https://www.homepower.com/articles/what-solar-electricity">
-Solar Electricity</a>
-</li>
-
-	<li>
-<a href="https://www.homepower.com/articles/what-solar-water-heating">
-Solar Water Heating</a>
-</li>
-
-	<li>
-<a href="https://www.homepower.com/articles/what-wind-electricity">
-Wind Power</a>
-</li>
-
-	<li>
-<a href="https://www.homepower.com/microhydro-power/basics">
-Microhydro Power</a>
-</li>
-
-	<li>
-<a href="https://www.homepower.com/articles/getting-started-home-efficiency">
-Home Efficiency</a>
-</li>
-
-	<li>
-<a href="https://www.homepower.com/articles/what-types-vehicles">
-Vehicles</a>
-</li>
-
-</ul>
-  </div>
-
-</div>
-
-<div id="block-block-4" class="block block-block tower-block ad-block">
-
-
-    
-  <div class="content">
-
-    <!--smart_paging_filter-->
-<p>
-<script type="text/javascript">
-
-<!--//-->
-<![CDATA[// >
-<!--
-
-  GA_googleFillSlot("HPSkyscraper160x600");
-
-//-->
-<!]]>
-
-</script>
-</p>
-
-<p>
-Advertisement</p>
-
-  </div>
-
-</div>
-
-  </div>
-
-      </div>
-</div>
- <!-- /.section, /#sidebar-first-->
-
-        
-
-
-  </div>
-</div>
- <!-- /#main, /#main-wrapper -->
-
-
-      <div id="footer" class="clearfix">
-
-        <div class="region region-footer">
-
-    <div id="block-menu-block-2" class="block block-menu-block footer-main-menu-block">
-
-
-    
-  <div class="content">
-
-    <div class="menu-block-wrapper menu-block-2 menu-name-main-menu parent-mlid-0 menu-level-1">
-
-  <ul class="menu clearfix">
-<li class="first expanded menu-mlid-1799">
-<a href="/solar-electricity" title="Solar Electricity">
-Solar Electricity</a>
-<ul class="menu clearfix">
-<li class="first leaf menu-mlid-1800">
-<a href="/solar-electricity/basics" title="Basics">
-Basics</a>
-</li>
-
-<li class="leaf menu-mlid-1801">
-<a href="/solar-electricity/design-installation" title="Design &amp; Installation">
-Design &amp; Installation</a>
-</li>
-
-<li class="leaf menu-mlid-1802">
-<a href="/solar-electricity/equipment-products" title="Equipment &amp; Products">
-Equipment &amp; Products</a>
-</li>
-
-<li class="last leaf menu-mlid-1803">
-<a href="/solar-electricity/project-profiles" title="Project Profiles">
-Project Profiles</a>
-</li>
-
-</ul>
-</li>
-
-<li class="expanded menu-mlid-1804">
-<a href="/solar-water-heating" title="Solar Water Heating">
-Solar Water Heating</a>
-<ul class="menu clearfix">
-<li class="first leaf menu-mlid-1805">
-<a href="/solar-water-heating/basics" title="Basics">
-Basics</a>
-</li>
-
-<li class="leaf menu-mlid-1806">
-<a href="/solar-water-heating/domestic-hot-water" title="Domestic Hot Water">
-Domestic Hot Water</a>
-</li>
-
-<li class="leaf menu-mlid-1807">
-<a href="/solar-water-heating/space-heating" title="Space Heating">
-Space Heating</a>
-</li>
-
-<li class="leaf menu-mlid-1808">
-<a href="/solar-water-heating/equipment-products" title="Equipment &amp; Products">
-Equipment &amp; Products</a>
-</li>
-
-<li class="last leaf menu-mlid-1809">
-<a href="/solar-water-heating/project-profiles" title="Project Profiles">
-Project Profiles</a>
-</li>
-
-</ul>
-</li>
-
-<li class="expanded menu-mlid-1810">
-<a href="/wind-power" title="Wind Power">
-Wind Power</a>
-<ul class="menu clearfix">
-<li class="first leaf menu-mlid-1811">
-<a href="/wind-power/basics" title="Basics">
-Basics</a>
-</li>
-
-<li class="leaf menu-mlid-1812">
-<a href="/wind-power/design-installation" title="Design &amp; Installation">
-Design &amp; Installation</a>
-</li>
-
-<li class="leaf menu-mlid-1813">
-<a href="/wind-power/equipment-products" title="Equipment &amp; Products">
-Equipment &amp; Products</a>
-</li>
-
-<li class="last leaf menu-mlid-1814">
-<a href="/wind-power/project-profiles" title="Project Profiles">
-Project Profiles</a>
-</li>
-
-</ul>
-</li>
-
-<li class="expanded menu-mlid-1815">
-<a href="/microhydro-power" title="Microhydro Power">
-Microhydro Power</a>
-<ul class="menu clearfix">
-<li class="first leaf menu-mlid-1816">
-<a href="/microhydro-power/basics" title="Basics">
-Basics</a>
-</li>
-
-<li class="leaf menu-mlid-1817">
-<a href="/microhydro-power/design-installation" title="Design &amp; Installation">
-Design &amp; Installation</a>
-</li>
-
-<li class="leaf menu-mlid-1818">
-<a href="/microhydro-power/equipment-products" title="Equipment &amp; Products">
-Equipment &amp; Products</a>
-</li>
-
-<li class="last leaf menu-mlid-1819">
-<a href="/microhydro-power/project-profiles" title="Project Profiles">
-Project Profiles</a>
-</li>
-
-</ul>
-</li>
-
-<li class="expanded menu-mlid-1820">
-<a href="/home-efficiency" title="Home Efficiency">
-Home Efficiency</a>
-<ul class="menu clearfix">
-<li class="first leaf menu-mlid-1821">
-<a href="/home-efficiency/basics" title="Basics">
-Basics</a>
-</li>
-
-<li class="leaf menu-mlid-1822">
-<a href="/home-efficiency/electricity" title="Electricity">
-Electricity</a>
-</li>
-
-<li class="leaf menu-mlid-1823">
-<a href="/home-efficiency/design-construction" title="Design &amp; Construction">
-Design &amp; Construction</a>
-</li>
-
-<li class="leaf menu-mlid-1824">
-<a href="/home-efficiency/equipment-products" title="Equipment &amp; Products">
-Equipment &amp; Products</a>
-</li>
-
-<li class="last leaf menu-mlid-1825">
-<a href="/home-efficiency/project-profiles" title="Project Profiles">
-Project Profiles</a>
-</li>
-
-</ul>
-</li>
-
-<li class="last expanded menu-mlid-1826">
-<a href="/vehicles" title="Vehicles">
-Vehicles</a>
-<ul class="menu clearfix">
-<li class="first leaf menu-mlid-1827">
-<a href="/vehicles/basics" title="Basics">
-Basics</a>
-</li>
-
-<li class="leaf menu-mlid-1828">
-<a href="/vehicles/all-electric" title="All-Electric">
-All-Electric</a>
-</li>
-
-<li class="leaf menu-mlid-1829">
-<a href="/vehicles/hybrids" title="Hybrids">
-Hybrids</a>
-</li>
-
-<li class="leaf menu-mlid-1830">
-<a href="/vehicles/biofuels" title="Biofuels">
-Biofuels</a>
-</li>
-
-<li class="last leaf menu-mlid-1831">
-<a href="/vehicles/project-profiles" title="Project Profiles">
-Project Profiles</a>
-</li>
-
-</ul>
-</li>
-
-</ul>
-</div>
-
-  </div>
-
-</div>
-
-<div id="block-block-8" class="block block-block other-links-block">
-
-
-    
-  <div class="content">
-
-    <!--smart_paging_filter-->
-<ul class="other-links-top">
-<li>
-<a href="https://www.homepower.com/subscribe-and-save?template=subscribe" target="_blank">
-Subscribe / Renew</a>
-</li>
-
-	<li>
-<a href="https://www.homepower.com/subscribe-and-save?template=subscribe&amp;gift=true" target="_blank">
-Give a Gift</a>
-</li>
-
-	<li>
-<a href="https://www.homepower.com/subscribe-and-save?template=subscribe&amp;format=digital" target="_blank">
-Digital Edition</a>
-</li>
-
-	<li>
-<a href="https://www.homepower.com/issue-gallery">
-Issue Downloads</a>
-</li>
-
-        <li>
-<a href="https://www.homepower.com/glossary">
-Glossary</a>
-</li>
-
-        <li>
-<a href="https://www.homepower.com/web-extras">
-Web Xtras</a>
-</li>
-
-</ul>
-<ul class="other-links-bottom">
-<li>
-<a href="https://www.homepower.com/about">
-About Us</a>
-</li>
-
-	<li>
-<a href="https://www.homepower.com/contact-us">
+				<li class="sub-menu-dropdown-link">
+<a href="/en/support/policies#customer-service">
 Contact Us</a>
 </li>
 
-	<li>
-<a href="https://www.homepower.com/sitemap">
-Site Map</a>
+
+			  </ul>
+
+			</li>
+
+			<li class="parent">
+<a href="https://www.rudyprojectusa.com/dealer_locate.php" target="_blank">
+Dealer Locator</a>
 </li>
 
-</ul>
-  </div>
+			</ul>
+
+			<div class="span3 visible-desktop secondary-nav">
+
+
+				<a id="cart" href="/en/cart/display">
+
+					<i class="icon-shopping-cart icon-2x">
+</i>
+<span class="hidden-phone">
+Cart </span>
+(<span class="num-items-wrapper">
+0</span>
+)
+				</a>
+
+
+				<a class="vip" href="/en/secureauth/landing">
+
+					<i class="icon-star icon-2x">
+</i>
+<span class="hidden-phone">
+VIP</span>
+
+				</a>
+
+
+				<a class="search last" href="#footer-search">
+
+					<i class="icon-search icon-2x">
+</i>
+<span class="hidden-phone">
+Search</span>
+
+				</a>
+
+				<div class="ajax-cart-wrapper hidden-phone">
+<div id="ajax-cart" class="ajax-cart" style="display:none">
+</div>
+</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+<!--/.nav-collapse -->
+
+	</div>
+
+<div id="content" class="container-fluid">
+
+	<div class="promotion-mast text-center hidden-tablet hidden-phone">
+
+	<div class="row-fluid">
+
+		<div class="span2" data-cs-toggle="tooltip" title="Need Rx Sunglasses? Leader in Italian prescription sport eyewear.">
+
+			<a href="/en/products/filter/category/sunglasses/sub/rx-collection" title="Need Rx Glasses">
+
+				<i class="icon-2x icon-custom-rx red">
+</i>
+
+				<p class="description">
+<b>
+Need Rx Glasses</b>
+</p>
+
+			</a>
+
+		</div>
+
+		<div class="span2" data-cs-toggle="tooltip" title="Free Shipping To the US and Canada on select orders.">
+
+			<a class="ship-info-box" href="/en/support/policies#shipping" title="Free Shipping">
+
+				<i class="icon-2x icon-truck">
+</i>
+
+				<p class="description">
+<b>
+Free 2 Way Shipping</b>
+</p>
+
+			</a>
+
+		</div>
+
+		<div class="span2" data-cs-toggle="tooltip" title="90 Day Returns, If you're not happy, Return It!">
+
+			<a class="90-day-info-box" href="/en/support/policies#returns" title="90 Day Returns">
+
+				<i class="icon-2x icon-mail-reply-all">
+</i>
+
+				<p class="description">
+<b>
+90 Day Returns</b>
+</p>
+
+			</a>
+
+		</div>
+
+		<div class="span2" data-cs-toggle="tooltip" title="Low Price Guarantee See it for a lower price, we'll match it.">
+
+			<a class="price-match-box" href="/en/support/pricematcher" title="Lowest Price Guaranteed">
+
+				<i class="icon-2x icon-dollar">
+</i>
+
+				<p class="description">
+<b>
+Low Price Guarantee</b>
+</p>
+
+			</a>
+
+		</div>
+
+		<div class="span2" data-cs-toggle="tooltip" title="Sale Items Save money, shop our Sale Items.">
+
+			<a href="/en/products/saleitems/description/asc" title="Shop Sale Items">
+
+				<i class="icon-2x icon-tags">
+</i>
+
+				<p class="description">
+<b>
+Shop Sale Items</b>
+</p>
+
+			</a>
+
+		</div>
+
+		<div class="span2" data-cs-toggle="tooltip" title="Deep discounts on last years products!">
+
+			<a href="/en/products/clearance" title="Shop Our Clearance Rack">
+
+				<i class="icon-2x icon-heart red">
+</i>
+
+				<p class="description">
+<b>
+Clearance Rack</b>
+</p>
+
+			</a>
+
+		</div>
+
+	</div>
 
 </div>
 
-<div id="block-menu-menu-secondary-menu" class="block block-menu directories-menu-block">
+	<div id="promotion-banner" class="visible-phone visible-tablet">
 
+	<div id="promotion-carousel" class="carousel slide">
 
-    <h2>
-Directories:</h2>
+		<!-- Carousel items -->
 
-  
-  <div class="content">
+		<div class="carousel-inner">
 
-    <ul class="menu clearfix">
-<li class="first leaf">
-<a href="/contractors" title="">
-Contractors</a>
-</li>
+			<div class="active item">
 
-<li class="leaf">
-<a href="/events" title="">
-Events &amp; Training</a>
-</li>
+				<i class="icon-2x icon-truck valign-middle">
+</i>
+&nbsp;&nbsp;&nbsp;<strong class="uppercase">
+Free Shipping</strong>
+ To the US and Canada on select orders. <a class="ship-info-box" href="/en/support/policies#shipping" title="Free Shipping">
+ See details</a>
 
-<li class="last leaf">
-<a href="/experts-directory" title="">
-Experts</a>
-</li>
+			</div>
 
-</ul>
-  </div>
+			<div class="item">
+
+				<i class="icon-2x icon-mail-reply-all valign-middle">
+</i>
+&nbsp;&nbsp;&nbsp;<strong class="uppercase">
+90 Day Returns</strong>
+ If you're not happy, return it! <a class="90-day-info-box" href="/en/support/policies#returns" title="90 Day Returns">
+ See details</a>
+
+			</div>
+
+			<div class="item">
+
+				<i class="icon-2x icon-smile valign-middle">
+</i>
+&nbsp;&nbsp;&nbsp;<strong class="uppercase">
+Low Price Guarantee</strong>
+ See it for a lower price, we'll match it. <a class="price-match-box" href="/en/support/pricematcher" title="Lowest Price Guaranteed">
+ See details</a>
+
+			</div>
+
+			<div class="item">
+
+				<i class="icon-2x icon-custom-rx valign-middle">
+</i>
+&nbsp;&nbsp;&nbsp;<strong class="uppercase">
+Need RX?</strong>
+ See our selection of prescription sunglasses. <a href="/en/products/filter/category/sunglasses/sub/rx-collection">
+ Click Here</a>
+
+			</div>
+
+			<div class="item">
+
+				<i class="icon-2x icon-heart valign-middle">
+</i>
+&nbsp;&nbsp;&nbsp;<strong class="uppercase">
+Clearance Rack</strong>
+ Get deep discounts on last years products! <a href="/en/products/clearance">
+ Click Here</a>
+
+			</div>
+
+			<div class="item">
+
+				<i class="icon-2x icon-tags valign-middle">
+</i>
+&nbsp;&nbsp;&nbsp;<strong class="uppercase">
+Sale Items</strong>
+ Save money, shop our Sale Items. <a href="/en/products/saleitems/description/asc">
+ Click Here</a>
+
+			</div>
+
+		</div>
+
+		<!-- Carousel nav -->
+
+		<a class="carousel-control left small" href="#promotion-carousel" data-slide="prev">
+&lsaquo;</a>
+
+		<a class="carousel-control right small" href="#promotion-carousel" data-slide="next">
+&rsaquo;</a>
+
+	</div>
 
 </div>
 
-<div id="block-block-7" class="block block-block copyright-links-block">
+	
+			<div class="row-fluid">
+
+		<div id="carousel-home-slider1" class="carousel slide content-wrapper home-slider" data-interval="7000">
+
+			<ol class="carousel-indicators hidden-phone">
+
+				<li data-target="#carousel-home-slider1" data-slide-to="0" class="active">
+</li>
+
+				<li data-target="#carousel-home-slider1" data-slide-to="1">
+</li>
+
+				<li data-target="#carousel-home-slider1" data-slide-to="2">
+</li>
+
+				<li data-target="#carousel-home-slider1" data-slide-to="3">
+</li>
+
+				<li data-target="#carousel-home-slider1" data-slide-to="4">
+</li>
+
+				<li data-target="#carousel-home-slider1" data-slide-to="5">
+</li>
+
+			</ol>
+
+			<!-- Carousel items -->
+
+			<div class="carousel-inner">
+
+				<div class="item active">
+
+					<img class="lazy" src="/en/img/ajax-loader-large.gif" data-original="/en/img/home/carousel/April-Sliders-FreeShipping.jpg" alt="We have Free Shipping Offers to get your gear!">
+
+				</div>
+
+				<div class="item">
+
+					<a href="/en/products/detail/HL600011US#featured-video">
+
+						<img class="lazy" src="/en/img/ajax-loader-large.gif" data-original="/en/img/home/carousel/2017April-Sliders-Boost01-03.jpg" alt="Rudy Project Boost 01 Road Aero">
+
+					</a>
+
+				</div>
+
+				<div class="item">
+
+					<a href="/en/products/detail/SP394025-0000#featured-video">
+
+						<img class="lazy" src="/en/img/ajax-loader-large.gif" data-original="/en/img/home/carousel/2017April-Sliders-TRALYX-VER2.jpg" alt="Rudy Project Tralyx">
+
+					</a>
+
+				</div>
+
+				<div class="item">
+
+					<a href="/en/support/warranties">
+
+						<img class="lazy" src="/en/img/ajax-loader-large.gif" data-original="/en/img/home/carousel/2017April-Sliders-SCRATCHEDLENSES.jpg" alt="Rudy Project Hates Scratched Lenses!">
+
+					</a>
+
+				</div>
+
+				<div class="item">
+
+					<a href="/en/products/detail/SP457306-0001#featured-video">
+
+						<img class="lazy" src="/en/img/ajax-loader-large.gif" data-original="/en/img/home/carousel/2017April-Sliders-Fotonyk.jpg" alt="Rudy Project Fotonyk">
+
+					</a>
+
+				</div>
+
+				<div class="item">
+
+					<a href="/en/products/detail/HL580002US#featured-video">
+
+						<img class="lazy" src="/en/img/ajax-loader-large.gif" data-original="/en/img/home/carousel/2017slider-racemaster.jpg" alt="Rudy Project Racemaster is Here!">
+
+					</a>
+
+				</div>
+
+			</div>
+
+			<!-- Carousel nav -->
+
+			<a class="carousel-control left hidden-phone" href="#carousel-home-slider1" data-slide="prev">
+&lsaquo;</a>
+
+			<a class="carousel-control right hidden-phone" href="#carousel-home-slider1" data-slide="next">
+&rsaquo;</a>
+
+		</div>
+
+	</div>
+
+	<div class="row-fluid top-items-carousel">
+
+		<ul class="nav nav-tabs">
+
+			<li class="hidden">
+<a href="#promotions" data-toggle="tab">
+Our Best Offers</a>
+</li>
+
+			<li class="active">
+<a href="#bestsellers" data-toggle="tab">
+Best Sellers</a>
+</li>
+
+			<li>
+<a href="#recentarrivals" data-toggle="tab">
+Recent Arrivals</a>
+</li>
+
+			<li>
+<a href="/en/products/saleitems/description/asc">
+Sale Items</a>
+</li>
+
+		</ul>
+
+		<div class="tab-content">
+
+			<div class="tab-pane hidden" id="promotions">
+
+				<div class="row-fluid">
+
+					<div class="carousel slide" id="carousel-promotions" data-interval="false">
+
+						<div class="carousel-inner">
+
+							<div class="item active">
+
+								<ul class="carousel-content-list">
+
+									<li class="span3 content-wrapper">
+
+										<a href="/rudy-project-gwp-details.php">
+<img src="/en/img/home/promotions/fgwp-home.jpg" alt="Rudy Project Free Gift With Purchase">
+</a>
+
+										<div class="product-item-buttons">
+
+											<a class="btn btn-block btn-inverse" href="/rudy-project-gwp-details.php">
+View This Promotion <i class="icon-chevron-right icon-white">
+</i>
+</a>
+
+										</div>
+
+									</li>
+
+									<li class="span3 content-wrapper">
+
+										<a href="/en/products/filter/category/sunglasses/sub/rx-collection/limit/24">
+<img src="/en/img/home/promotions/need-rx-home.jpg" alt="Rudy Project RX Sunglasses">
+</a>
+
+										<div class="product-item-buttons">
+
+											<a class="btn btn-block btn-inverse" href="/en/products/filter/category/sunglasses/sub/rx-collection/limit/24">
+Shop Rx Sunglasses <i class="icon-chevron-right icon-white">
+</i>
+</a>
+
+										</div>
+
+									</li>
+
+									<li class="span3 content-wrapper">
+
+										<a href="/en/products/saleitems/description/asc">
+<img src="/en/img/home/promotions/sale-items-home.jpg" alt="Rudy Project Sale Items">
+</a>
+
+										<div class="product-item-buttons">
+
+											<a class="btn btn-block btn-inverse" href="/en/products/saleitems/description/asc">
+Shop Sale Items <i class="icon-chevron-right icon-white">
+</i>
+</a>
+
+										</div>
+
+									</li>
+
+									<li class="span3 content-wrapper">
+
+										<a href="/gift-cards.php">
+<img src="/en/img/home/promotions/gift-cards-home.jpg" alt="Rudy Project Gift Cards">
+</a>
+
+										<div class="product-item-buttons">
+
+											<a class="btn btn-block btn-inverse" href="/gift-cards.php">
+Shop Gift Cards <i class="icon-chevron-right icon-white">
+</i>
+</a>
+
+										</div>
+
+									</li>
+
+								</ul>
+
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="tab-pane active" id="bestsellers">
+
+				<div class="row-fluid">
+
+					<div class="carousel slide" id="carousel-best-sellers1" data-interval="false">
+
+						<div class="carousel-inner">
+
+							<div class="item active">
+<ul class="carousel-content-list">
+									<li class="span3 product-item content-wrapper overflow-hidden">
+
+										<div class="view view-first">
+
+											<a href="/en/products/detail/HL518901US">
+
+												<img src="/images/products/HL518901US_listing.jpg" alt="STERLING HELMET WHITE RED SILVER MATTE - SMALL / MEDIUM">
+
+											</a>
+
+											<div class="mask">
+
+												<a class="info quick_view" href="/en/quickview/show/HL518901US">
+<i class="icon-expand-alt icon-dark">
+</i>
+<span>
+ Quickview</span>
+</a>
+
+											</div>
+
+										</div>
+
+																				<div class="product-item-details">
+
+											<p>
+<a href="/en/products/detail/HL518901US" class="black">
+STERLING HELMET WHITE RED SILVER MATTE - SMALL / MEDIUM</a>
+</p>
+
+																							<p>
+
+													<span class="heading">
+MSRP: </span>
+
+													<span>
+
+																													$274.99																											</span>
+
+												</p>
+
+																																		<p>
+<span class="heading">
+Availability:&nbsp;</span>
+<span class="red">
+Out of Stock</span>
+</p>
+
+																						<div class="pr_snippet_product">
+
+												<script type="text/javascript">
+POWERREVIEWS.display.snippet(document, { pr_page_id : "HL518901US" });</script>
+
+											</div>
+
+										</div>
+
+										<div class="product-item-buttons">
+
+											<a class="btn btn-block btn-inverse" href="/en/products/detail/HL518901US">
+View This Model <i class="icon-chevron-right icon-white">
+</i>
+</a>
+
+										</div>
+
+									</li>
+
+							  									<li class="span3 product-item content-wrapper overflow-hidden">
+
+										<div class="view view-first">
+
+											<a href="/en/products/detail/SN790306S5P">
+
+												<img src="/images/products/SN790306S5P_listing.jpg" alt="RYDON PERFORMANCE KIT MATTE BLACK WITH LASER COPPER, ACTION BROWN, CLEAR, YELLOW & RACING RED LENSES">
+
+											</a>
+
+											<div class="mask">
+
+												<a class="info quick_view" href="/en/quickview/show/SN790306S5P">
+<i class="icon-expand-alt icon-dark">
+</i>
+<span>
+ Quickview</span>
+</a>
+
+											</div>
+
+										</div>
+
+																				<div class="product-item-details">
+
+											<p>
+<a href="/en/products/detail/SN790306S5P" class="black">
+RYDON PERFORMANCE KIT MATTE BLACK WITH LASER COPPER, ACTION BROWN, CLEAR, YELLOW & RACING RED LENSES</a>
+</p>
+
+																							<p>
+
+													<span class="heading">
+MSRP: </span>
+
+													<span>
+
+																													$324.99																											</span>
+
+												</p>
+
+																																		<p>
+<span class="heading">
+Quantity Available:&nbsp;</span>
+<span class="green">
+10</span>
+</p>
+
+																						<div class="pr_snippet_product">
+
+												<script type="text/javascript">
+POWERREVIEWS.display.snippet(document, { pr_page_id : "SN790306S5P" });</script>
+
+											</div>
+
+										</div>
+
+										<div class="product-item-buttons">
+
+											<a class="btn btn-block btn-inverse" href="/en/products/detail/SN790306S5P">
+View This Model <i class="icon-chevron-right icon-white">
+</i>
+</a>
+
+										</div>
+
+									</li>
+
+							  									<li class="span3 product-item content-wrapper overflow-hidden">
+
+										<div class="view view-first">
+
+											<a href="/en/products/detail/SP397380-0000">
+
+												<img src="/images/products/SP397380-0000_listing.jpg" alt="TRALYX ICE SILVER MATTE WITH IMPACTX-2 PHOTOCHROMIC CLEAR TO BLACK LENSES">
+
+											</a>
+
+											<div class="mask">
+
+												<a class="info quick_view" href="/en/quickview/show/SP397380-0000">
+<i class="icon-expand-alt icon-dark">
+</i>
+<span>
+ Quickview</span>
+</a>
+
+											</div>
+
+										</div>
+
+																				<div class="product-item-details">
+
+											<p>
+<a href="/en/products/detail/SP397380-0000" class="black">
+TRALYX ICE SILVER MATTE WITH IMPACTX-2 PHOTOCHROMIC CLEAR TO BLACK LENSES</a>
+</p>
+
+																							<p>
+
+													<span class="heading">
+MSRP: </span>
+
+													<span>
+
+																													$274.99																											</span>
+
+												</p>
+
+																																		<p>
+<span class="heading">
+Quantity Available:&nbsp;</span>
+<span class="green">
+10</span>
+</p>
+
+																						<div class="pr_snippet_product">
+
+												<script type="text/javascript">
+POWERREVIEWS.display.snippet(document, { pr_page_id : "SP397380-0000" });</script>
+
+											</div>
+
+										</div>
+
+										<div class="product-item-buttons">
+
+											<a class="btn btn-block btn-inverse" href="/en/products/detail/SP397380-0000">
+View This Model <i class="icon-chevron-right icon-white">
+</i>
+</a>
+
+										</div>
+
+									</li>
+
+							  									<li class="span3 product-item content-wrapper overflow-hidden">
+
+										<div class="view view-first">
+
+											<a href="/en/products/detail/HL530011US">
+
+												<img src="/images/products/HL530011US_listing.jpg" alt="WING57 BLACK-YELLOW FLUO (MATTE) SMALL / MEDIUM">
+
+											</a>
+
+											<div class="mask">
+
+												<a class="info quick_view" href="/en/quickview/show/HL530011US">
+<i class="icon-expand-alt icon-dark">
+</i>
+<span>
+ Quickview</span>
+</a>
+
+											</div>
+
+										</div>
+
+																				<div class="product-item-details">
+
+											<p>
+<a href="/en/products/detail/HL530011US" class="black">
+WING57 BLACK-YELLOW FLUO (MATTE) SMALL / MEDIUM</a>
+</p>
+
+																							<p>
+
+													<span class="heading">
+MSRP: </span>
+
+													<span>
+
+																													$499.99																											</span>
+
+												</p>
+
+																																		<p>
+<span class="heading">
+Quantity Available:&nbsp;</span>
+<span class="green">
+10</span>
+</p>
+
+																						<div class="pr_snippet_product">
+
+												<script type="text/javascript">
+POWERREVIEWS.display.snippet(document, { pr_page_id : "HL530011US" });</script>
+
+											</div>
+
+										</div>
+
+										<div class="product-item-buttons">
+
+											<a class="btn btn-block btn-inverse" href="/en/products/detail/HL530011US">
+View This Model <i class="icon-chevron-right icon-white">
+</i>
+</a>
+
+										</div>
+
+									</li>
+
+							  </ul>
+</div>
+						</div>
+
+											</div>
+
+				</div>
+
+			</div>
+
+			<div class="tab-pane" id="recentarrivals">
+
+				<div class="row-fluid">
+
+					<div class="carousel slide" id="carousel-recent-arrivals1" data-interval="false">
+
+						<div class="carousel-inner">
+
+						<div class="item active">
+<ul class="carousel-content-list">
+									<li class="span3 product-item content-wrapper overflow-hidden">
+
+										<div class="view view-first">
+
+											<a href="/en/products/detail/HL600062US">
+
+												<img src="/images/products/HL600062US_listing.jpg" alt="BOOST 01 YELLOW FLUO - BLACK MATTE - LARGE">
+
+											</a>
+
+											<div class="mask">
+
+												<a class="info quick_view" href="/en/quickview/show/HL600062US">
+<i class="icon-expand-alt icon-dark">
+</i>
+<span>
+ Quickview</span>
+</a>
+
+											</div>
+
+										</div>
+
+																				<div class="product-item-details">
+
+											<p>
+<a href="/en/products/detail/HL600062US" class="black">
+BOOST 01 YELLOW FLUO - BLACK MATTE - LARGE</a>
+</p>
+
+																							<p>
+
+													<span class="heading">
+MSRP: </span>
+
+													<span>
+
+																													$349.99																											</span>
+
+												</p>
+
+																																		<p>
+<span class="heading">
+Quantity Available:&nbsp;</span>
+<span class="green">
+10</span>
+</p>
+
+																						<div class="pr_snippet_product">
+
+												<script type="text/javascript">
+POWERREVIEWS.display.snippet(document, { pr_page_id : "HL600062US" });</script>
+
+											</div>
+
+										</div>
+
+										<div class="product-item-buttons">
+
+											<a class="btn btn-block btn-inverse" href="/en/products/detail/HL600062US">
+View This Model <i class="icon-chevron-right icon-white">
+</i>
+</a>
+
+										</div>
+
+									</li>
+
+							  									<li class="span3 product-item content-wrapper overflow-hidden">
+
+										<div class="view view-first">
+
+											<a href="/en/products/detail/RP430105">
+
+												<img src="/images/products/RP430105_listing.jpg" alt="BIB SHORTS XL PINK FLUO">
+
+											</a>
+
+											<div class="mask">
+
+												<a class="info quick_view" href="/en/quickview/show/RP430105">
+<i class="icon-expand-alt icon-dark">
+</i>
+<span>
+ Quickview</span>
+</a>
+
+											</div>
+
+										</div>
+
+																				<div class="product-item-details">
+
+											<p>
+<a href="/en/products/detail/RP430105" class="black">
+BIB SHORTS XL PINK FLUO</a>
+</p>
+
+																							<p>
+
+													<span class="heading">
+MSRP: </span>
+
+													<span>
+
+																													$129.99																											</span>
+
+												</p>
+
+																																		<p>
+<span class="heading">
+Quantity Available:&nbsp;</span>
+<span class="green">
+10</span>
+</p>
+
+																						<div class="pr_snippet_product">
+
+												<script type="text/javascript">
+POWERREVIEWS.display.snippet(document, { pr_page_id : "RP430105" });</script>
+
+											</div>
+
+										</div>
+
+										<div class="product-item-buttons">
+
+											<a class="btn btn-block btn-inverse" href="/en/products/detail/RP430105">
+View This Model <i class="icon-chevron-right icon-white">
+</i>
+</a>
+
+										</div>
+
+									</li>
+
+							  									<li class="span3 product-item content-wrapper overflow-hidden">
+
+										<div class="view view-first">
+
+											<a href="/en/products/detail/MK134485">
+
+												<img src="/images/products/MK134485_listing.jpg" alt="KLONYX MX FROZEN GREEN WITH TRANSPARENT LENSES">
+
+											</a>
+
+											<div class="mask">
+
+												<a class="info quick_view" href="/en/quickview/show/MK134485">
+<i class="icon-expand-alt icon-dark">
+</i>
+<span>
+ Quickview</span>
+</a>
+
+											</div>
+
+										</div>
+
+																				<div class="product-item-details">
+
+											<p>
+<a href="/en/products/detail/MK134485" class="black">
+KLONYX MX FROZEN GREEN WITH TRANSPARENT LENSES</a>
+</p>
+
+																							<p>
+
+													<span class="heading">
+MSRP: </span>
+
+													<span>
+
+																													$149.99																											</span>
+
+												</p>
+
+																																		<p>
+<span class="heading">
+Quantity Available:&nbsp;</span>
+<span class="green">
+8</span>
+</p>
+
+																						<div class="pr_snippet_product">
+
+												<script type="text/javascript">
+POWERREVIEWS.display.snippet(document, { pr_page_id : "MK134485" });</script>
+
+											</div>
+
+										</div>
+
+										<div class="product-item-buttons">
+
+											<a class="btn btn-block btn-inverse" href="/en/products/detail/MK134485">
+View This Model <i class="icon-chevron-right icon-white">
+</i>
+</a>
+
+										</div>
+
+									</li>
+
+							  									<li class="span3 product-item content-wrapper overflow-hidden">
+
+										<div class="view view-first">
+
+											<a href="/en/products/detail/HL530101US">
+
+												<img src="/images/products/HL530101US_listing.jpg" alt="WING57 CUSTOM WHITE-SILVER - SMALL / MEDIUM">
+
+											</a>
+
+											<div class="mask">
+
+												<a class="info quick_view" href="/en/quickview/show/HL530101US">
+<i class="icon-expand-alt icon-dark">
+</i>
+<span>
+ Quickview</span>
+</a>
+
+											</div>
+
+										</div>
+
+																				<div class="sale-item-product-ribbon">
+
+											<span>
+Sale Item</span>
+
+										</div>
+
+																				<div class="product-item-details">
+
+											<p>
+<a href="/en/products/detail/HL530101US" class="black">
+WING57 CUSTOM WHITE-SILVER - SMALL / MEDIUM</a>
+</p>
+
+																							<p>
+
+													<span class="heading">
+MSRP: </span>
+
+													<span>
+
+																													<del>
+$499.99</del>
+
+															<p>
+
+																<span class="heading">
+Your  Price Today: </span>
+
+																<span class="heading red">
+$249.99</span>
+
+															</p>
+
+																											</span>
+
+												</p>
+
+																																		<p>
+<span class="heading">
+Quantity Available:&nbsp;</span>
+<span class="green">
+10</span>
+</p>
+
+																						<div class="pr_snippet_product">
+
+												<script type="text/javascript">
+POWERREVIEWS.display.snippet(document, { pr_page_id : "HL530101US" });</script>
+
+											</div>
+
+										</div>
+
+										<div class="product-item-buttons">
+
+											<a class="btn btn-block btn-inverse" href="/en/products/detail/HL530101US">
+View This Model <i class="icon-chevron-right icon-white">
+</i>
+</a>
+
+										</div>
+
+									</li>
+
+							  </ul>
+</div>
+<div class="item">
+<ul class="carousel-content-list">
+									<li class="span3 product-item content-wrapper overflow-hidden">
+
+										<div class="view view-first">
+
+											<a href="/en/products/detail/RP830106">
+
+												<img src="/images/products/RP830106_listing.jpg" alt="BIB SHORTS XXL YELLOW FLUO">
+
+											</a>
+
+											<div class="mask">
+
+												<a class="info quick_view" href="/en/quickview/show/RP830106">
+<i class="icon-expand-alt icon-dark">
+</i>
+<span>
+ Quickview</span>
+</a>
+
+											</div>
+
+										</div>
+
+																				<div class="product-item-details">
+
+											<p>
+<a href="/en/products/detail/RP830106" class="black">
+BIB SHORTS XXL YELLOW FLUO</a>
+</p>
+
+																							<p>
+
+													<span class="heading">
+MSRP: </span>
+
+													<span>
+
+																													$129.99																											</span>
+
+												</p>
+
+																																		<p>
+<span class="heading">
+Quantity Available:&nbsp;</span>
+<span class="green">
+6</span>
+</p>
+
+																						<div class="pr_snippet_product">
+
+												<script type="text/javascript">
+POWERREVIEWS.display.snippet(document, { pr_page_id : "RP830106" });</script>
+
+											</div>
+
+										</div>
+
+										<div class="product-item-buttons">
+
+											<a class="btn btn-block btn-inverse" href="/en/products/detail/RP830106">
+View This Model <i class="icon-chevron-right icon-white">
+</i>
+</a>
+
+										</div>
+
+									</li>
+
+							  									<li class="span3 product-item content-wrapper overflow-hidden">
+
+										<div class="view view-first">
+
+											<a href="/en/products/detail/RP830103">
+
+												<img src="/images/products/RP830103_listing.jpg" alt="BIB SHORTS MED YELLOW FLUO">
+
+											</a>
+
+											<div class="mask">
+
+												<a class="info quick_view" href="/en/quickview/show/RP830103">
+<i class="icon-expand-alt icon-dark">
+</i>
+<span>
+ Quickview</span>
+</a>
+
+											</div>
+
+										</div>
+
+																				<div class="product-item-details">
+
+											<p>
+<a href="/en/products/detail/RP830103" class="black">
+BIB SHORTS MED YELLOW FLUO</a>
+</p>
+
+																							<p>
+
+													<span class="heading">
+MSRP: </span>
+
+													<span>
+
+																													$129.99																											</span>
+
+												</p>
+
+																																		<p>
+<span class="heading">
+Quantity Available:&nbsp;</span>
+<span class="green">
+7</span>
+</p>
+
+																						<div class="pr_snippet_product">
+
+												<script type="text/javascript">
+POWERREVIEWS.display.snippet(document, { pr_page_id : "RP830103" });</script>
+
+											</div>
+
+										</div>
+
+										<div class="product-item-buttons">
+
+											<a class="btn btn-block btn-inverse" href="/en/products/detail/RP830103">
+View This Model <i class="icon-chevron-right icon-white">
+</i>
+</a>
+
+										</div>
+
+									</li>
+
+							  									<li class="span3 product-item content-wrapper overflow-hidden">
+
+										<div class="view view-first">
+
+											<a href="/en/products/detail/RP400102">
+
+												<img src="/images/products/RP400102_listing.jpg" alt="JERSEY SHORT SLEEVE SM PINK FLUO">
+
+											</a>
+
+											<div class="mask">
+
+												<a class="info quick_view" href="/en/quickview/show/RP400102">
+<i class="icon-expand-alt icon-dark">
+</i>
+<span>
+ Quickview</span>
+</a>
+
+											</div>
+
+										</div>
+
+																				<div class="product-item-details">
+
+											<p>
+<a href="/en/products/detail/RP400102" class="black">
+JERSEY SHORT SLEEVE SM PINK FLUO</a>
+</p>
+
+																							<p>
+
+													<span class="heading">
+MSRP: </span>
+
+													<span>
+
+																													$99.99																											</span>
+
+												</p>
+
+																																		<p>
+<span class="heading">
+Quantity Available:&nbsp;</span>
+<span class="green">
+9</span>
+</p>
+
+																						<div class="pr_snippet_product">
+
+												<script type="text/javascript">
+POWERREVIEWS.display.snippet(document, { pr_page_id : "RP400102" });</script>
+
+											</div>
+
+										</div>
+
+										<div class="product-item-buttons">
+
+											<a class="btn btn-block btn-inverse" href="/en/products/detail/RP400102">
+View This Model <i class="icon-chevron-right icon-white">
+</i>
+</a>
+
+										</div>
+
+									</li>
+
+							  									<li class="span3 product-item content-wrapper overflow-hidden">
+
+										<div class="view view-first">
+
+											<a href="/en/products/detail/RP800106">
+
+												<img src="/images/products/RP800106_listing.jpg" alt="JERSEY SHORT SLEEVE XXL FLUO YELLOW">
+
+											</a>
+
+											<div class="mask">
+
+												<a class="info quick_view" href="/en/quickview/show/RP800106">
+<i class="icon-expand-alt icon-dark">
+</i>
+<span>
+ Quickview</span>
+</a>
+
+											</div>
+
+										</div>
+
+																				<div class="product-item-details">
+
+											<p>
+<a href="/en/products/detail/RP800106" class="black">
+JERSEY SHORT SLEEVE XXL FLUO YELLOW</a>
+</p>
+
+																							<p>
+
+													<span class="heading">
+MSRP: </span>
+
+													<span>
+
+																													$99.99																											</span>
+
+												</p>
+
+																																		<p>
+<span class="heading">
+Quantity Available:&nbsp;</span>
+<span class="green">
+10</span>
+</p>
+
+																						<div class="pr_snippet_product">
+
+												<script type="text/javascript">
+POWERREVIEWS.display.snippet(document, { pr_page_id : "RP800106" });</script>
+
+											</div>
+
+										</div>
+
+										<div class="product-item-buttons">
+
+											<a class="btn btn-block btn-inverse" href="/en/products/detail/RP800106">
+View This Model <i class="icon-chevron-right icon-white">
+</i>
+</a>
+
+										</div>
+
+									</li>
+
+							  </ul>
+</div>
+<div class="item">
+<ul class="carousel-content-list">
+									<li class="span3 product-item content-wrapper overflow-hidden">
+
+										<div class="view view-first">
+
+											<a href="/en/products/detail/RP800104">
+
+												<img src="/images/products/RP800104_listing.jpg" alt="JERSEY SHORT SLEEVE L FLUO YELLOW">
+
+											</a>
+
+											<div class="mask">
+
+												<a class="info quick_view" href="/en/quickview/show/RP800104">
+<i class="icon-expand-alt icon-dark">
+</i>
+<span>
+ Quickview</span>
+</a>
+
+											</div>
+
+										</div>
+
+																				<div class="product-item-details">
+
+											<p>
+<a href="/en/products/detail/RP800104" class="black">
+JERSEY SHORT SLEEVE L FLUO YELLOW</a>
+</p>
+
+																							<p>
+
+													<span class="heading">
+MSRP: </span>
+
+													<span>
+
+																													$99.99																											</span>
+
+												</p>
+
+																																		<p>
+<span class="heading">
+Quantity Available:&nbsp;</span>
+<span class="green">
+10</span>
+</p>
+
+																						<div class="pr_snippet_product">
+
+												<script type="text/javascript">
+POWERREVIEWS.display.snippet(document, { pr_page_id : "RP800104" });</script>
+
+											</div>
+
+										</div>
+
+										<div class="product-item-buttons">
+
+											<a class="btn btn-block btn-inverse" href="/en/products/detail/RP800104">
+View This Model <i class="icon-chevron-right icon-white">
+</i>
+</a>
+
+										</div>
+
+									</li>
+
+							  									<li class="span3 product-item content-wrapper overflow-hidden">
+
+										<div class="view view-first">
+
+											<a href="/en/products/detail/SP405106-0000">
+
+												<img src="/images/products/SP405106-0000_listing.jpg" alt="ASTROLOOP MATTE BLACK WITH SMOKE BLK DEG LENSES">
+
+											</a>
+
+											<div class="mask">
+
+												<a class="info quick_view" href="/en/quickview/show/SP405106-0000">
+<i class="icon-expand-alt icon-dark">
+</i>
+<span>
+ Quickview</span>
+</a>
+
+											</div>
+
+										</div>
+
+																				<div class="product-item-details">
+
+											<p>
+<a href="/en/products/detail/SP405106-0000" class="black">
+ASTROLOOP MATTE BLACK WITH SMOKE BLK DEG LENSES</a>
+</p>
+
+																							<p>
+
+													<span class="heading">
+MSRP: </span>
+
+													<span>
+
+																													$174.99																											</span>
+
+												</p>
+
+																																		<p>
+<span class="heading">
+Quantity Available:&nbsp;</span>
+<span class="green">
+10</span>
+</p>
+
+																						<div class="pr_snippet_product">
+
+												<script type="text/javascript">
+POWERREVIEWS.display.snippet(document, { pr_page_id : "SP405106-0000" });</script>
+
+											</div>
+
+										</div>
+
+										<div class="product-item-buttons">
+
+											<a class="btn btn-block btn-inverse" href="/en/products/detail/SP405106-0000">
+View This Model <i class="icon-chevron-right icon-white">
+</i>
+</a>
+
+										</div>
+
+									</li>
+
+							  									<li class="span3 product-item content-wrapper overflow-hidden">
+
+										<div class="view view-first">
+
+											<a href="/en/products/detail/HL600091VUS">
+
+												<img src="/images/products/HL600091VUS_listing.jpg" alt="BOOST 01 WITH OPTICAL SHIELD STEALTH BLACK MATTE - SMALL / MEDIUM">
+
+											</a>
+
+											<div class="mask">
+
+												<a class="info quick_view" href="/en/quickview/show/HL600091VUS">
+<i class="icon-expand-alt icon-dark">
+</i>
+<span>
+ Quickview</span>
+</a>
+
+											</div>
+
+										</div>
+
+																				<div class="product-item-details">
+
+											<p>
+<a href="/en/products/detail/HL600091VUS" class="black">
+BOOST 01 WITH OPTICAL SHIELD STEALTH BLACK MATTE - SMALL / MEDIUM</a>
+</p>
+
+																							<p>
+
+													<span class="heading">
+MSRP: </span>
+
+													<span>
+
+																													$399.99																											</span>
+
+												</p>
+
+																																		<p>
+<span class="heading">
+Quantity Available:&nbsp;</span>
+<span class="green">
+10</span>
+</p>
+
+																						<div class="pr_snippet_product">
+
+												<script type="text/javascript">
+POWERREVIEWS.display.snippet(document, { pr_page_id : "HL600091VUS" });</script>
+
+											</div>
+
+										</div>
+
+										<div class="product-item-buttons">
+
+											<a class="btn btn-block btn-inverse" href="/en/products/detail/HL600091VUS">
+View This Model <i class="icon-chevron-right icon-white">
+</i>
+</a>
+
+										</div>
+
+									</li>
+
+							  									<li class="span3 product-item content-wrapper overflow-hidden">
+
+										<div class="view view-first">
+
+											<a href="/en/products/detail/HL600071US">
+
+												<img src="/images/products/HL600071US_listing.jpg" alt="BOOST 01 WHITE - RED FLUO SHINY - SMALL / MEDIUM">
+
+											</a>
+
+											<div class="mask">
+
+												<a class="info quick_view" href="/en/quickview/show/HL600071US">
+<i class="icon-expand-alt icon-dark">
+</i>
+<span>
+ Quickview</span>
+</a>
+
+											</div>
+
+										</div>
+
+																				<div class="product-item-details">
+
+											<p>
+<a href="/en/products/detail/HL600071US" class="black">
+BOOST 01 WHITE - RED FLUO SHINY - SMALL / MEDIUM</a>
+</p>
+
+																							<p>
+
+													<span class="heading">
+MSRP: </span>
+
+													<span>
+
+																													$349.99																											</span>
+
+												</p>
+
+																																		<p>
+<span class="heading">
+Quantity Available:&nbsp;</span>
+<span class="green">
+10</span>
+</p>
+
+																						<div class="pr_snippet_product">
+
+												<script type="text/javascript">
+POWERREVIEWS.display.snippet(document, { pr_page_id : "HL600071US" });</script>
+
+											</div>
+
+										</div>
+
+										<div class="product-item-buttons">
+
+											<a class="btn btn-block btn-inverse" href="/en/products/detail/HL600071US">
+View This Model <i class="icon-chevron-right icon-white">
+</i>
+</a>
+
+										</div>
+
+									</li>
+
+							  </ul>
+</div>
+						</div>
+
+							<a data-slide="prev" href="#carousel-recent-arrivals1" class="left carousel-control">
+&lsaquo;</a>
+
+							<a data-slide="next" href="#carousel-recent-arrivals1" class="right carousel-control">
+&rsaquo;</a>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<div class="row-fluid">
+
+		<div class="tab-content">
+
+			<div class="tab-pane active" id="carousel-sports">
+
+				<div class="row-fluid">
+
+					<h3 class="font-oswald">
+Browse Products By Sport</h3>
+
+					<div class="carousel slide" id="carousel-sports1" data-interval="false">
+
+						<div class="carousel-inner">
+
+							<div class="item active">
+
+								<ul class="carousel-content-list">
+
+									<li class="span3 content-wrapper">
+
+										<div class="view view-first">
+
+											<a href="/en/products/filter/sub/landing/sport/cycling" title="Cycling">
+
+												<img src="/en/img/home/cycling.jpg" alt="Cycling" />
+
+											</a>
+
+											<div class="mask">
+
+												<a class="info" href="/en/products/filter/sub/landing/sport/cycling" title="Cycling">
+
+													<span class="visible-desktop">
+Cycling</span>
+<span class="hidden-desktop">
+<i class="icon-external-link">
+</i>
+</span>
+
+												</a>
+
+											</div>
+
+										</div>
+
+										<div class="view-sub-text clearfix">
+
+											<a href="/en/products/filter/sub/landing/sport/cycling" title="Cycling">
+<h5 class="text-center">
+Cycling</h5>
+</a>
+
+										</div>
+
+									</li>
+
+									<li class="span3 content-wrapper">
+
+										<div class="view view-first">
+
+											<a href="/en/products/filter/sub/landing/sport/triathlon" title="Triathlon">
+
+												<img src="/en/img/home/triathlon.jpg" alt="Triathlon" />
+
+											</a>
+
+											<div class="mask">
+
+												<a class="info" href="/en/products/filter/sub/landing/sport/triathlon" title="Triathlon">
+
+													<span class="visible-desktop">
+Triathlon</span>
+<span class="hidden-desktop">
+<i class="icon-external-link">
+</i>
+</span>
+
+												</a>
+
+											</div>
+
+										</div>
+
+										<div class="view-sub-text clearfix">
+
+											<a href="/en/products/filter/sub/landing/sport/triathlon" title="Triathlon">
+<h5 class="text-center">
+Triathlon</h5>
+</a>
+
+										</div>
+
+									</li>
+
+									<li class="span3 content-wrapper">
+
+										<div class="view view-first">
+
+											<a href="/en/products/filter/sub/landing/sport/shooting" title="Shooting">
+
+												<img src="/en/img/home/shooting.jpg" alt="Shooting" />
+
+											</a>
+
+											<div class="mask">
+
+												<a class="info" href="/en/products/filter/sub/landing/sport/shooting" title="Shooting">
+
+													<span class="visible-desktop">
+Shooting</span>
+<span class="hidden-desktop">
+<i class="icon-external-link">
+</i>
+</span>
+
+												</a>
+
+											</div>
+
+										</div>
+
+										<div class="view-sub-text clearfix">
+
+											<a href="/en/products/filter/sub/landing/sport/shooting" title="Shooting">
+<h5 class="text-center">
+Shooting</h5>
+</a>
+
+										</div>
+
+									</li>
+
+									<li class="span3 content-wrapper">
+
+										<div class="view view-first">
+
+											<a href="/en/products/filter/sub/landing/sport/running" title="Running">
+
+												<img src="/en/img/home/running.jpg" alt="Running" />
+
+											</a>
+
+											<div class="mask">
+
+												<a class="info" href="/en/products/filter/sub/landing/sport/running" title="Running">
+
+													<span class="visible-desktop">
+Running</span>
+<span class="hidden-desktop">
+<i class="icon-external-link">
+</i>
+</span>
+
+												</a>
+
+											</div>
+
+										</div>
+
+										<div class="view-sub-text clearfix">
+
+											<a href="/en/products/filter/sub/landing/sport/running" title="Running">
+<h5 class="text-center">
+Running</h5>
+</a>
+
+										</div>
+
+									</li>
+
+								</ul>
+
+							</div>
+
+							<div class="item">
+
+								<ul class="carousel-content-list">
+
+									<li class="span3 content-wrapper">
+
+										<div class="view view-first">
+
+											<a href="/en/products/filter/sub/landing/sport/golfing" title="Mountain Biking">
+
+												<img src="/en/img/home/golfing.jpg" alt="Golfing" />
+
+											</a>
+
+											<div class="mask">
+
+												<a class="info" href="/en/products/filter/sub/landing/sport/golfing" title="Golfing">
+
+													<span class="visible-desktop">
+Golfing</span>
+<span class="hidden-desktop">
+<i class="icon-external-link">
+</i>
+</span>
+
+												</a>
+
+											</div>
+
+										</div>
+
+										<div class="view-sub-text clearfix">
+
+											<a href="/en/products/filter/sub/landing/sport/golfing" title="Mountain Biking">
+<h5 class="text-center">
+Golfing</h5>
+</a>
+
+										</div>
+
+									</li>
+
+									<li class="span3 content-wrapper">
+
+										<div class="view view-first">
+
+											<a href="/en/products/filter/sub/landing/sport/mountain-biking" title="Mountain Biking">
+
+												<img src="/en/img/home/mountain-biking.jpg" alt="Mountain Biking" />
+
+											</a>
+
+											<div class="mask">
+
+												<a class="info" href="/en/products/filter/sub/landing/sport/mountain-biking" title="Mountain Biking">
+
+													<span class="visible-desktop">
+Mountain Biking</span>
+<span class="hidden-desktop">
+<i class="icon-external-link">
+</i>
+</span>
+
+												</a>
+
+											</div>
+
+										</div>
+
+										<div class="view-sub-text clearfix">
+
+											<a href="/en/products/filter/sub/landing/sport/mountain-biking" title="Mountain Biking">
+<h5 class="text-center">
+Mountain Biking</h5>
+</a>
+
+										</div>
+
+									</li>
+
+									<li class="span3 content-wrapper">
+
+										<div class="view view-first">
+
+											<a href="/en/products/filter/sub/landing/sport/volleyball" title="Volleyball">
+
+												<img src="/en/img/home/volleyball.jpg" alt="Volleyball" />
+
+											</a>
+
+											<div class="mask">
+
+												<a class="info" href="/en/products/filter/sub/landing/sport/volleyball" title="Volleyball">
+
+													<span class="visible-desktop">
+Volleyball</span>
+<span class="hidden-desktop">
+<i class="icon-external-link">
+</i>
+</span>
+
+												</a>
+
+											</div>
+
+										</div>
+
+										<div class="view-sub-text clearfix">
+
+											<a href="/en/products/filter/sub/landing/sport/volleyball" title="Volleyball">
+<h5 class="text-center">
+Volleyball</h5>
+</a>
+
+										</div>
+
+									</li>
+
+									<li class="span3 content-wrapper">
+
+										<div class="view view-first">
+
+											<a href="/en/products/filter/sub/landing/sport/fishing" title="Fishing">
+
+												<img src="/en/img/home/fishing.jpg" alt="Fishing" />
+
+											</a>
+
+											<div class="mask">
+
+												<a class="info" href="/en/products/filter/sub/landing/sport/fishing" title="Fishing">
+
+													<span class="visible-desktop">
+Fishing</span>
+<span class="hidden-desktop">
+<i class="icon-external-link">
+</i>
+</span>
+
+												</a>
+
+											</div>
+
+										</div>
+
+										<div class="view-sub-text clearfix">
+
+											<a href="/en/products/filter/sub/landing/sport/fishing" title="Fishing">
+<h5 class="text-center">
+Fishing</h5>
+</a>
+
+										</div>
+
+									</li>
+
+								</ul>
+
+							</div>
+
+							<div class="item">
+
+								<ul class="carousel-content-list">
+
+									<li class="span3 content-wrapper">
+
+										<div class="view view-first">
+
+											<a href="/en/products/filter/sub/landing/sport/baseball" title="Baseball">
+
+												<img src="/en/img/home/baseball.jpg" alt="Baseball" />
+
+											</a>
+
+											<div class="mask">
+
+												<a class="info" href="/en/products/filter/sub/landing/sport/baseball" title="Baseball">
+
+													<span class="visible-desktop">
+Baseball</span>
+<span class="hidden-desktop">
+<i class="icon-external-link">
+</i>
+</span>
+
+												</a>
+
+											</div>
+
+										</div>
+
+										<div class="view-sub-text clearfix">
+
+											<a href="/en/products/filter/sub/landing/sport/baseball" title="Baseball">
+<h5 class="text-center">
+Baseball</h5>
+</a>
+
+										</div>
+
+									</li>
+
+									<li class="span3 content-wrapper">
+
+										<div class="view view-first">
+
+											<a href="/en/products/filter/sub/landing/sport/motorsports" title="Motorsports">
+
+												<img src="/en/img/home/motorsports.jpg" alt="Motorsports" />
+
+											</a>
+
+											<div class="mask">
+
+												<a class="info" href="/en/products/filter/sub/landing/sport/motorsports" title="Motorsports">
+
+													<span class="visible-desktop">
+Motorsports</span>
+<span class="hidden-desktop">
+<i class="icon-external-link">
+</i>
+</span>
+
+												</a>
+
+											</div>
+
+										</div>
+
+										<div class="view-sub-text clearfix">
+
+											<a href="/en/products/filter/sub/landing/sport/motorsports" title="Motorsports">
+<h5 class="text-center">
+Motorsports</h5>
+</a>
+
+										</div>
+
+									</li>
+
+									<li class="span3 content-wrapper">
+
+										<div class="view view-first">
+
+											<a href="/en/products/filter/sub/landing/sport/inline-skate" title="Inline Skate">
+
+												<img src="/en/img/home/inline-skate.jpg" alt="Inline Skate" />
+
+											</a>
+
+											<div class="mask">
+
+												<a class="info" href="/en/products/filter/sub/landing/sport/inline-skate" title="Inline Skate">
+
+													<span class="visible-desktop">
+Inline Skate</span>
+<span class="hidden-desktop">
+<i class="icon-external-link">
+</i>
+</span>
+
+												</a>
+
+											</div>
+
+										</div>
+
+										<div class="view-sub-text clearfix">
+
+											<a href="/en/products/filter/sub/landing/sport/inline-skate" title="Inline Skate">
+<h5 class="text-center">
+Inline Skate</h5>
+</a>
+
+										</div>
+
+									</li>
+
+									<li class="span3 content-wrapper">
+
+										<div class="view view-first">
+
+											<a href="/en/products/filter/sub/landing/sport/mountain-climbing" title="Mountain Climbing">
+
+												<img src="/en/img/home/mountain-climbing.jpg" alt="Mountain Climbing" />
+
+											</a>
+
+											<div class="mask">
+
+												<a class="info" href="/en/products/filter/sub/landing/sport/mountain-climbing" title="Mountain Climbing">
+
+													<span class="visible-desktop">
+Mountain Climbing</span>
+<span class="hidden-desktop">
+<i class="icon-external-link">
+</i>
+</span>
+
+												</a>
+
+											</div>
+
+										</div>
+
+										<div class="view-sub-text clearfix">
+
+											<a href="/en/products/filter/sub/landing/sport/mountain-climbing" title="Mountain Climbing">
+<h5 class="text-center">
+Mountain Climbing</h5>
+</a>
+
+										</div>
+
+									</li>
+
+								</ul>
+
+							</div>
+
+							<div class="item">
+
+								<ul class="carousel-content-list">
+
+									<li class="span3 content-wrapper">
+
+										<div class="view view-first">
+
+											<a href="/en/products/filter/sub/landing/sport/tennis" title="Tennis">
+
+												<img src="/en/img/home/tennis.jpg" alt="Tennis" />
+
+											</a>
+
+											<div class="mask">
+
+												<a class="info" href="/en/products/filter/sub/landing/sport/tennis" title="Tennis">
+
+													<span class="visible-desktop">
+Tennis</span>
+<span class="hidden-desktop">
+<i class="icon-external-link">
+</i>
+</span>
+
+												</a>
+
+											</div>
+
+										</div>
+
+										<div class="view-sub-text clearfix">
+
+											<a href="/en/products/filter/sub/landing/sport/tennis" title="Tennis">
+<h5 class="text-center">
+Tennis</h5>
+</a>
+
+										</div>
+
+									</li>
+
+									<li class="span3 content-wrapper">
+
+										<div class="view view-first">
+
+											<a href="/en/products/filter/sub/landing/sport/water-sports" title="Water Sports">
+
+												<img src="/en/img/home/water-sports.jpg" alt="Water Sports" />
+
+											</a>
+
+											<div class="mask">
+
+												<a class="info" href="/en/products/filter/sub/landing/sport/water-sports" title="Water Sports">
+
+													<span class="visible-desktop">
+Water Sports</span>
+<span class="hidden-desktop">
+<i class="icon-external-link">
+</i>
+</span>
+
+												</a>
+
+											</div>
+
+										</div>
+
+										<div class="view-sub-text clearfix">
+
+											<a href="/en/products/filter/sub/landing/sport/water-sports" title="Water Sports">
+<h5 class="text-center">
+Water Sports</h5>
+</a>
+
+										</div>
+
+									</li>
+
+									<li class="span3 content-wrapper">
+
+										<div class="view view-first">
+
+											<a href="/en/products/filter/sub/landing/sport/winter-sports" title="Winter Sports">
+
+												<img src="/en/img/home/winter-sports.jpg" alt="Winter Sports" />
+
+											</a>
+
+											<div class="mask">
+
+												<a class="info" href="/en/products/filter/sub/landing/sport/winter-sports" title="Winter Sports">
+
+													<span class="visible-desktop">
+Winter Sports</span>
+<span class="hidden-desktop">
+<i class="icon-external-link">
+</i>
+</span>
+
+												</a>
+
+											</div>
+
+										</div>
+
+										<div class="view-sub-text clearfix">
+
+											<a href="/en/products/filter/sub/landing/sport/winter-sports" title="Winter Sports">
+<h5 class="text-center">
+Winter Sports</h5>
+</a>
+
+										</div>
+
+									</li>
+
+									<li class="span3 content-wrapper">
+
+										<div class="view view-first">
+
+											<a href="/en/products/filter/sub/landing/sport/active-lifestyle" title="Active Lifestyle">
+
+												<img src="/en/img/home/active-lifestyle.jpg" alt="Active Lifestyle" />
+
+											</a>
+
+											<div class="mask">
+
+												<a class="info" href="/en/products/filter/sub/landing/sport/active-lifestyle" title="Active Lifestyle">
+
+													<span class="visible-desktop">
+Active Lifestyle</span>
+<span class="hidden-desktop">
+<i class="icon-external-link">
+</i>
+</span>
+
+												</a>
+
+											</div>
+
+										</div>
+
+										<div class="view-sub-text clearfix">
+
+											<a href="/en/products/filter/sub/landing/sport/active-lifestyle" title="Active Lifestyle">
+<h5 class="text-center">
+Active Lifestyle</h5>
+</a>
+
+										</div>
+
+									</li>
+
+								</ul>
+
+							</div>
+
+						</div>
+
+						<a data-slide="prev" href="#carousel-sports1" class="left carousel-control">
+&lsaquo;</a>
+
+						<a data-slide="next" href="#carousel-sports1" class="right carousel-control">
+&rsaquo;</a>
+
+					</div>
+
+					<a class="pull-right" href="/en/products/allsports">
+View all sports <i class="icon-angle-right">
+</i>
+<i class="icon-angle-right">
+</i>
+</a>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+<div id="footer" class="visible">
+
+	<div class="footer-wrapper">
+
+		<div class="footer-pre">
+
+			<div class="footer-pre-wrapper row-fluid text-center">
+
+				<section class="section">
+
+					<div class="row-fluid">
+
+						<div class="span2">
+
+							<div class="media">
+
+								<img src="/en/img/theme/sponsors/raam-logo.jpg" alt="Race Across America" />
+
+							</div>
+
+						</div>
+
+						<div class="span2">
+
+							<div class="media">
+
+								<img src="/en/img/theme/sponsors/award-bar-usat.jpg" alt="USAT" />
+
+							</div>
+
+						</div>
+
+						<div class="span2">
+
+							<div class="media">
+
+								<img src="/en/img/theme/sponsors/award-bar-mens-journal.jpg" alt="Mens Journal" />
+
+							</div>
+
+						</div>
+
+						<div class="span2">
+
+							<div class="media">
+
+								<img src="/en/img/theme/sponsors/award-bar-pga.jpg" alt="PGA" />
+
+							</div>
+
+						</div>
+
+						<div class="span2">
+
+							<div class="media">
+
+								<img src="/en/img/theme/sponsors/award-bar-gear-of-year.jpg" alt="Gear Of The Year" />
+
+							</div>
+
+						</div>
+
+						<div class="span2">
+
+							<div class="media">
+
+								<img src="/en/img/theme/sponsors/award-bar-wired.jpg" alt="Wired" />
+
+							</div>
+
+						</div>
 
 
-    
-  <div class="content">
+					</div>
 
-    <p class="copyright">
-Copyright &copy; 1987-2017 Home Power Inc. All Rights Reserved</p>
+				</section>
 
-<p class="legal-links">
-<a href="/terms-of-use">
-Terms of Use</a>
- <a href="/privacy-policy">
+			</div>
+
+		</div>
+
+		<div class="footer-top">
+
+			<div class="row-fluid social-links">
+
+				<div class="span3 offset3 social-links-wrapper">
+
+					<div class="span2 social-link facebook-icon">
+
+							<a href="http://www.facebook.com/RudyProjectNA" target="_blank">
+<i class="icon-2x icon-facebook">
+</i>
+</a>
+
+						</div>
+
+						<div class="span2 social-link twitter-icon">
+
+							<a href="https://twitter.com/RudyProjectNA" target="_blank">
+<i class="icon-2x icon-twitter">
+</i>
+</a>
+
+						</div>
+
+						<div class="span2 social-link instagram-icon">
+
+							<a href="https://instagram.com/rudyprojectna/" target="_blank">
+<i class="icon-2x icon-instagram">
+</i>
+</a>
+
+						</div>
+
+						<div class="span2 social-link youtube-icon">
+
+							<a href="http://www.youtube.com/user/edashrudy" target="_blank">
+<i class="icon-2x icon-youtube">
+</i>
+</a>
+
+						</div>
+
+						<div class="span2 social-link pinterest-icon">
+
+							<a href="http://pinterest.com/rudyprojectna/" target="_blank">
+<i class="icon-2x icon-pinterest">
+</i>
+</a>
+
+					</div>
+
+				</div>
+
+
+				<div id="footer-search" class="footer-search span5">
+
+					<form method="POST" action="/en/search/results/" class="search">
+
+						<div class="form-search">
+
+							<input class="search-input" type="text" name="filter" value="" data-default-text="search..." class="input-text" autocomplete="on">
+
+							<button type="submit">
+<i class="icon-search icon-large  icon-light">
+</i>
+</button>
+
+						</div>
+
+					</form>
+
+				</div>
+
+			</div>
+
+			<div class="row-fluid text-center">
+
+				<div class="span12">
+
+					<ul class="inline">
+
+						<li>
+<a href="/en/support/policies#customer-service">
+Customer Service</a>
+</li>
+
+						<li>
+<a href="/en/support/policies#shipping">
+Shipping</a>
+</li>
+
+						<li>
+<a href="/en/support/policies#returns">
+Returns</a>
+</li>
+
+						<li>
+<a href="/en/support/pricematcher">
+Price Match</a>
+</li>
+
+						<li>
+<a href="/unauthorized-dealer-notice.php">
+Buy Authorized</a>
+</li>
+
+						<li>
+<a href="/coupons.php">
+Coupons</a>
+</li>
+
+						<li>
+<a href="/en/giftcards">
+Gift Cards</a>
+</li>
+
+						<li>
+<a href="http://www.rudyprojectusa.com/onlinecatalog/index.htm?id=2">
+Virtual Catalog</a>
+</li>
+
+						<li>
+<a href="/en/support/country">
+<img class="north-american-flag" src="/en/img/theme/north-american-flags.gif" />
+</a>
+</li>
+
+					</ul>
+
+				</div>
+
+			</div>
+
+			<div class="row-fluid text-center">
+
+				<div class="span12 footer-info">
+
+					<address>
+Rudy Project, 1015 Calle Amanecer, San Clemente, CA. 92673 <a href="tel:8778528457">
+(877) 852-8457</a>
+</address>
+
+					<ul class="inline">
+
+						<li>
+<a href="/terms-of-use.php">
+Terms Of Use</a>
+</li>
+
+						<li>
+<a href="/en/support/privacy">
 Privacy Policy</a>
- <a class="last" href="terms">
-Community Terms of Use</a>
-</p>
-
-<p class="office-links">
-<a href="/advertising">
-Advertise</a>
- <a href="/authorguidelines">
-Author Guidelines</a>
- <a class="last" href="/subscriber-services">
-Subscriber Services</a>
-</p>
-  </div>
-
-</div>
-
-  </div>
-
-      <div class="footer-cf-credit">
-        
-        <p>
-<a href="http://www.culturefoundry.com" target="_blank">
-Culture Foundry</a>
-: <a href="http://www.culturefoundry.com" target="_blank">
-digital media strategy, design and development</a>
-</p>
-
-      </div>
-
-      
-    </div>
- <!-- /#footer -->
-
-  
-</div>
-</div>
- <!-- /#page, /#page-wrapper -->
-
-    <div class="region region-page-bottom">
-
-    <div id="fancy_login_dim_screen">
-</div>
-<div id="fancy_login_login_box">
-<div id="fancy_login_form_contents">
-<a href="#" id="fancy_login_close_button">
-X</a>
-<div id="fancy_login_user_login_block_wrapper">
-<form action="/node?destination=node" method="post" id="user-login-form" accept-charset="UTF-8">
-<div>
-<div class="form-item form-type-textfield form-item-name">
-
-  <label for="edit-name--2">
-Username or e-mail <span class="form-required" title="This field is required.">
-*</span>
-</label>
-
- <input type="text" id="edit-name--2" name="name" value="" size="15" maxlength="60" class="form-text required" />
-
-</div>
-
-<div class="form-item form-type-password form-item-pass">
-
-  <label for="edit-pass--2">
-Password <span class="form-required" title="This field is required.">
-*</span>
-</label>
-
- <input type="password" id="edit-pass--2" name="pass" size="15" maxlength="128" class="form-text required" />
-
-</div>
-
-<div class="item-list">
-<ul>
-<li class="first">
-<a href="/user/register" title="Create a new user account.">
-Create new account</a>
 </li>
 
-<li class="last">
-<a href="/user/password" title="Request new password via e-mail.">
-Reset my password</a>
-</li>
+						<li>
+&copy; 2016 e-Rudy.com, All Rights Reserved.</li>
 
-</ul>
-</div>
-<input type="hidden" name="form_build_id" value="form-YR20hDPm3cZ9T4wYRpe3gDc1MVb2O5_V8L2k7xXj5-c" />
+					</ul>
 
-<input type="hidden" name="form_id" value="fancy_login_user_login_block" />
+				</div>
 
-<div class="form-actions form-wrapper" id="edit-actions--3">
-<input type="submit" id="edit-submit-1492843995" name="op" value="Log in" class="form-submit" />
-</div>
-</div>
-</form>
-</div>
-</div>
-</div>
-  </div>
+			</div>
 
-<div id="fb-root">
+		</div>
+
+		<div class="footer-bottom">
+
+			<div class="row-fluid text-center">
+
+				<div class="seal-wrapper">
+
+					<div class="span4 pull-right">
+
+						<div id="thawteseal" title="Click to Verify - This site chose Thawte SSL for secure e-commerce and confidential communications.">
+
+							<div>
+<script type="text/javascript" src="https://seal.thawte.com/getthawteseal?host_name=www.e-rudy.com&amp;size=S&amp;lang=en">
+</script>
 </div>
 
-<script type="text/javascript" src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=xa-4efd4c665a5c616a">
+						</div>
+
+					</div>
+
+					<div class="span4 pull-right">
+
+						<div id="trustwaveseal" title="Click to Verify - This site is PCI compliant and verified by TrustWave.">
+
+							<script type="text/javascript" src="https://sealserver.trustwave.com/seal.js?style=invert&size=65x36&code=5b3baa2dd1b94b63bec725575f0a10c6">
 </script>
 
-<script>
+						</div>
 
-// TGF
-(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
-!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
-(function() {
-  var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-  po.src = 'https://apis.google.com/js/plusone.js';
-  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-})();
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+<div class="back-to-top">
+<a href="#">
+&#8743;</a>
+</div>
+
+</div>
+ <!-- /#main -->
+
+<script id="jquery-js" type="text/javascript" src="/en/js/jquery/jquery-1.8.2.min.js">
+</script>
+<script id="bootstrap-js" type="text/javascript" src="/en/js/bootstrap/bootstrap.min.js">
+</script>
+<script id="fancybox2-js" type="text/javascript" src="/en/js/fancybox2/jquery.fancybox.pack.js">
+</script>
+<script id="global-js" type="text/javascript" src="/en/js/global.min.js">
+</script>
+		<script type="text/javascript" src="/en/js/home/home.min.js">
+</script>
+
+		<script type="text/javascript" src="/en/js/components/scoopsubscription/scoopsubscription.min.js">
+</script>
+
+		<script type="text/javascript" src="/en/js/components/promotionmast/promotionmast.min.js">
+</script>
+
+		<script type="text/javascript" src="/en/js/components/promotioncarousel/promotioncarousel.min.js">
+</script>
+
+		<script type="text/javascript" src="/en/js/jquery/jquery.lazyload.min.js">
+</script>
+
+		<script type="text/javascript" src="/en/js/jquery/jquery.mobile.touch-1.4.0.min.js">
+</script>
+
+<script type="text/javascript">
+
+			window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+			d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+			_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute("charset","utf-8");
+			$.src="//v2.zopim.com/?4AQCfswTqwSlqmZxxY22dwUQ5Eaqda8q";z.t=+new Date;$.
+			type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");</script>
+<span class="scoop-subscription-component-1">
+
+	<a href="/en/home/subscribe">
+</a>
+
+</span>
+
+
+<!-- Google Code for cycling Remarketing List -->
+
+<script type="text/javascript">
+
+/* <![CDATA[ */
+var google_conversion_id = 1072205309;
+var google_conversion_language = "en";
+var google_conversion_format = "3";
+var google_conversion_color = "666666";
+var google_conversion_label = "KZhbCP2g6wMQ_Zui_wM";
+var google_conversion_value = 0;
+/* ]]>
+ */
+</script>
+
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+
+</script>
+
+<noscript>
+
+<div style="display:inline;">
+
+<img height="1" width="1" style="border-style:none;" alt="" src="https://www.googleadservices.com/pagead/conversion/1072205309/?label=KZhbCP2g6wMQ_Zui_wM&amp;guid=ON&amp;script=0"/>
+
+</div>
+
+</noscript>
+
+<noscript>
+
+	<div class="row-fluid">
+
+    	<div id="noscript-warning" class="span12">
+
+    		Your system does not have JavaScript enabled, which is required to purchase product and properly experience e-rudy.com.<br>
+
+    		Please <a href="http://enable-javascript.com/" target="_blank">
+enable JavaScript in your browser</a>
+ and refresh the page.
+    	</div>
+
+	</div>
+
+</noscript>
+
+<script id="e2ma-embed">
+window.e2ma=window.e2ma||{};e2ma.accountId='1770447';</script>
+
+<script src="//dk98ddgl0znzm.cloudfront.net/e2ma.js" async="async">
 </script>
 
 </body>
