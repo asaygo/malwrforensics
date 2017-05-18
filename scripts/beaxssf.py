@@ -240,7 +240,7 @@ def help():
 
 ###MAIN###
 if __name__ == "__main__":
-    print "BEstAutomaticXSSFinder v1.0"
+    print "BEstAutomaticXSSlFinder v1.1"
     print "DISCLAIMER: For testing purposes only!\n"
 
     if len(sys.argv) < 2 or len(sys.argv) > 3:
