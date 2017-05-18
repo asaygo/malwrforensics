@@ -11,7 +11,8 @@ import requests
 import re
 
 DEBUG = 0
-xss_attacks = [ "<script>alert(1);</script>", "<img src=x onerror=prompt(/test/)>",
+xss_attacks = [ "<script>alert(1);</script>", "<script>prompt(1)</script>",
+                "<img src=x onerror=prompt(/test/)>",
                 "\"><script>alert(1);</script><div id=\"x", "</script><script>alert(1);</script>",
                 "</title><script>alert(1);</script>", "<body background=\"javascript:alert(1)\">",
                 "<img src=test123456.jpg onerror=alert(1)>"]
@@ -159,7 +160,7 @@ def check_lfi(host, page, method, params, hidden_param_name, hidden_param_value,
     return
 
 
-def scan_for_forms(fname, host, url):
+def scan_for_forms(fname, host, url, scanopt):
     print "[+] Start scan"
     rtype=""
     has_form=0
@@ -168,6 +169,7 @@ def scan_for_forms(fname, host, url):
     hidden_param_value=[]
     page = ""
     form_counter = 0
+
     try:
         with open(fname, "r") as f:
             for line in f:
@@ -176,9 +178,11 @@ def scan_for_forms(fname, host, url):
                 #let's check if the page is vulnerable
                 if line.find("</form>") >=0:
                     has_form=0
-                    if len(page) > 0 and len(params) > 0:
-                        check_xss(host, page, rtype, params, hidden_param_name, hidden_param_value, form_counter, url)
-                        check_lfi(host, page, rtype, params, hidden_param_name, hidden_param_value, form_counter, url)
+                    if len(page) > 0 and (len(params) > 0 or len(hidden_param_value) > 0):
+                        if scanopt.find("--checkxss") == 0 or scanopt.find("--all") == 0:
+                            check_xss(host, page, rtype, params, hidden_param_name, hidden_param_value, form_counter, url)
+                        if scanopt.find("--checklfi") == 0 or scanopt.find("--all") == 0:
+                            check_lfi(host, page, rtype, params, hidden_param_name, hidden_param_value, form_counter, url)
                         params=[]
                         hidden_param_name=[]
                         hidden_param_value=[]
@@ -186,10 +190,10 @@ def scan_for_forms(fname, host, url):
 
                 #add input parameters to list
                 if has_form == 1:
-                    m_input = re.match(r'.*\<(input|button)\s[^\>]*name="(\w+)"', line, re.M|re.I)
+                    m_input = re.match(r'.*\<(input|button)\s[^\>]*name=["\'](\w+)["\']', line, re.M|re.I)
                     if m_input:
                         #check if the parameters already has a value assigned
-                        m_value = re.match(r'.*\<(input|button)\s[^\>]*value="(\w+)"', line, re.M|re.I)
+                        m_value = re.match(r'.*\<(input|button)\s[^\>]*value=["\'](\w+)["\']', line, re.M|re.I)
                         if m_value:
                             hidden_param_name.append(m_input.group(2))
                             hidden_param_value.append(m_value.group(2))
@@ -197,9 +201,9 @@ def scan_for_forms(fname, host, url):
                             params.append(m_input.group(2))
 
                 #detect forms
-                m_same      = re.match(r'.*\<form\>"', line, re.M|re.I)
-                m_action    = re.match(r'.*\<form\s[^\>]*action="([\w\/\.\-\#\:]+)"', line, re.M|re.I)
-                m_reqtype   = re.match(r'.*\<form\s[^\>]*method="([\w\/\.\-]+)"', line, re.M|re.I)
+                m_same      = re.match(r'.*\<form\>', line, re.M|re.I)
+                m_action    = re.match(r'.*\<form\s[^\>]*action=["\']([\w\/\.\-\#\:]+)["\']', line, re.M|re.I)
+                m_reqtype   = re.match(r'.*\<form\s[^\>]*method=["\']([\w\/\.\-]+)["\']', line, re.M|re.I)
                 if m_action or m_same:
                     has_form=1
                     form_counter+=1
@@ -222,19 +226,37 @@ def scan_for_forms(fname, host, url):
 
     return
 
-def banner():
-    print "BEstAutomaticXSSFinder v1.0"
-    print "DISCLAIMER: For testing purposes only!\n"
+def help():
+    print "--checkxss\t\tcheck webpage for XSS vunerabilities"
+    print "--checklfi\t\tcheck webpage for local file inclusion (LFI) vulnerabilities"
+    print "--all\t\t\tthe tool will scan for both XSS and LFI vulnerabilities (default)"
+    print "\nExamples:"
+    print "program http://example.com/guestbook\t\t\tit will check for both XSS and LFI"
+    print "program --checkxss http://example.com/guestbook\t\tit will check only for XSS"
 
 ###MAIN###
 if __name__ == "__main__":
-    banner()
+    print "BEstAutomaticXSSFinder v1.0"
+    print "DISCLAIMER: For testing purposes only!\n"
 
-    if len(sys.argv) != 2:
-        print "program [url]"
+    if len(sys.argv) < 2 or len(sys.argv) > 3:
+        print "program [scan options] [url]\n"
+        help()
         exit()
 
-    url = sys.argv[1]
+    scanopt ="--all"
+    url = ""
+    
+    if sys.argv[1].find("http") == 0:
+        url = sys.argv[1]
+        if len(sys.argv) == 3:
+            scanopt = sys.argv[2]
+    else:
+        if len(sys.argv) == 3:
+            if sys.argv[1].find("--check") == 0:
+                scanopt = sys.argv[1]
+                url = sys.argv[2]
+
     if url.find("http") != 0:
         print "[-] Invalid target"
         exit()
@@ -256,8 +278,9 @@ if __name__ == "__main__":
         with open("tmpage.txt", "w") as f:
             f.write(s)
 
-        scan_for_forms("tmpage.txt", host, url)
-        os.remove("tmpage.txt")
+        scan_for_forms("tmpage.txt", host, url, scanopt)
+        if DEBUG == 0:
+            os.remove("tmpage.txt")
     except Exception, e:
         print "[-] Main(): Error " + str(e)
 
