@@ -25,7 +25,7 @@ def contains_banned_api(s):
 
 def check_banned_api(fname):
     try:
-        if len(fname) < 1:
+        if len(fname) < 3:
             return
 
         counter_line = 0
@@ -45,9 +45,10 @@ def get_files(path):
         if os.path.isdir(filePath):
             pass
         else:
-            if ".c" in filePath[-2:] or ".h" in filePath[-2:] or ".cpp" in filePath[-4:]:
-                print("Check: " + filePath)
-                check_banned_api(filePath)
+            if len(filePath) > 3:
+                if ".c" in filePath[-2:] or ".h" in filePath[-2:] or ".cpp" in filePath[-4:]:
+                    print("Check: " + filePath)
+                    check_banned_api(filePath)
 
 
 if __name__ == "__main__":
