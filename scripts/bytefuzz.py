@@ -74,7 +74,7 @@ def load_config_file(fname):
                         if m:
                             ignore_flag = int(m.group(1))
 
-                        m = re.match(r'\s*ignore_value\s*=\s*([0-9a-fx])[\r\n]*', line, re.M|re.I)
+                        m = re.match(r'\s*ignore_value\s*=\s*([0-9a-fx]+)[\r\n]*', line, re.M|re.I)
                         if m:
                             val = str(m.group(1))
                             ignore_value = int(val, 16)
@@ -93,7 +93,7 @@ def load_config_file(fname):
                         if m:
                             fileext = str(m.group(1))
 
-                        m = re.match(r'\s*mutation_value\s*=\s*([0-9a-fx])[\r\n]*', line, re.M|re.I)
+                        m = re.match(r'\s*mutation_value\s*=\s*([0-9a-fx]+)[\r\n]*', line, re.M|re.I)
                         if m:
                             val = str(m.group(1))
                             mutation_value = int(val, 16)
