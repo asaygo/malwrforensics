@@ -35,7 +35,7 @@ def check_banned_api(fname):
                 if contains_banned_api(line) == 1:
                     print(fname + ":(L" + str(counter_line) +"):" + line)
     except:
-        print("check_banned_api(): Error reading from file " + str(fname))
+        print("[-] check_banned_api(): Error reading from file " + str(fname))
     return
 
 def get_files(path):

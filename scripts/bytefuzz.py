@@ -6,7 +6,6 @@
 ###############################################
 
 import os
-import subprocess
 import time
 import sys
 import struct
@@ -15,19 +14,21 @@ from pydbg import *
 from pydbg.defines import *
 import utils
 
-verbose           = 1     	#show the command line arguments (for debugging purposes)
-generate_only	  = 0     	#just generate the files
-scan_only	      = 1     	#do not generate the files (useful to reproduce a crash)
-timeout           = 1     	#no of seconds to wait for the target program to load
-ignore_flag	      = 1     	#value that won't be replaced; eg: 0s are just padding
-ignore_val	      = 0x0     	#value that won't be replaced; eg: 0s are just padding
-debug_program     = 0		#set to 1 if you want to pydbg the program; 0 will just use os.system
-filename	      = ""		#input file for program
-fileext		      = ""		#input file extension
-program		      = ""		#program to launch
-mutation_value	  = 0xff		#the bytes in the file will be overwritten with this value
-bytes_replace	  = 1		#number of consecutive bytes to overwrite
-mutations	      = 0		#how many mutations (0 = size of the file)
+VERSION             = "1.1"
+
+verbose             = 1     	#show the command line arguments (for debugging purposes)
+generate_only       = 0     	#just generate the files
+scan_only           = 1     	#do not generate the files (useful to reproduce a crash)
+timeout             = 1     	#no of seconds to wait for the target program to load
+ignore_flag         = 1     	#value that won't be replaced; eg: 0s are just padding
+ignore_value        = 0x0     	#value that won't be replaced; eg: 0s are just padding
+debug_program       = 0		#set to 1 if you want to pydbg the program; 0 will just use os.system
+filename            = ""		#input file for program
+fileext             = ""		#input file extension
+program             = ""		#program to launch
+mutation_value      = 0xff		#the bytes in the file will be overwritten with this value
+bytes_replace       = 1		#number of consecutive bytes to overwrite
+mutations           = 0		#how many mutations (0 = size of the file)
 
 
 def load_config_file(fname):
@@ -36,7 +37,7 @@ def load_config_file(fname):
     global scan_only
     global timeout
     global ignore_flag
-    global ignore_val
+    global ignore_value
     global debug_program
     global filename
     global fileext
@@ -193,7 +194,7 @@ def launch_program(target_program, name, output_folder):
     global debug_program
 
     ###YOU MAY WANT TO CHANGE THIS###
-    params = " -df " + name + " " + output_folder
+    params = name + " " + output_folder
 
     exe_path = target_program
     if debug_program == 1:
@@ -255,8 +256,8 @@ def usage():
 
 ###MAIN###
 if __name__ == "__main__":
-    print ("static BYTE FUZZer v1.0")
-    if len(sys.argv) != 8:
+    print ("static BYTE FUZZer v" + VERSION)
+    if len(sys.argv) != 7:
         if load_config_file("bytefuzz.conf") == -1:
             usage()
             exit()
