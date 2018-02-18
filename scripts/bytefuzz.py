@@ -16,23 +16,25 @@ import utils
 
 VERSION             = "1.1"
 
-verbose             = 1     	#show the command line arguments (for debugging purposes)
-generate_only       = 0     	#just generate the files
-scan_only           = 1     	#do not generate the files (useful to reproduce a crash)
-timeout             = 1     	#no of seconds to wait for the target program to load
-ignore_flag         = 1     	#value that won't be replaced; eg: 0s are just padding
-ignore_value        = 0x0     	#value that won't be replaced; eg: 0s are just padding
-debug_program       = 0		#set to 1 if you want to pydbg the program; 0 will just use os.system
-filename            = ""		#input file for program
-fileext             = ""		#input file extension
-program             = ""		#program to launch
-mutation_value      = 0xff		#the bytes in the file will be overwritten with this value
-bytes_replace       = 1		#number of consecutive bytes to overwrite
-mutations           = 0		#how many mutations (0 = size of the file)
+verbose             = 1    #show the command line arguments (for debugging purposes)
+fuzz_type           = 1    #get type of fuzzing: 0 - overwrite, 1 - append
+generate_only       = 0    #just generate the files
+scan_only           = 0    #do not generate the files (useful to reproduce a crash)
+timeout             = 1    #no of seconds to wait for the target program to load
+ignore_flag         = 0    #value that won't be replaced; eg: 0s are just padding
+ignore_value        = 0x0  #value that won't be replaced; eg: 0s are just padding
+debug_program       = 1    #set to 1 if you want to pydbg the program; 0 will just use os.system
+filename            = ""   #input file for program
+fileext             = ""   #input file extension
+program             = ""   #program to launch
+mutation_value      = 0xff #the bytes in the file will be overwritten with this value
+bytes_replace       = 1    #number of consecutive bytes to overwrite
+mutations           = 0    #how many mutations (0 = size of the file)
 
 
 def load_config_file(fname):
     global verbose
+    global fuzz_type
     global generate_only
     global scan_only
     global timeout
@@ -52,6 +54,10 @@ def load_config_file(fname):
             for line in f:
                 if len(line) > 4:
                     if line[0:1] != "#":
+                        m = re.match(r'\s*fuzz_type\s*=\s*(\d+).*', line, re.M|re.I)
+                        if m:
+                            fuzz_type = int(m.group(1))
+
                         m = re.match(r'\s*generate_only\s*=\s*(\d+).*', line, re.M|re.I)
                         if m:
                             generate_only = int(m.group(1))
@@ -121,6 +127,7 @@ def get_size(fname):
 def generate_files(fname, val, n_bytes, fuzz_file_ext, fuzz_folder, n_mutations):
     global ignore_flag
     global ignore_value
+    global fuzz_type
     counter = 0
     print ("[+] Generate mutations based on " + fname)
 
@@ -142,12 +149,18 @@ def generate_files(fname, val, n_bytes, fuzz_file_ext, fuzz_folder, n_mutations)
                     if int(ord(buff[i])) == ignore_value:
                         continue
 
-                counter = counter +1
+                counter = counter+1
                 mid = []
                 for j in range(0,n_bytes):
                     mid.append(val)
 
-                end = buff[i+n_bytes:]
+                #overwrite
+                if fuzz_type == 0:
+                    end = buff[i+n_bytes:]
+
+                #insert
+                if fuzz_type == 1:
+                    end = buff[i:]
 
                 start = []
                 if i > 1:
@@ -305,6 +318,9 @@ if __name__ == "__main__":
         print ("\tbytes to replace = " + str(bytes_replace))
         print ("\tmutation value = " + str(mutation_value))
         print ("\tmax mutations = " + str(mutations))
+        print ("\tfuzz_type = " + str(fuzz_type))
+        print ("\tscan_only = " + str(scan_only))
+        print ("\tgenerate_only = " + str(generate_only))
 
     byte_fuzz(filename, mutation_value, fileext, fuzz_folder, bytes_replace, program, mutations, output_folder)
     print ("[+] Done")
