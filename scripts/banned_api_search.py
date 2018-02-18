@@ -47,12 +47,12 @@ def get_files(path):
         else:
             if len(filePath) > 3:
                 if ".c" in filePath[-2:] or ".h" in filePath[-2:] or ".cpp" in filePath[-4:]:
-                    print("Check: " + filePath)
                     check_banned_api(filePath)
-
 
 if __name__ == "__main__":
     if len(sys.argv) == 2:
+        print("malwrforensics.com - Banned Windows API checker v1.0\n")
         get_files(sys.argv[1])
+        print("[+] Done")
     else:
         print("program [folder]")

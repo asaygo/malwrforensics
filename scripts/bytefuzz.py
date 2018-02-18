@@ -1,23 +1,114 @@
 #!/usr/bin/python
 ###############################################
-#   Static Byte FUZZer			      #
+#   Byte FUZZer                 		      #
 #   Author: malwrforensics                    #
-#   Conact: malwr at malwrforensics dot com   #
+#   Contact: malwr at malwrforensics dot com  #
 ###############################################
 
 import os
 import subprocess
 import time
 import sys
+import struct
+import re
+from pydbg import *
+from pydbg.defines import *
+import utils
 
-JUST_GENERATE	= 0     #just generate the files
-IS_CMDLN        = 0     #don't try to kill the target app as it exited
-DEBUG           = 0     #show the command line arguments (for debugging purposes)
-TIMEOUT         = 1     #no of seconds to wait for the target program to load
+verbose           = 1     	#show the command line arguments (for debugging purposes)
+generate_only	  = 0     	#just generate the files
+scan_only	      = 1     	#do not generate the files (useful to reproduce a crash)
+timeout           = 1     	#no of seconds to wait for the target program to load
+ignore_flag	      = 1     	#value that won't be replaced; eg: 0s are just padding
+ignore_val	      = 0x0     	#value that won't be replaced; eg: 0s are just padding
+debug_program     = 0		#set to 1 if you want to pydbg the program; 0 will just use os.system
+filename	      = ""		#input file for program
+fileext		      = ""		#input file extension
+program		      = ""		#program to launch
+mutation_value	  = 0xff		#the bytes in the file will be overwritten with this value
+bytes_replace	  = 1		#number of consecutive bytes to overwrite
+mutations	      = 0		#how many mutations (0 = size of the file)
 
-ignore_list = ['Caption', 'SystemIdleProcess', 'System', 'smss.exe', 'csrss.exe', 'wininit.exe', 'csrss.exe', 'winlogon.exe', 'services.exe',
-'lsass.exe', 'lsm.exe', 'spoolsv.exe', 'taskhost.exe', 'dwm.exe', 'explorer.exe', 'SearchIndexer.exe', 'svchost.exe', 'wmpnetwk.exe',
-'audiodg.exe', 'sppsvc.exe', 'PresentationFontCache.exe', 'taskhost.exe', 'conhost.exe', 'WmiPrvSE.exe', 'python.exe', 'cmd.exe', 'WMIC.exe']
+
+def load_config_file(fname):
+    global verbose
+    global generate_only
+    global scan_only
+    global timeout
+    global ignore_flag
+    global ignore_val
+    global debug_program
+    global filename
+    global fileext
+    global program
+    global mutation_value
+    global bytes_replace
+    global mutations
+
+    try:
+        print("[+] Read config file")
+        with open(fname, 'r') as f:
+            for line in f:
+                if len(line) > 4:
+                    if line[0:1] != "#":
+                        m = re.match(r'\s*generate_only\s*=\s*(\d+).*', line, re.M|re.I)
+                        if m:
+                            generate_only = int(m.group(1))
+
+                        m = re.match(r'\s*scan_only\s*=\s*(\d+).*', line, re.M|re.I)
+                        if m:
+                            scan_only = int(m.group(1))
+
+                        m = re.match(r'\s*timeout\s*=\s*(\d+).*', line, re.M|re.I)
+                        if m:
+                            timeout = int(m.group(1))
+
+                        m = re.match(r'\s*ignore_flag\s*=\s*(\d+).*', line, re.M|re.I)
+                        if m:
+                            ignore_flag = int(m.group(1))
+
+                        m = re.match(r'\s*ignore_value\s*=\s*([0-9a-fx])[\r\n]*', line, re.M|re.I)
+                        if m:
+                            val = str(m.group(1))
+                            ignore_value = int(val, 16)
+                            if ignore_value < 0 or ignore_value > 255:
+                                ignore_value = 0
+
+                        m = re.match(r'\s*debug_program\s*=\s*(\d+).*', line, re.M|re.I)
+                        if m:
+                            debug_program = int(m.group(1))
+
+                        m = re.match(r'filename\s*=\s*(.*)[\r\n]*', line, re.M|re.I)
+                        if m:
+                            filename = str(m.group(1))
+
+                        m = re.match(r'\s*fileext\s*=\s*(\w+)[\r\n]*', line, re.M|re.I)
+                        if m:
+                            fileext = str(m.group(1))
+
+                        m = re.match(r'\s*mutation_value\s*=\s*([0-9a-fx])[\r\n]*', line, re.M|re.I)
+                        if m:
+                            val = str(m.group(1))
+                            mutation_value = int(val, 16)
+                            if mutation_value < 0 or mutation_value > 255:
+                                mutation_value = 0
+
+                        m = re.match(r'\s*program\s*=\s*(.*)[\r\n]*', line, re.M|re.I)
+                        if m:
+                            program = str(m.group(1))
+
+                        m = re.match(r'\s*bytes_replace\s*=\s*(\d+).*', line, re.M|re.I)
+                        if m:
+                            bytes_replace = int(m.group(1))
+
+                        m = re.match(r'\s*mutations\s*=\s*(\d+).*', line, re.M|re.I)
+                        if m:
+                            mutations = int(m.group(1))
+
+    except:
+        print("[-] Can't read from file")
+        return -1
+    return 0
 
 def get_size(fname):
     f = open(fname, 'rb')
@@ -26,183 +117,193 @@ def get_size(fname):
     f.close()
     return size
 
-def get_running_processes_windows():
-    global ignore_list
-    try:
-        plist = []
-        cmd = "wmic /output:process.lst process get caption"
-        os.system(cmd)
-        with open("process.lst", "r") as f:
-            for line in f:
-                line = line.replace('\x00', "")
-                line = line.replace('\n', "")
-                line = line.replace('\r', "")
-                line = line.replace(' ', "")
-                line = line.replace('\xff', "")
-                line = line.replace('\xfe', "")
-            if len(line) > 0 and line not in ignore_list:
-                plist.append(line)
-            os.remove("process.lst")
-    except:
-        print "[-] Error getting the process list"
-    return plist
+def generate_files(fname, val, n_bytes, fuzz_file_ext, fuzz_folder, n_mutations):
+    global ignore_flag
+    global ignore_value
+    counter = 0
+    print ("[+] Generate mutations based on " + fname)
 
-def generate_files(fileName, val, bytesToReplace, fuzzExt, fuzzFolder):
-    try:
-        if len(fileName) > 0:
-            with open(fileName, "rb") as f:
+    if 1:
+        if len(fname) > 0:
+            with open(fname, "rb") as f:
                 buff = f.read()
+                f.close()
 
-            print "[+] Generate " + str(len(buff)-bytesToReplace) + " files"
-            for i in range(1, len(buff)-bytesToReplace):
-                b = buff
+            size = str(len(buff)-n_bytes)
+            if size > n_mutations:
+                size = n_mutations
 
-                #replace byte(s) with new value(s)
-                mid = chr(val)*bytesToReplace
-                end = b[i+bytesToReplace:]
+            print("[+] Generate " + str(size) + " files")
+            for i in range(0, size):
 
-                if i > 0:
-                    start = b[:i-1]
+                #skip values that aren't important
+                if ignore_flag == 1:
+                    if int(ord(buff[i])) == ignore_value:
+                        continue
+
+                counter = counter +1
+                mid = []
+                for j in range(0,n_bytes):
+                    mid.append(val)
+
+                end = buff[i+n_bytes:]
+
+                start = []
+                if i > 1:
+                    for j in range(0,i):
+                        start.append(buff[j])
                 else:
-                    start = ""
-                b = start + mid + end
+                    if i==1:
+                        start.append(buff[0])
+                    else:
+                        start = []
 
-                #write the a new file with the bytes changed
-                name = fuzzFolder + "\\fuzz_" + str(i) + "." + str(fuzzExt)
-                with open(name, "wb") as f:
-                    f.write(b)
-                i=i+1
-    except:
-        print "[-] generate_files(): Error generating files"
+                b = []
+                if i>0:
+                    for c in start:
+                        b.append(c)
+                for c in mid:
+                    b.append(c)
+                for c in end:
+                    b.append(c)
 
-def set_startupinfo():
-    startupinfo = None
-    if os.name == 'nt':
-        startupinfo = subprocess.STARTUPINFO()
-        #hide the window of the new process
-        startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
-        return startupinfo
-    return startupinfo
+                name = fuzz_folder + "\\fuzz_" + str(hex(val)) + "_" + str(i) + "." + str(fuzz_file_ext)
+                with open(name, "wb") as f_out:
+                    f_out.write(bytearray(b))
+                    f_out.close()
 
-def byte_fuzz(fileName, val, fuzzExt, fuzzFolder, bytesToReplace, programToExecute, procName, noOfVariations):
-    global JUST_GENERATE
-    global IS_CMDLN
-    global TIMEOUT
+    return counter
+
+def exception_handle(dbg):
+    print(dbg.dump_context())
+    raw_input("[+] Crash detected! Press a key to continue...")
+    return DBG_EXCEPTION_NOT_HANDLED
+
+def debug(exe_path, params):
+    dbg = pydbg()
+    pid = dbg.load(exe_path, params)
+    #dbg.attach(int(pid))
+    dbg.set_callback(EXCEPTION_ACCESS_VIOLATION, exception_handle)
+    dbg.set_callback(EXCEPTION_GUARD_PAGE, exception_handle)
+    dbg.run()
+    return
+
+def launch_program(target_program, name, output_folder):
+    global timeout
+    global debug_program
+
+    ###YOU MAY WANT TO CHANGE THIS###
+    params = " -df " + name + " " + output_folder
+
+    exe_path = target_program
+    if debug_program == 1:
+        debug(exe_path, params)
+    else:
+        os.system(exe_path + params)
+    time.sleep(timeout)
+
+def byte_fuzz(fname, val, fuzz_file_ext, fuzz_folder, n_bytes, target_program, n_mutations, output_folder):
+    global generate_only
+    global scan_only
+
+    counter = 0
     try:
-        if len(fileName) <=0  or len(programToExecute) <= 0 or len(procName) <=0 or noOfVariations == 0:
-            print "[-] Invalid option"
+        if len(fname) <=0  or len(target_program) <= 0 or n_mutations == 0:
+            print("[-] Invalid option")
             return
 
-        fsize = get_size(fileName)
-        plist_orig = get_running_processes_windows()
-        if (bytesToReplace > 0 and bytesToReplace < fsize and val >= 0 and val <= 0xff):
-            generate_files(fileName, val, bytesToReplace, fuzzExt, fuzzFolder)
-        if JUST_GENERATE == 1:
+        fsize = get_size(fname)
+        if n_mutations < fsize:
+            fsize = n_mutations
+
+        if (n_bytes > 0 and n_bytes < fsize and val >= 0 and val <= 0xff and scan_only == 0):
+            print("[+] Max possible mutations: " + str(fsize-n_bytes))
+            counter = generate_files(fname, val, n_bytes, fuzz_file_ext, fuzz_folder, n_mutations)
+            print("[+] Files generated: " + str(counter))
+
+        if generate_only == 1:
             exit()
 
-        print "[*] Check " + str(fsize-bytesToReplace) + " files"
-        sys.stdout.write("Variant: ")
-        sys.stdout.flush()
-        for i in range(1, fsize-bytesToReplace):
+        for i in range(1, fsize-n_bytes):
+            name = fuzz_folder + "\\fuzz_" + str(hex(val)) + "_" + str(i) + "." + str(fuzz_file_ext)
+
+            if not os.path.isfile(name):
+                continue
+
             vSize = len(str(i))
             sys.stdout.write(str(i))
             sys.stdout.flush()
-            name = fuzzFolder + "\\fuzz_" + str(i) + "." + str(fuzzExt)
 
-	        #hide the window of the new process
-            startupinfo = set_startupinfo()
-            with open(os.devnull, 'w') as temp:
-                proc = subprocess.Popen([programToExecute, name], startupinfo=startupinfo, stdout=temp, stderr=temp)
-                time.sleep(TIMEOUT) #give the process time to load te file
+            launch_program(target_program, name, output_folder)
 
-            #check the number of processes to see if there is a crash
-            try:
-                flag_crash = 0 #will be 1 if a crash is detected
-                plist_new = get_running_processes_windows()
-                if IS_CMDLN == 0:
-                    if len(plist_new) != len(plist_orig) + 1:
-                        flag_crash = 1
-                    else:
-                        if len(plist_new) != len(plist_orig):
-                            flag_crash = 1
-
-                #crash was detected,
-                #show the list of processes, before and after
-                if flag_crash == 1:
-                    print "\n[+] Possible crash at " + str(i)
-                    print plist_orig
-                    print plist_new
-                    exit()
-
-                #kill the process
-                if IS_CMDLN == 0:
-                    os.system("taskkill /f /im " + procName + " > " + os.devnull + " 2>&1")
-                if noOfVariations > 0 and i>noOfVariations:
-                    print "\n[*] Max tries reached"
-                    exit()
-                sys.stdout.write("\b" * vSize)
-                sys.stdout.flush()
-                i=i+1
-            except Exception, e:
-                print "\n[-] Error at offset " + str(i) + "\n" + str(e)
-    except Exception, e:
-        print "[-] Error " + str(e)
+            sys.stdout.write("\b" * vSize)
+            sys.stdout.flush()
+    except Exception as e:
+        print("[-] Error: " + str(e))
 
 def usage():
-    print "Usage: program [path] [ext] [value] [bytes] [executable] [caption] [variations]"
-    print "\tpath\t\tpath and file name of the file to fuzz"
-    print "\text\t\tfile extension of the fuzzed files"
-    print "\tvalue\t\tthe value (between 0x0 and 0xff) that will be used to replace the bytes in the original file"
-    print "\tbytes\t\thow many bytes to replace at a time, usually between 1 and 4"
-    print "\texecutable\tthe path and name of the executable used to open the fuzzed files"
-    print "\tcaption\t\tthe caption name of the process that is used to open the fuzzed files (usually the name of the executable)"
-    print "\tvariations\thow many variations you want to test (if 0 then the size of the fuzzed file will be used)"
-    print '\nExample: program test.pdf pdf 0xff 1 "C:\Program Files (x86)\Adobe\Bin\Acrord32.exe" Acrord32.exe 100'
+    print ("Usage: program [path] [ext] [value] [bytes] [executable] [caption] [variations]")
+    print ("\tpath\t\tpath and file name of the file to fuzz")
+    print ("\text\t\tfile extension of the fuzzed files")
+    print ("\tvalue\t\tthe value (between 0x0 and 0xff) that will be used to replace the bytes in the original file")
+    print ("\tbytes\t\thow many bytes to replace at a time, usually between 1 and 4")
+    print ("\texecutable\tthe path and name of the executable used to open the fuzzed files")
+    print ("\tcaption\t\tthe caption name of the process that is used to open the fuzzed files (usually the name of the executable)")
+    print ("\tvariations\thow many variations you want to test (if 0 then the size of the fuzzed file will be used)")
+    print ('\nExample: program test.pdf pdf 0xff 1 "C:\Program Files (x86)\Adobe\Bin\Acrord32.exe" Acrord32.exe 100')
     return
 
 ###MAIN###
 if __name__ == "__main__":
-    print "static BYTE FUZZer v1.0"
+    print ("static BYTE FUZZer v1.0")
     if len(sys.argv) != 8:
-        usage()
-        exit()
+        if load_config_file("bytefuzz.conf") == -1:
+            usage()
+            exit()
     else:
-	fileName = sys.argv[1]
-	fuzzExt = sys.argv[2]
+        filename = sys.argv[1]
+        fileext = sys.argv[2]
+        val = sys.argv[3]
+        if val.find("0x") != 0:
+            print ("[-] The value has to be in hex")
+            exit()
+        mutation_value = int(val, 16)
 
-	if sys.argv[3].find("0x") != 0:
-	    print "[-] The value has to be in hex"
-	    exit()
+        bytes_replace = int(sys.argv[4])
+        if bytes_replace <= 0:
+            print ("[-] Nothing to replace")
+            exit()
 
-	val = int(sys.argv[3], 16)
- 	if val < 0:
-	    val = 0
+        program = sys.argv[5]
+        mutations = int(sys.argv[6])
 
-	bytesToReplace = int(sys.argv[4])
-	if bytesToReplace <= 0:
-	    print "[-] Nothing to replace"
-	    exit()
 
-	programToExecute = sys.argv[5]
-	procName = sys.argv[6]
-	noOfVariations = int(sys.argv[7])
-	if noOfVariations <= 0:
-	    noOfVariations = 600
+    if mutation_value < 0 or mutation_value > 255:
+        mutation_value = 0
 
-	#create fuzz folder
-	fuzzFolder = "fuzzfiles"
-	if not os.path.exists(fuzzFolder):
-	    os.makedirs(fuzzFolder)
+    if mutations <= 0:
+        mutations = get_size(filename)
 
-	if DEBUG != 0:
-	    print "[*] Debug info:"
-	    print "\tfileName = " + fileName
-	    print "\tfuzzExt = " + fuzzExt
-	    print "\tval = " + str(val)
-	    print "\tbytesToReplace = " + str(bytesToReplace)
-	    print "\tprogramToExecute = " + programToExecute
-	    print "\tprocName = " + procName
-	    print "\tnoOfVariations = " + str(noOfVariations)
+    #create fuzz folder
+    fuzz_folder = "fuzzfiles"
+    if not os.path.exists(fuzz_folder):
+        os.makedirs(fuzz_folder)
 
-	byte_fuzz(fileName, val, fuzzExt, fuzzFolder, bytesToReplace, programToExecute, procName, noOfVariations)
-	print "[*] Done"
+    #create output files folder
+    output_folder = "outfiles"
+    if not os.path.exists(output_folder):
+        os.makedirs(output_folder)
+
+    print("[*] Don't forget to change the \"parameters\" value in launch_program()")
+
+    if verbose != 0:
+        print ("[*] Debug info:")
+        print ("\tfile = " + filename)
+        print ("\text = " + fileext)
+        print ("\tprogram = " + program)
+        print ("\tbytes to replace = " + str(bytes_replace))
+        print ("\tmutation value = " + str(mutation_value))
+        print ("\tmax mutations = " + str(mutations))
+
+    byte_fuzz(filename, mutation_value, fileext, fuzz_folder, bytes_replace, program, mutations, output_folder)
+    print ("[+] Done")
