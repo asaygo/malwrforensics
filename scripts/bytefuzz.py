@@ -141,9 +141,12 @@ def generate_files(fname, val, n_bytes, fuzz_file_ext, fuzz_folder, n_mutations)
                 buff = f.read()
                 f.close()
 
-            size = str(len(buff)-n_bytes)
-            if size > n_mutations:
-                size = n_mutations
+            if fuzz_type != 1 and len(buff) < n_bytes:
+                size = str(len(buff)-n_bytes)
+                if size > n_mutations:
+                    size = n_mutations
+            else:
+                size = len(buff)
 
             print("[+] Generate " + str(size) + " files")
             for i in range(0, size):
@@ -236,9 +239,10 @@ def launch_program_w_popen(target_program, name, output_folder):
     ###YOU MAY WANT TO CHANGE THIS###
     params = []
     params.append("x")
-    params.append("-aou")
-    params.append("-o" + output_folder)
+    params.append("-y")
+    params.append("-or")
     params.append(name)
+    params.append(output_folder)
 
     startupinfo = set_startupinfo()
     with open(os.devnull, 'w') as temp:
@@ -251,7 +255,7 @@ def launch_program(target_program, name, output_folder):
     global debug_program
 
     ###YOU MAY WANT TO CHANGE THIS###
-    params = " x -aou -y -o" + output_folder + " " + name
+    params = " x -y -or " + name + " " + output_folder
 
     exe_path = target_program
     if debug_program == 1:
@@ -264,6 +268,7 @@ def byte_fuzz(fname, val, fuzz_file_ext, fuzz_folder, n_bytes, target_program, n
     global generate_only
     global scan_only
     global verbose
+    global fuzz_type
 
     counter = 0
     try:
@@ -275,15 +280,19 @@ def byte_fuzz(fname, val, fuzz_file_ext, fuzz_folder, n_bytes, target_program, n
         if n_mutations < fsize:
             fsize = n_mutations
 
-        if (n_bytes >= 0 and n_bytes < fsize and val >= 0 and val <= 0xff and scan_only == 0):
-            print("[+] Max possible mutations: " + str(fsize-n_bytes))
+        if (n_bytes >= 0 and val >= 0 and val <= 0xff and scan_only == 0):
             counter = generate_files(fname, val, n_bytes, fuzz_file_ext, fuzz_folder, n_mutations)
             print("[+] Files generated: " + str(counter))
 
         if generate_only == 1:
             exit()
 
-        for i in range(1, fsize-n_bytes):
+        if fuzz_type != 1:
+            size = fsize-n_bytes
+        else:
+            size = fsize
+
+        for i in range(1, size):
             name = fuzz_folder + "\\fuzz_" + str(hex(val)) + "_" + str(i) + "." + str(fuzz_file_ext)
 
             #if verbose == 1:
