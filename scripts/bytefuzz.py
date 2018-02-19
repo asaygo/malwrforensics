@@ -6,6 +6,7 @@
 ###############################################
 
 import os
+import subprocess
 import time
 import sys
 import struct
@@ -14,23 +15,23 @@ from pydbg import *
 from pydbg.defines import *
 import utils
 
-VERSION             = "1.1"
+VERSION             = "1.2"
 
-verbose             = 1    #show the command line arguments (for debugging purposes)
-fuzz_type           = 1    #get type of fuzzing: 0 - overwrite, 1 - append
-generate_only       = 0    #just generate the files
-scan_only           = 0    #do not generate the files (useful to reproduce a crash)
-timeout             = 1    #no of seconds to wait for the target program to load
-ignore_flag         = 0    #value that won't be replaced; eg: 0s are just padding
-ignore_value        = 0x0  #value that won't be replaced; eg: 0s are just padding
-debug_program       = 1    #set to 1 if you want to pydbg the program; 0 will just use os.system
-filename            = ""   #input file for program
-fileext             = ""   #input file extension
-program             = ""   #program to launch
-mutation_value      = 0xff #the bytes in the file will be overwritten with this value
-bytes_replace       = 1    #number of consecutive bytes to overwrite
-mutations           = 0    #how many mutations (0 = size of the file)
-
+verbose             = 1     #show the command line arguments (for debugging purposes)
+fuzz_type           = 1     #get type of fuzzing: 0 - overwrite, 1 - append
+generate_only       = 0     #just generate the files
+scan_only           = 0     #do not generate the files (useful to reproduce a crash)
+timeout             = 2     #no of seconds to wait for the target program to load
+ignore_flag         = 0     #value that won't be replaced; eg: 0s are just padding
+ignore_value        = 0x0   #value that won't be replaced; eg: 0s are just padding
+debug_program       = 1		#set to 1 if you want to pydbg the program; 0 will just use os.system
+filename            = ""	#input file for program
+fileext             = ""	#input file extension
+program             = ""	#program to launch
+mutation_value      = 0xff	#the bytes in the file will be overwritten with this value
+bytes_replace       = 1		#number of consecutive bytes to overwrite
+mutations           = 0		#how many mutations (0 = size of the file)
+use_subp_popen      = 0     #use subprocess.popen and then kill (useful for GUIs)
 
 def load_config_file(fname):
     global verbose
@@ -47,6 +48,7 @@ def load_config_file(fname):
     global mutation_value
     global bytes_replace
     global mutations
+    global use_subp_popen
 
     try:
         print("[+] Read config file")
@@ -74,7 +76,7 @@ def load_config_file(fname):
                         if m:
                             ignore_flag = int(m.group(1))
 
-                        m = re.match(r'\s*ignore_value\s*=\s*([0-9a-fx]+)[\r\n]*', line, re.M|re.I)
+                        m = re.match(r'\s*ignore_value\s*=\s*([0-9a-fx])[\r\n]*', line, re.M|re.I)
                         if m:
                             val = str(m.group(1))
                             ignore_value = int(val, 16)
@@ -97,8 +99,6 @@ def load_config_file(fname):
                         if m:
                             val = str(m.group(1))
                             mutation_value = int(val, 16)
-                            if mutation_value < 0 or mutation_value > 255:
-                                mutation_value = 0
 
                         m = re.match(r'\s*program\s*=\s*(.*)[\r\n]*', line, re.M|re.I)
                         if m:
@@ -111,6 +111,10 @@ def load_config_file(fname):
                         m = re.match(r'\s*mutations\s*=\s*(\d+).*', line, re.M|re.I)
                         if m:
                             mutations = int(m.group(1))
+
+                        m = re.match(r'\s*use_subp_popen\s*=\s*(\d+).*', line, re.M|re.I)
+                        if m:
+                            use_subp_popen = int(m.group(1))
 
     except:
         print("[-] Can't read from file")
@@ -202,12 +206,35 @@ def debug(exe_path, params):
     dbg.run()
     return
 
+def set_startupinfo():
+    startupinfo = None
+    if os.name == 'nt':
+        startupinfo = subprocess.STARTUPINFO()
+        #hide the window of the new process
+        startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
+        return startupinfo
+    return startupinfo
+
+def launch_program_w_popen(target_program, name, output_folder):
+    global timeout
+
+    ###YOU MAY WANT TO CHANGE THIS###
+    params = []
+    params.append("-o" + output_folder)
+    params.append(name)
+
+    startupinfo = set_startupinfo()
+    with open(os.devnull, 'w') as temp:
+        proc = subprocess.Popen([programToExecute, params], startupinfo=startupinfo, stdout=temp, stderr=temp, shell=False)
+        time.sleep(timeout) #give the process time to load the file
+        proc.kill()
+
 def launch_program(target_program, name, output_folder):
     global timeout
     global debug_program
 
     ###YOU MAY WANT TO CHANGE THIS###
-    params = name + " " + output_folder
+    params = " -o" + output_folder + " " + name
 
     exe_path = target_program
     if debug_program == 1:
@@ -219,6 +246,7 @@ def launch_program(target_program, name, output_folder):
 def byte_fuzz(fname, val, fuzz_file_ext, fuzz_folder, n_bytes, target_program, n_mutations, output_folder):
     global generate_only
     global scan_only
+    global verbose
 
     counter = 0
     try:
@@ -248,7 +276,10 @@ def byte_fuzz(fname, val, fuzz_file_ext, fuzz_folder, n_bytes, target_program, n
             sys.stdout.write(str(i))
             sys.stdout.flush()
 
-            launch_program(target_program, name, output_folder)
+            if use_subp_popen == 1:
+                launch_program_w_popen(target_program, name, output_folder)
+            else:
+                launch_program(target_program, name, output_folder)
 
             sys.stdout.write("\b" * vSize)
             sys.stdout.flush()
@@ -290,7 +321,6 @@ if __name__ == "__main__":
 
         program = sys.argv[5]
         mutations = int(sys.argv[6])
-
 
     if mutation_value < 0 or mutation_value > 255:
         mutation_value = 0
