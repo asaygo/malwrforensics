@@ -17,13 +17,13 @@ import utils
 
 VERSION             = "1.2"
 
-verbose             = 1     #show the command line arguments (for debugging purposes)
-fuzz_type           = 1     #get type of fuzzing: 0 - overwrite, 1 - append
-generate_only       = 0     #just generate the files
-scan_only           = 0     #do not generate the files (useful to reproduce a crash)
-timeout             = 2     #no of seconds to wait for the target program to load
-ignore_flag         = 0     #value that won't be replaced; eg: 0s are just padding
-ignore_value        = 0x0   #value that won't be replaced; eg: 0s are just padding
+verbose             = 1     	#show the command line arguments (for debugging purposes)
+fuzz_type           = 1     	#get type of fuzzing: 0 - overwrite, 1 - append, 2 - delete
+generate_only       = 0     	#just generate the files
+scan_only           = 0     	#do not generate the files (useful to reproduce a crash)
+timeout             = 2     	#no of seconds to wait for the target program to load
+ignore_flag         = 0     	#value that won't be replaced; eg: 0s are just padding
+ignore_value        = 0x0     	#value that won't be replaced; eg: 0s are just padding
 debug_program       = 1		#set to 1 if you want to pydbg the program; 0 will just use os.system
 filename            = ""	#input file for program
 fileext             = ""	#input file extension
@@ -31,7 +31,7 @@ program             = ""	#program to launch
 mutation_value      = 0xff	#the bytes in the file will be overwritten with this value
 bytes_replace       = 1		#number of consecutive bytes to overwrite
 mutations           = 0		#how many mutations (0 = size of the file)
-use_subp_popen      = 0     #use subprocess.popen and then kill (useful for GUIs)
+use_subp_popen      = 0         #use subprocess.popen and then kill (useful for GUIs)
 
 def load_config_file(fname):
     global verbose
@@ -166,6 +166,16 @@ def generate_files(fname, val, n_bytes, fuzz_file_ext, fuzz_folder, n_mutations)
                 if fuzz_type == 1:
                     end = buff[i:]
 
+                #delete
+                if fuzz_type == 2:
+
+                    #if no bytes are to be removed
+                    #then delete the last byte
+                    if n_bytes == 0:
+                        end = buff[0:size-i-n_bytes]
+                    else:
+                        end = buff[i+n_bytes:]
+
                 start = []
                 if i > 1:
                     for j in range(0,i):
@@ -174,6 +184,11 @@ def generate_files(fname, val, n_bytes, fuzz_file_ext, fuzz_folder, n_mutations)
                     if i==1:
                         start.append(buff[0])
                     else:
+                        start = []
+
+                if fuzz_type == 2:
+                    mid = []
+                    if n_bytes == 0:
                         start = []
 
                 b = []
@@ -220,6 +235,8 @@ def launch_program_w_popen(target_program, name, output_folder):
 
     ###YOU MAY WANT TO CHANGE THIS###
     params = []
+    params.append("x")
+    params.append("-aou")
     params.append("-o" + output_folder)
     params.append(name)
 
@@ -234,7 +251,7 @@ def launch_program(target_program, name, output_folder):
     global debug_program
 
     ###YOU MAY WANT TO CHANGE THIS###
-    params = " -o" + output_folder + " " + name
+    params = " x -aou -y -o" + output_folder + " " + name
 
     exe_path = target_program
     if debug_program == 1:
@@ -258,7 +275,7 @@ def byte_fuzz(fname, val, fuzz_file_ext, fuzz_folder, n_bytes, target_program, n
         if n_mutations < fsize:
             fsize = n_mutations
 
-        if (n_bytes > 0 and n_bytes < fsize and val >= 0 and val <= 0xff and scan_only == 0):
+        if (n_bytes >= 0 and n_bytes < fsize and val >= 0 and val <= 0xff and scan_only == 0):
             print("[+] Max possible mutations: " + str(fsize-n_bytes))
             counter = generate_files(fname, val, n_bytes, fuzz_file_ext, fuzz_folder, n_mutations)
             print("[+] Files generated: " + str(counter))
@@ -268,6 +285,10 @@ def byte_fuzz(fname, val, fuzz_file_ext, fuzz_folder, n_bytes, target_program, n
 
         for i in range(1, fsize-n_bytes):
             name = fuzz_folder + "\\fuzz_" + str(hex(val)) + "_" + str(i) + "." + str(fuzz_file_ext)
+
+            #if verbose == 1:
+                #print("Val = " + str(val))
+                #print("\tWork on " + name)
 
             if not os.path.isfile(name):
                 continue
