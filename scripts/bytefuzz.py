@@ -24,14 +24,14 @@ generate_only       = 0     	#just generate the files
 scan_only           = 0     	#do not generate the files (useful to reproduce a crash)
 timeout             = 2     	#no of seconds to wait for the target program to load
 ignore_flag         = 0     	#value that won't be replaced; eg: 0s are just padding
-ignore_value        = 0x0     	#value that won't be replaced; eg: 0s are just padding
-debug_program       = 1		    #set to 1 if you want to pydbg the program; 0 will just use os.system
-filename            = ""	    #input file for program
-fileext             = ""	    #input file extension
-program             = ""	    #program to launch
-mutation_value      = 0xff	    #the bytes in the file will be overwritten with this value
-bytes_replace       = 1		    #number of consecutive bytes to overwrite
-mutations           = 0		    #how many mutations (0 = size of the file)
+ignore_value        = 0x0       #value that won't be replaced; eg: 0s are just padding
+debug_program       = 1         #set to 1 if you want to pydbg the program; 0 will just use os.system
+filename            = ""        #input file for program
+fileext             = ""        #input file extension
+program             = ""        #program to launch
+mutation_value      = 0xff      #the bytes in the file will be overwritten with this value
+bytes_replace       = 1         #number of consecutive bytes to overwrite
+mutations           = 0         #how many mutations (0 = size of the file)
 use_subp_popen      = 0         #use subprocess.popen and then kill (useful for GUIs)
 
 def load_config_file(fname):
@@ -159,6 +159,9 @@ def generate_files(fname, val, n_bytes, fuzz_file_ext, fuzz_folder, n_mutations)
 
             if len(buff) >= n_bytes:
                 size = str(len(buff)-n_bytes)
+                if size < 0:
+                    size = len(buff)
+
                 if size > n_mutations:
                     size = n_mutations
             else:
