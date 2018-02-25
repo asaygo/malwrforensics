@@ -282,9 +282,10 @@ def launch_program_w_popen(target_program, name, output_folder):
         if HasCrashed() == 1:
             raw_input("[+] Crash detected! Press a key to continue...")
 
-        proc.kill()
         print("\n[*] Terminate process")
-        os.system("taskkill /F /IM gimp-2.8.exe")
+        proc.kill()
+        #you may want to change this
+        #os.system("taskkill /F /IM calc.exe")
         time.sleep(1)
 
 def launch_program(target_program, name, output_folder):
@@ -300,7 +301,10 @@ def launch_program(target_program, name, output_folder):
     else:
         os.system(exe_path + params)
     time.sleep(timeout)
-    os.system("taskkill /F /IM gimp-2.8.exe")
+
+    print("\n[*] Terminate process")
+    #you may want to change this
+    #os.system("taskkill /F /IM calc.exe")
     time.sleep(1)
 
 def byte_fuzz(fname, val, fuzz_file_ext, fuzz_folder, n_bytes, target_program, n_mutations, output_folder):
