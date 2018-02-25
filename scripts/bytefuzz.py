@@ -11,19 +11,20 @@ import time
 import sys
 import struct
 import re
+import utils
+import codecs
 from pydbg import *
 from pydbg.defines import *
-import utils
 
 VERSION             = "1.2"
 FUZZ_FILE_PREFIX    = "fuzz"
 
-verbose             = 1     	#show the command line arguments (for debugging purposes)
-fuzz_type           = 1     	#get type of fuzzing: 0 - overwrite, 1 - append, 2 - delete
-generate_only       = 0     	#just generate the files
-scan_only           = 0     	#do not generate the files (useful to reproduce a crash)
-timeout             = 2     	#no of seconds to wait for the target program to load
-ignore_flag         = 0     	#value that won't be replaced; eg: 0s are just padding
+verbose             = 1         #show the command line arguments (for debugging purposes)
+fuzz_type           = 1         #get type of fuzzing: 0 - overwrite, 1 - append, 2 - delete
+generate_only       = 0         #just generate the files
+scan_only           = 0         #do not generate the files (useful to reproduce a crash)
+timeout             = 2         #no of seconds to wait for the target program to load
+ignore_flag         = 0         #value that won't be replaced; eg: 0s are just padding
 ignore_value        = 0x0       #value that won't be replaced; eg: 0s are just padding
 debug_program       = 1         #set to 1 if you want to pydbg the program; 0 will just use os.system
 filename            = ""        #input file for program
@@ -157,16 +158,12 @@ def generate_files(fname, val, n_bytes, fuzz_file_ext, fuzz_folder, n_mutations)
                 buff = f.read()
                 f.close()
 
-            if len(buff) >= n_bytes:
+            if fuzz_type != 1 and len(buff) < n_bytes:
                 size = str(len(buff)-n_bytes)
-                if size < 0:
-                    size = len(buff)
-
                 if size > n_mutations:
                     size = n_mutations
             else:
-                if fuzz_type != 1
-                    size = len(buff)
+                size = len(buff)
 
             print("[+] Generate " + str(size) + " files")
             for i in range(0, size):
@@ -244,12 +241,28 @@ def debug(exe_path, params):
     dbg.run()
     return
 
+def HasCrashed():
+    try:
+        os.remove("list.txt")
+    except:
+        print("[-] Can't find process list")
+
+    os.system("wmic /output:list.txt PROCESS get Caption,Commandline")
+    try:
+        with codecs.open("list.txt", encoding='utf-16', mode='r') as f:
+            for p in f:
+                if "WerFault".lower() in p.lower():
+                    return 1
+    except:
+        print("[-] Can't read proces list")
+    return 0
+
 def set_startupinfo():
     startupinfo = None
     if os.name == 'nt':
         startupinfo = subprocess.STARTUPINFO()
         #hide the window of the new process
-        startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
+        #startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
         return startupinfo
     return startupinfo
 
@@ -265,7 +278,14 @@ def launch_program_w_popen(target_program, name, output_folder):
     with open(os.devnull, 'w') as temp:
         proc = subprocess.Popen([target_program, params], startupinfo=startupinfo, stdout=temp, stderr=temp, shell=False)
         time.sleep(timeout) #give the process time to load the file
+
+        if HasCrashed() == 1:
+            raw_input("[+] Crash detected! Press a key to continue...")
+
         proc.kill()
+        print("\n[*] Terminate process")
+        os.system("taskkill /F /IM gimp-2.8.exe")
+        time.sleep(1)
 
 def launch_program(target_program, name, output_folder):
     global timeout
@@ -280,6 +300,8 @@ def launch_program(target_program, name, output_folder):
     else:
         os.system(exe_path + params)
     time.sleep(timeout)
+    os.system("taskkill /F /IM gimp-2.8.exe")
+    time.sleep(1)
 
 def byte_fuzz(fname, val, fuzz_file_ext, fuzz_folder, n_bytes, target_program, n_mutations, output_folder):
     global generate_only
@@ -395,6 +417,7 @@ if __name__ == "__main__":
         print ("\tfuzz_type = " + str(fuzz_type))
         print ("\tscan_only = " + str(scan_only))
         print ("\tgenerate_only = " + str(generate_only))
+        print("\tuse_subp_popen = " + str(use_subp_popen))
 
     byte_fuzz(filename, mutation_value, fileext, fuzz_folder, bytes_replace, program, mutations, output_folder)
     print ("[+] Done")
