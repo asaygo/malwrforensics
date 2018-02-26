@@ -158,7 +158,7 @@ def generate_files(fname, val, n_bytes, fuzz_file_ext, fuzz_folder, n_mutations)
                 buff = f.read()
                 f.close()
 
-            if fuzz_type != 1 and len(buff) < n_bytes:
+            if fuzz_type != 1 and len(buff) > n_bytes:
                 size = str(len(buff)-n_bytes)
                 if size > n_mutations:
                     size = n_mutations
