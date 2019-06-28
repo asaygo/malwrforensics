@@ -1,6 +1,6 @@
 #!/usr/bin/python
 ###############################################
-#   Byte FUZZer                 		      #
+#   Byte FUZZer                               #
 #   Author: malwrforensics                    #
 #   Contact: malwr at malwrforensics dot com  #
 ###############################################
@@ -13,11 +13,12 @@ import struct
 import re
 import utils
 import codecs
+import random
 #from pydbg import *
 #from pydbg.defines import *
 
 TARGET_OS           = "LINUX"
-VERSION             = "1.3"
+VERSION             = "1.4"
 FUZZ_FILE_PREFIX    = "fuzz"
 
 verbose             = 1         #show the command line arguments (for debugging purposes)
@@ -30,7 +31,7 @@ ignore_value        = 0x0       #value that won't be replaced; eg: 0s are just p
 filename            = ""        #input file for program
 fileext             = ""        #input file extension
 program             = ""        #program to launch
-mutation_value      = 0xff      #the bytes in the file will be overwritten with this value
+mutation_value      = 0 	#the bytes in the file will be overwritten with this value
 bytes_replace       = 1         #number of consecutive bytes to overwrite
 mutations           = 0         #how many mutations (0 = size of the file)
 use_subp_popen      = 0         #use subprocess.popen and then kill (useful for GUIs)
@@ -102,10 +103,10 @@ def load_config_file(fname):
                         if m:
                             fileext = str(m.group(1))
 
-                        m = re.match(r'\s*mutation_value\s*=\s*([0-9a-fx]+)[\r\n]*', line, re.M|re.I)
+                        m = re.match(r'\s*mutation_value\s*=\s*([0-9a-fxrn]+)[\r\n]*', line, re.M|re.I)
                         if m:
                             val = str(m.group(1))
-                            mutation_value = int(val, 16)
+                            mutation_value = int(val, 16)                         
 
                         m = re.match(r'\s*program\s*=\s*(.*)[\r\n]*', line, re.M|re.I)
                         if m:
@@ -157,14 +158,14 @@ def generate_files(fname, val, n_bytes, fuzz_file_ext, fuzz_folder, n_mutations)
     counter = 0
     print ("[+] Generate mutations based on " + fname)
 
-    if 1:
+    try:
         if len(fname) > 0:
             with open(fname, "rb") as f:
                 buff = f.read()
                 f.close()
 
             if fuzz_type != 1 and len(buff) > n_bytes:
-                size = str(len(buff)-n_bytes)
+                size = len(buff)-n_bytes
                 if size > n_mutations:
                     size = n_mutations
             else:
@@ -181,7 +182,10 @@ def generate_files(fname, val, n_bytes, fuzz_file_ext, fuzz_folder, n_mutations)
                 counter = counter+1
                 mid = []
                 for j in range(0,n_bytes):
-                    mid.append(val)
+                    if val != 0:
+                      mid.append(val)
+                    else:
+                      mid.append(int(random.randint(0,255)))
 
                 #overwrite
                 if fuzz_type == 0:
@@ -229,6 +233,8 @@ def generate_files(fname, val, n_bytes, fuzz_file_ext, fuzz_folder, n_mutations)
                 with open(name, "wb") as f_out:
                     f_out.write(bytearray(b))
                     f_out.close()
+    except:
+        print("[-] Error generating files")
 
     return counter
 
@@ -246,8 +252,9 @@ def generate_files(fname, val, n_bytes, fuzz_file_ext, fuzz_folder, n_mutations)
 #    dbg.run()
 #    return
 
-def HasCrashed(pname):
+def HasCrashed(target_program, pname):
     global TARGET_OS
+    flag_exists = 0
     try:
         os.remove("list.txt")
     except:
@@ -274,12 +281,21 @@ def HasCrashed(pname):
     else:
         os.system("wmic /output:list.txt PROCESS get Caption,Commandline")
         try:
+            processname = ""
+            m = re.match(r'.*\\(\w+\.exe)', target_program, re.M|re.I)
+            if m:
+              processname = m.group(1)
             with codecs.open("list.txt", encoding='utf-16', mode='r') as f:
                 for p in f:
+                    if len(processname) > 0:
+                      if processname.lower() in p.lower():
+                        flag_exists = 1
                     if "WerFault".lower() in p.lower():
                         return 1
         except:
             print("[-] Can't read proces list")
+    if flag_exists == 0:
+      return 1
     return 0
 
 def set_startupinfo():
@@ -312,14 +328,15 @@ def launch_program_w_popen(target_program, name, output_folder):
             pname = target_program
         time.sleep(timeout) #give the process time to load the file
 
-        if HasCrashed(pname) == 1:
+        if HasCrashed(target_program, pname) == 1:
             raw_input("[+] Crash detected! Press a key to continue...")
 
         print("\n[*] Terminate process")
         if "WINDOWS" in TARGET_OS:
             proc.kill()
-            #you may want to change this
-            #os.system("taskkill /F /IM calc.exe")
+            m = re.match(r'.*\\(\w+\.exe)', target_program, re.M|re.I)
+            if m:
+              os.system("taskkill /F /IM " + str(m.group(1)))
 
         if "LINUX" in TARGET_OS:
             os.system("killall " + pname)
@@ -359,6 +376,7 @@ def byte_fuzz(fname, val, fuzz_file_ext, fuzz_folder, n_bytes, target_program, n
     global verbose
     global fuzz_type
     global FUZZ_FILE_PREFIX
+    global TARGET_OS
 
     counter = 0
     try:
@@ -395,22 +413,33 @@ def byte_fuzz(fname, val, fuzz_file_ext, fuzz_folder, n_bytes, target_program, n
                     continue
 
                 vSize = len(str(i))
-                sys.stdout.write(str(i))
-                sys.stdout.flush()
+                #sys.stdout.write(str(i))
+                #sys.stdout.flush()
+                fname = name
 
                 if use_subp_popen == 1:
                     launch_program_w_popen(target_program, name, output_folder)
                 else:
                     launch_program(target_program, name, output_folder)
 
-                sys.stdout.write("\b" * vSize)
-                sys.stdout.flush()
+                #sys.stdout.write("\b" * vSize)
+                #sys.stdout.flush()
+                #print("move " + fname + " " + output_folder)
+                if "LINUX" in TARGET_OS:
+                  os.system("mv " + fname + " " + output_folder)
+                else:
+                  os.system("move " + fname + " " + output_folder)
+
         else:
             if use_subp_popen == 1:
                 launch_program_w_popen(target_program, fname, output_folder)
             else:
                 launch_program(target_program, fname, output_folder)
-            os.system("mv " + fname + " " + output_folder + "/")
+
+            if "LINUX" in TARGET_OS:
+              os.system("mv " + fname + " " + output_folder)
+            else:
+              os.system("move " + fname + " " + output_folder)
 
     except Exception as e:
         print("[-] Error byte_fuzz(): " + str(e))
@@ -437,6 +466,9 @@ if __name__ == "__main__":
     if "LINUX" in TARGET_OS:
         print("[+] Enable core dumps")
         os.system("ulimit -c unlimited")
+        separator = "/"
+    else:
+        separator = "\\"
 
     if len(sys.argv) != 7:
         if load_config_file("bytefuzz.conf") == -1:
@@ -507,7 +539,7 @@ if __name__ == "__main__":
         counter = 0
         for root, dirs, files in os.walk(fuzz_folder):
             for filename in files:
-                byte_fuzz(root + "/" + filename, mutation_value, fileext, fuzz_folder, bytes_replace, program, mutations, output_folder)
+                byte_fuzz(root + separator + filename, mutation_value, fileext, fuzz_folder, bytes_replace, program, mutations, output_folder)
                 counter = counter + 1
         print("[*] Fuzzed " + str(counter) + " files")
     print ("[+] Done")
