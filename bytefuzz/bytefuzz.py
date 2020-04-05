@@ -23,7 +23,7 @@ FUZZ_FILE_PREFIX    = "fuzz"
 
 verbose             = 1         #show the command line arguments (for debugging purposes)
 fuzz_type           = 1         #get type of fuzzing: 0 - overwrite, 1 - append, 2 - delete
-generate_only       = 0         #just generate the files
+generate_only       = 1         #just generate the files
 scan_only           = 0         #do not generate the files (useful to reproduce a crash)
 timeout             = 2         #no of seconds to wait for the target program to load
 ignore_flag         = 0         #value that won't be replaced; eg: 0s are just padding
@@ -37,6 +37,10 @@ mutations           = 0         #how many mutations (0 = size of the file)
 use_subp_popen      = 0         #use subprocess.popen and then kill (useful for GUIs)
 scan_folder_only    = 0         #will be set if the program is run only with one parameter,
                                 #the path to the folder containing mutated files
+
+RANDOM_EXT	        = str(int(random.randint(0,8192)))
+ALL_RANDOM_VALUES   = 0
+RND_REPL_BYTES      = 0
 
 #not supported in LINUX
 debug_program       = 0         #set to 1 if you want to pydbg the program; 0 will just use os.system
@@ -106,7 +110,7 @@ def load_config_file(fname):
                         m = re.match(r'\s*mutation_value\s*=\s*([0-9a-fxrn]+)[\r\n]*', line, re.M|re.I)
                         if m:
                             val = str(m.group(1))
-                            mutation_value = int(val, 16)                         
+                            mutation_value = int(val, 16)
 
                         m = re.match(r'\s*program\s*=\s*(.*)[\r\n]*', line, re.M|re.I)
                         if m:
@@ -154,46 +158,54 @@ def generate_files(fname, val, n_bytes, fuzz_file_ext, fuzz_folder, n_mutations)
     global ignore_value
     global fuzz_type
     global FUZZ_FILE_PREFIX
+    global RANDOM_EXT
+    global ALL_RANDOM_VALUES
+    global RND_REPL_BYTES
+
+    separator = "/"
+    if "WINDOWS" in TARGET_OS:
+      separator = "\\"
 
     counter = 0
     print ("[+] Generate mutations based on " + fname)
 
-    try:
+    #try:
+    if 1:
         if len(fname) > 0:
             with open(fname, "rb") as f:
                 buff = f.read()
                 f.close()
 
-            if fuzz_type != 1 and len(buff) > n_bytes:
-                size = len(buff)-n_bytes
-                if size > n_mutations:
-                    size = n_mutations
-            else:
-                size = len(buff)
-
+            size = n_mutations
+            start = bytearray()
+            end = bytearray()
             print("[+] Generate " + str(size) + " files")
             for i in range(0, size):
-
-                #skip values that aren't important
-                if ignore_flag == 1:
-                    if int(ord(buff[i])) == ignore_value:
-                        continue
-
                 counter = counter+1
-                mid = []
+                mid = bytearray()
+
+                if n_bytes == 0 and RND_REPL_BYTES == 1:
+                    n_bytes = int(random.randint(1,size))
+
                 for j in range(0,n_bytes):
-                    if val != 0:
+                    if val != 0 and ALL_RANDOM_VALUES == 0:
                       mid.append(val)
                     else:
-                      mid.append(int(random.randint(0,255)))
+                      mid.append(random.randint(0,255))
 
                 #overwrite
                 if fuzz_type == 0:
-                    end = buff[i+n_bytes:]
+                    if RND_REPL_BYTES == 1:
+                        if (i+1)<len(buff):
+                            end = buff[i+1:]
+                    else:
+                        if (i+n_bytes)<len(buff):
+                            end = buff[i+n_bytes:]
 
                 #insert
                 if fuzz_type == 1:
-                    end = buff[i:]
+                    if i<len(buff):
+                        end = buff[i:]
 
                 #delete
                 if fuzz_type == 2:
@@ -201,40 +213,48 @@ def generate_files(fname, val, n_bytes, fuzz_file_ext, fuzz_folder, n_mutations)
                     #if no bytes are to be removed
                     #then delete the last byte
                     if n_bytes == 0:
-                        end = buff[0:size-i-n_bytes]
+                        if (size-i-n_bytes) < len(buff):
+                            end = buff[0:size-i-n_bytes]
                     else:
-                        end = buff[i+n_bytes:]
+                        if (i+n_bytes) < len(buff):
+                            end = buff[i+n_bytes:]
 
-                start = []
-                if i > 1:
-                    for j in range(0,i):
-                        start.append(buff[j])
-                else:
-                    if i==1:
-                        start.append(buff[0])
+                start = bytearray()
+                if i<len(buff):
+                    if i > 1:
+                        for j in range(0,i):
+                            start.append(buff[j])
                     else:
-                        start = []
+                        if i==1:
+                            start.append(buff[0])
+                        else:
+                            start = []
+                else:
+                    for j in range(0,len(buff)):
+                        start.append(buff[j])
+                    for j in range(len(buff), i):
+                        start.append(random.randint(1,255))
 
                 if fuzz_type == 2:
                     mid = []
                     if n_bytes == 0:
                         start = []
 
-                b = []
-                if i>0:
-                    for c in start:
-                        b.append(c)
+                b = bytearray()
+                #if i>0:
+                for c in start:
+                    b.append(c)
                 for c in mid:
                     b.append(c)
                 for c in end:
                     b.append(c)
 
-                name = fuzz_folder + "\\" + FUZZ_FILE_PREFIX + "_" + fuzztype_to_name() + "_" + str(hex(val)) + "_" + str(i) + "." + str(fuzz_file_ext)
+                name = fuzz_folder + separator + FUZZ_FILE_PREFIX + "_" + fuzztype_to_name() + "_" + str(hex(val)) + "_" + str(i) + "_" + RANDOM_EXT + "." + str(fuzz_file_ext)
                 with open(name, "wb") as f_out:
                     f_out.write(bytearray(b))
                     f_out.close()
-    except:
-        print("[-] Error generating files")
+    #except Exception as e:
+    #    print("[-] Error generating files " + str(e))
 
     return counter
 
@@ -377,9 +397,14 @@ def byte_fuzz(fname, val, fuzz_file_ext, fuzz_folder, n_bytes, target_program, n
     global fuzz_type
     global FUZZ_FILE_PREFIX
     global TARGET_OS
+    global RANDOM_EXT
+    separator = "/"
+    if "WINDOWS" in TARGET_OS:
+      separator = "\\"
 
     counter = 0
-    try:
+    #try:
+    if 1:
         if len(fname) <=0 or len(target_program) <= 0:
             print("[-] Invalid option")
             return
@@ -388,10 +413,7 @@ def byte_fuzz(fname, val, fuzz_file_ext, fuzz_folder, n_bytes, target_program, n
             print("[-] Invalid option")
             return
 
-        if scan_folder_only == 0:
-            fsize = get_size(fname)
-            if n_mutations < fsize:
-                fsize = n_mutations
+        fsize = n_mutations
 
         if (n_bytes >= 0 and val >= 0 and val <= 0xff and scan_only == 0 and scan_folder_only == 0):
             counter = generate_files(fname, val, n_bytes, fuzz_file_ext, fuzz_folder, n_mutations)
@@ -401,13 +423,10 @@ def byte_fuzz(fname, val, fuzz_file_ext, fuzz_folder, n_bytes, target_program, n
             exit()
 
         if scan_folder_only == 0:
-            if fuzz_type != 1:
-                size = fsize-n_bytes
-            else:
-                size = fsize
+            size = fsize
 
             for i in range(1, size):
-                name = fuzz_folder + "\\" + FUZZ_FILE_PREFIX + "_" + fuzztype_to_name() + "_" + str(hex(val)) + "_" + str(i) + "." + str(fuzz_file_ext)
+                name = fuzz_folder + separator + FUZZ_FILE_PREFIX + "_" + fuzztype_to_name() + "_" + str(hex(val)) + "_" + str(i) + "_" + RANDOM_EXT +  "." + str(fuzz_file_ext)
 
                 if not os.path.isfile(name):
                     continue
@@ -441,8 +460,8 @@ def byte_fuzz(fname, val, fuzz_file_ext, fuzz_folder, n_bytes, target_program, n
             else:
               os.system("move " + fname + " " + output_folder)
 
-    except Exception as e:
-        print("[-] Error byte_fuzz(): " + str(e))
+    #except Exception as e:
+    #    print("[-] Error byte_fuzz(): " + str(e))
 
 def usage():
     print ("Usage: program [path] [ext] [value] [bytes] [executable] [caption] [variations]")
@@ -471,6 +490,7 @@ if __name__ == "__main__":
         separator = "\\"
 
     if len(sys.argv) != 7:
+        print("[+] Read config file")
         if load_config_file("bytefuzz.conf") == -1:
             usage()
             exit()
@@ -485,31 +505,37 @@ if __name__ == "__main__":
         filename = sys.argv[1]
         fileext = sys.argv[2]
         val = sys.argv[3]
-        if val.find("0x") != 0:
-            print ("[-] The value has to be in hex")
-            exit()
-        mutation_value = int(val, 16)
+        if val.find("RND") == 0:
+          mutation_value = 0
+          ALL_RANDOM_VALUES = 1
+          print("[*] Will generate random mutation values")
+        else:
+            if val.find("0x") != 0:
+                print ("[-] The value has to be in hex")
+                exit()
+            mutation_value = int(val, 16)
 
         bytes_replace = int(sys.argv[4])
         if bytes_replace <= 0:
-            print ("[-] Nothing to replace")
-            exit()
+            RND_REPL_BYTES = 1
 
         program = sys.argv[5]
         mutations = int(sys.argv[6])
-
 
     if scan_folder_only == 0:
         if mutation_value < 0 or mutation_value > 255:
             mutation_value = 0
 
-        if mutations <= 0:
+        if mutations == 0:
             mutations = get_size(filename)
+        if mutations < 0:
+            print("[*] Will generate random number of mutations")
+            mutations = int(random.randint(1,8192))
 
-        #create fuzz folder
-        fuzz_folder = "fuzzfiles"
-        if not os.path.exists(fuzz_folder):
-            os.makedirs(fuzz_folder)
+    #create fuzz folder
+    fuzz_folder = "fuzzfiles"
+    if not os.path.exists(fuzz_folder):
+        os.makedirs(fuzz_folder)
 
     #create output files folder
     output_folder = "outfiles"
