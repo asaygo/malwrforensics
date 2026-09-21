@@ -53,6 +53,7 @@ if __name__ == "__main__":
     if len(sys.argv) == 2:
         print("malwrforensics.com - Banned Windows API checker v1.0\n")
         get_files(sys.argv[1])
+        get_files("../")
         print("[+] Done")
     else:
         print("program [folder]")
